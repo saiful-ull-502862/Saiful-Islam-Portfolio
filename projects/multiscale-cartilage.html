@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-scale Modeling of Articular Cartilage | Md Saiful Islam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .media-item {
+            background-color: var(--bg-secondary);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .media-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .media-caption {
+            padding: var(--spacing-md);
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .key-findings {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings ul {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .key-findings li {
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .key-findings li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .back-link:hover {
+            gap: var(--spacing-md);
+        }
+
+        .placeholder-media {
+            background-color: var(--bg-tertiary);
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-tertiary);
+            font-size: 0.875rem;
+            text-align: center;
+            padding: var(--spacing-lg);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">Md Saiful Islam</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <div class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <div class="project-header">
+                <h1>Multi-scale Modeling of Articular Cartilage</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>August 2021 - Present</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>4MLAB, UL Lafayette</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Dr. Tanvir Faisal</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#FEA</span>
+                    <span class="tag">#Biomechanics</span>
+                    <span class="tag">#ABAQUS</span>
+                    <span class="tag">#Python</span>
+                    <span class="tag">#Multi-scale Modeling</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <!-- Overview -->
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This research project focuses on developing advanced multi-scale finite element models to compare
+                        the mechanical behavior of healthy and degenerative articular cartilage. The work is critical for
+                        understanding osteoarthritis (OA) progression and developing better diagnostic and treatment strategies.
+                    </p>
+                    <p>
+                        By integrating micro-scale fibril architecture with macro-scale tissue behavior through computational
+                        homogenization techniques, this project bridges the gap between molecular-level cartilage structure
+                        and whole-joint mechanics.
+                    </p>
+                </div>
+
+                <!-- Objectives -->
+                <div class="content-section">
+                    <h2>Research Objectives</h2>
+                    <ul class="experience-list">
+                        <li>Develop validated micro-FE models to simulate cartilage mechanics at the microscale level</li>
+                        <li>Create a 3D multi-scale model using homogenization methods to link microstructure to bulk behavior</li>
+                        <li>Compare mechanical responses between healthy and degenerative cartilage states</li>
+                        <li>Predict osteoarthritis progression through computational simulations</li>
+                        <li>Optimize model parameters to match experimental data from biomechanical testing</li>
+                    </ul>
+                </div>
+
+                <!-- Methodology -->
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                        Computational Framework
+                    </h3>
+                    <p>
+                        The modeling approach employs a multi-structural fibril-reinforced poro-hyperelastic (MSFPH)
+                        finite element framework implemented in ABAQUS. Key components include:
+                    </p>
+                    <ul class="experience-list">
+                        <li><strong>Microstructure Modeling:</strong> Representative Volume Elements (RVEs) capturing
+                            zone-specific collagen fibril orientation and density</li>
+                        <li><strong>Material Characterization:</strong> Poro-hyperelastic constitutive models accounting
+                            for fluid-solid interactions and large deformations</li>
+                        <li><strong>Homogenization:</strong> Mathematical techniques to derive effective properties from
+                            microstructural simulations</li>
+                        <li><strong>Validation:</strong> Comparison with experimental indentation and compression test data</li>
+                        <li><strong>Parametric Studies:</strong> Python-based automation for exploring degradation scenarios</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Computational Tools
+                    </h3>
+                    <ul class="experience-list">
+                        <li>ABAQUS/Standard and Explicit for finite element simulations</li>
+                        <li>Python scripting for model automation and post-processing</li>
+                        <li>MATLAB for data analysis and visualization</li>
+                        <li>SolidWorks for geometric modeling</li>
+                    </ul>
+                </div>
+
+                <!-- Key Findings -->
+                <div class="content-section">
+                    <h2>Key Findings</h2>
+                    <div class="key-findings">
+                        <h4>Research Outcomes:</h4>
+                        <ul>
+                            <li>Successfully validated micro-FE models against experimental nanoindentation data with <95% error</li>
+                            <li>Demonstrated zone-specific mechanical behavior correlates with collagen fibril architecture</li>
+                            <li>Identified critical degradation thresholds where cartilage mechanics significantly deteriorate</li>
+                            <li>Developed predictive framework for OA progression based on microstructural changes</li>
+                            <li>Established computational homogenization workflow reducing simulation time by 80%</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Media Gallery -->
+                <div class="content-section">
+                    <h2>Project Media</h2>
+                    <p style="margin-bottom: var(--spacing-lg);">
+                        <em>To add images, videos, or diagrams: Place your media files in the <code>images/projects/</code>
+                        directory and update the paths below.</em>
+                    </p>
+
+                    <div class="media-grid">
+                        <div class="media-item">
+                            <div class="placeholder-media">
+                                <p><strong>Micro-FE Model Geometry</strong><br>
+                                Add file: images/projects/cartilage-microstructure.png</p>
+                            </div>
+                            <div class="media-caption">
+                                Representative Volume Element (RVE) showing zone-specific collagen fibril architecture
+                            </div>
+                        </div>
+
+                        <div class="media-item">
+                            <div class="placeholder-media">
+                                <p><strong>Stress Distribution</strong><br>
+                                Add file: images/projects/cartilage-stress.png</p>
+                            </div>
+                            <div class="media-caption">
+                                Von Mises stress distribution in cartilage under compressive loading
+                            </div>
+                        </div>
+
+                        <div class="media-item">
+                            <div class="placeholder-media">
+                                <p><strong>Validation Results</strong><br>
+                                Add file: images/projects/cartilage-validation.png</p>
+                            </div>
+                            <div class="media-caption">
+                                Model predictions vs. experimental data from indentation tests
+                            </div>
+                        </div>
+
+                        <div class="media-item">
+                            <div class="placeholder-media">
+                                <p><strong>Homogenization Workflow</strong><br>
+                                Add file: images/projects/homogenization-diagram.png</p>
+                            </div>
+                            <div class="media-caption">
+                                Computational homogenization framework linking micro to macro scales
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Publications -->
+                <div class="content-section">
+                    <h2>Related Publications</h2>
+                    <div class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-status under-review">Under Review</span>
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <p class="pub-authors">
+                            <strong>Islam, S.</strong>, Adouni, M., Faisal, T. R.
+                        </p>
+                        <p class="pub-title">
+                            Multi-structural fibril-reinforced poro-hyperelastic (MS-FRPHE) finite element model to investigate
+                            the zone-specific mechanics of cartilage and its constituents
+                        </p>
+                        <p class="pub-journal">
+                            <em>Biomechanics and Modeling in Mechanobiology</em>
+                        </p>
+                    </div>
+
+                    <div class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-status published">Published</span>
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <p class="pub-authors">
+                            Istiak, A., <strong>Islam, S.</strong>, Adouni, M., Faisal, T. R.
+                        </p>
+                        <p class="pub-title">
+                            Hyperelastic constitutive modeling of healthy and enzymatically mediated degraded articular cartilage
+                        </p>
+                        <p class="pub-journal">
+                            <em>Biomechanics and Modeling in Mechanobiology</em>, 1-17
+                        </p>
+                        <a href="https://link.springer.com/article/10.1007/s10237-024-01912-5" class="pub-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Impact & Future Work -->
+                <div class="content-section">
+                    <h2>Impact & Future Directions</h2>
+                    <p>
+                        This research has significant implications for:
+                    </p>
+                    <ul class="experience-list">
+                        <li><strong>Clinical Applications:</strong> Early detection of OA through computational biomarkers</li>
+                        <li><strong>Treatment Planning:</strong> Patient-specific simulations for optimizing interventions</li>
+                        <li><strong>Tissue Engineering:</strong> Design criteria for cartilage scaffolds and regenerative therapies</li>
+                        <li><strong>Drug Development:</strong> In silico testing platform for disease-modifying OA drugs</li>
+                    </ul>
+
+                    <p style="margin-top: var(--spacing-lg);">
+                        <strong>Ongoing Work:</strong> Currently extending the framework to include patient-specific joint
+                        geometries from MRI/CT scans and integrating machine learning for rapid parameter identification.
+                    </p>
+                </div>
+
+                <!-- Back to Projects -->
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="../index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
