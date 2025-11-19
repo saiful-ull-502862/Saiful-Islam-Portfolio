@@ -487,66 +487,16 @@ function blendProfileWithBackground(backgroundImageData) {
     const width = canvas.width;
     const height = canvas.height;
 
-    // Clear canvas
+    // Clear canvas to make it transparent
     ctx.clearRect(0, 0, width, height);
 
-    if (backgroundImageData) {
-        // Load background image
-        const bgImg = new Image();
-        bgImg.crossOrigin = 'anonymous';
-        bgImg.onload = () => {
-            // Draw background image
-            ctx.drawImage(bgImg, 0, 0, width, height);
+    // Draw only the profile image without any background
+    // This allows the hero background to show through
+    const scale = Math.min(width / profileImg.width, height / profileImg.height) * 0.9;
+    const x = (width / 2) - (profileImg.width / 2) * scale;
+    const y = (height / 2) - (profileImg.height / 2) * scale;
 
-            // Create a subtle gradient overlay to blend better
-            const gradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/2);
-            gradient.addColorStop(0, 'rgba(255, 255, 255, 0.1)');
-            gradient.addColorStop(1, 'rgba(0, 0, 0, 0.2)');
-            ctx.fillStyle = gradient;
-            ctx.fillRect(0, 0, width, height);
-
-            // Draw profile image with blending
-            ctx.globalCompositeOperation = 'source-over';
-            ctx.globalAlpha = 1.0;
-
-            // Calculate dimensions to maintain aspect ratio
-            const scale = Math.min(width / profileImg.width, height / profileImg.height) * 0.9;
-            const x = (width / 2) - (profileImg.width / 2) * scale;
-            const y = (height / 2) - (profileImg.height / 2) * scale;
-
-            ctx.drawImage(profileImg, x, y, profileImg.width * scale, profileImg.height * scale);
-
-            // Add a subtle vignette effect
-            const vignette = ctx.createRadialGradient(width/2, height/2, width/4, width/2, height/2, width/2);
-            vignette.addColorStop(0, 'rgba(0, 0, 0, 0)');
-            vignette.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
-            ctx.fillStyle = vignette;
-            ctx.fillRect(0, 0, width, height);
-        };
-        bgImg.src = backgroundImageData;
-    } else {
-        // Default: Draw profile with gradient background matching the theme
-        const gradient = ctx.createLinearGradient(0, 0, width, height);
-        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.08)');
-        gradient.addColorStop(1, 'rgba(16, 185, 129, 0.08)');
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, width, height);
-
-        // Add pattern overlay
-        const pattern = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/2);
-        pattern.addColorStop(0, 'rgba(37, 99, 235, 0.15)');
-        pattern.addColorStop(0.5, 'rgba(16, 185, 129, 0.08)');
-        pattern.addColorStop(1, 'rgba(245, 158, 11, 0.05)');
-        ctx.fillStyle = pattern;
-        ctx.fillRect(0, 0, width, height);
-
-        // Draw profile image
-        const scale = Math.min(width / profileImg.width, height / profileImg.height) * 0.9;
-        const x = (width / 2) - (profileImg.width / 2) * scale;
-        const y = (height / 2) - (profileImg.height / 2) * scale;
-
-        ctx.drawImage(profileImg, x, y, profileImg.width * scale, profileImg.height * scale);
-    }
+    ctx.drawImage(profileImg, x, y, profileImg.width * scale, profileImg.height * scale);
 }
 
 // ===========================

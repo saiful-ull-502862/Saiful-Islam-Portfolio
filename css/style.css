@@ -784,7 +784,7 @@ code {
     object-fit: contain;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
-    background-color: var(--bg-secondary);
+    background: transparent;
     padding: var(--spacing-md);
 }
 
@@ -801,6 +801,7 @@ code {
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
     display: block;
+    background: transparent;
 }
 
 .scroll-down {
