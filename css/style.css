@@ -408,6 +408,26 @@ code {
     transform: rotate(180deg);
 }
 
+.bg-toggle {
+    background-color: var(--bg-tertiary);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-primary);
+    transition: all var(--transition-fast);
+}
+
+.bg-toggle:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    transform: scale(1.1);
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -437,6 +457,145 @@ code {
 
 .nav-toggle.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* ===========================
+   Background Customizer
+   =========================== */
+.bg-customizer {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: var(--bg-primary);
+    border-left: 1px solid var(--border-color);
+    box-shadow: var(--shadow-xl);
+    z-index: 1001;
+    transition: right var(--transition-base);
+    overflow-y: auto;
+}
+
+.bg-customizer.active {
+    right: 0;
+}
+
+.bg-customizer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-primary);
+    z-index: 1;
+}
+
+.bg-customizer-header h3 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.bg-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-tertiary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-close:hover {
+    color: var(--primary-color);
+    transform: rotate(90deg);
+}
+
+.bg-customizer-content {
+    padding: var(--spacing-xl);
+}
+
+.bg-upload-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.bg-upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-2xl);
+    border: 3px dashed var(--border-color);
+    border-radius: var(--radius-lg);
+    background-color: var(--bg-secondary);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.bg-upload-label:hover {
+    border-color: var(--primary-color);
+    background-color: var(--bg-tertiary);
+    transform: translateY(-2px);
+}
+
+.bg-upload-label i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.bg-upload-label span {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.bg-upload-note {
+    margin-top: var(--spacing-md);
+    font-size: 0.875rem;
+    color: var(--text-tertiary);
+    text-align: center;
+}
+
+.bg-preview-section {
+    margin-top: var(--spacing-xl);
+}
+
+.bg-preview-section h4 {
+    margin-bottom: var(--spacing-md);
+    font-size: 1.125rem;
+}
+
+.bg-preview-container {
+    width: 100%;
+    height: 200px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--spacing-lg);
+    background-color: var(--bg-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-preview-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.bg-actions .btn {
+    width: 100%;
+    justify-content: center;
 }
 
 /* ===========================
@@ -627,6 +786,21 @@ code {
     box-shadow: var(--shadow-xl);
     background-color: var(--bg-secondary);
     padding: var(--spacing-md);
+}
+
+/* Profile container and canvas */
+.profile-container {
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+#profileCanvas {
+    width: 450px;
+    height: 450px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    display: block;
 }
 
 .scroll-down {
@@ -1529,6 +1703,17 @@ code {
     :root {
         --spacing-2xl: 2rem;
         --spacing-3xl: 3rem;
+    }
+
+    .bg-customizer {
+        width: 100%;
+        right: -100%;
+    }
+
+    .profile-container,
+    #profileCanvas {
+        width: 280px;
+        height: 280px;
     }
 
     .nav-menu {
