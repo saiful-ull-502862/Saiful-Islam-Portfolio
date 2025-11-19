@@ -14,6 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initContactForm();
     updateLastModified();
+    initBackgroundCustomizer();
+    initProfileBlending();
 });
 
 // ===========================
@@ -352,6 +354,200 @@ function debounce(func, wait = 10, immediate = true) {
 window.addEventListener('scroll', debounce(() => {
     // Scroll-based operations are already handled in individual functions
 }, 15));
+
+// ===========================
+// Background Customizer
+// ===========================
+function initBackgroundCustomizer() {
+    const bgToggle = document.getElementById('bgToggle');
+    const bgCustomizer = document.getElementById('bgCustomizer');
+    const bgClose = document.getElementById('bgClose');
+    const bgImageUpload = document.getElementById('bgImageUpload');
+    const bgPreview = document.getElementById('bgPreview');
+    const bgPreviewSection = document.getElementById('bgPreviewSection');
+    const applyBackground = document.getElementById('applyBackground');
+    const resetBackground = document.getElementById('resetBackground');
+
+    let uploadedImageData = null;
+
+    // Toggle background customizer panel
+    bgToggle.addEventListener('click', () => {
+        bgCustomizer.classList.add('active');
+    });
+
+    bgClose.addEventListener('click', () => {
+        bgCustomizer.classList.remove('active');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!bgCustomizer.contains(e.target) &&
+            !bgToggle.contains(e.target) &&
+            bgCustomizer.classList.contains('active')) {
+            bgCustomizer.classList.remove('active');
+        }
+    });
+
+    // Handle image upload
+    bgImageUpload.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                uploadedImageData = event.target.result;
+                bgPreview.src = uploadedImageData;
+                bgPreviewSection.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+
+    // Apply background
+    applyBackground.addEventListener('click', () => {
+        if (uploadedImageData) {
+            localStorage.setItem('customBackground', uploadedImageData);
+            applyCustomBackground(uploadedImageData);
+            blendProfileWithBackground(uploadedImageData);
+            bgCustomizer.classList.remove('active');
+        }
+    });
+
+    // Reset background
+    resetBackground.addEventListener('click', () => {
+        localStorage.removeItem('customBackground');
+        resetToDefaultBackground();
+        blendProfileWithBackground(null);
+        bgPreviewSection.style.display = 'none';
+        bgImageUpload.value = '';
+        uploadedImageData = null;
+    });
+
+    // Load saved background on init
+    const savedBackground = localStorage.getItem('customBackground');
+    if (savedBackground) {
+        applyCustomBackground(savedBackground);
+        blendProfileWithBackground(savedBackground);
+    }
+}
+
+function applyCustomBackground(imageData) {
+    const heroBackground = document.querySelector('.hero-background');
+    if (heroBackground) {
+        heroBackground.style.backgroundImage = `url(${imageData})`;
+        heroBackground.style.backgroundSize = 'cover';
+        heroBackground.style.backgroundPosition = 'center';
+        heroBackground.style.backgroundRepeat = 'no-repeat';
+    }
+}
+
+function resetToDefaultBackground() {
+    const heroBackground = document.querySelector('.hero-background');
+    if (heroBackground) {
+        heroBackground.style.backgroundImage = '';
+    }
+}
+
+// ===========================
+// Profile Image Blending
+// ===========================
+function initProfileBlending() {
+    const canvas = document.getElementById('profileCanvas');
+    const profileImg = document.getElementById('profileImage');
+
+    if (!canvas || !profileImg) return;
+
+    // Load saved background and blend
+    const savedBackground = localStorage.getItem('customBackground');
+
+    profileImg.onload = () => {
+        if (savedBackground) {
+            blendProfileWithBackground(savedBackground);
+        } else {
+            blendProfileWithBackground(null);
+        }
+    };
+
+    // If image is already loaded
+    if (profileImg.complete) {
+        if (savedBackground) {
+            blendProfileWithBackground(savedBackground);
+        } else {
+            blendProfileWithBackground(null);
+        }
+    }
+}
+
+function blendProfileWithBackground(backgroundImageData) {
+    const canvas = document.getElementById('profileCanvas');
+    const profileImg = document.getElementById('profileImage');
+
+    if (!canvas || !profileImg) return;
+
+    const ctx = canvas.getContext('2d');
+    const width = canvas.width;
+    const height = canvas.height;
+
+    // Clear canvas
+    ctx.clearRect(0, 0, width, height);
+
+    if (backgroundImageData) {
+        // Load background image
+        const bgImg = new Image();
+        bgImg.crossOrigin = 'anonymous';
+        bgImg.onload = () => {
+            // Draw background image
+            ctx.drawImage(bgImg, 0, 0, width, height);
+
+            // Create a subtle gradient overlay to blend better
+            const gradient = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/2);
+            gradient.addColorStop(0, 'rgba(255, 255, 255, 0.1)');
+            gradient.addColorStop(1, 'rgba(0, 0, 0, 0.2)');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw profile image with blending
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.globalAlpha = 1.0;
+
+            // Calculate dimensions to maintain aspect ratio
+            const scale = Math.min(width / profileImg.width, height / profileImg.height) * 0.9;
+            const x = (width / 2) - (profileImg.width / 2) * scale;
+            const y = (height / 2) - (profileImg.height / 2) * scale;
+
+            ctx.drawImage(profileImg, x, y, profileImg.width * scale, profileImg.height * scale);
+
+            // Add a subtle vignette effect
+            const vignette = ctx.createRadialGradient(width/2, height/2, width/4, width/2, height/2, width/2);
+            vignette.addColorStop(0, 'rgba(0, 0, 0, 0)');
+            vignette.addColorStop(1, 'rgba(0, 0, 0, 0.3)');
+            ctx.fillStyle = vignette;
+            ctx.fillRect(0, 0, width, height);
+        };
+        bgImg.src = backgroundImageData;
+    } else {
+        // Default: Draw profile with gradient background matching the theme
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, 'rgba(37, 99, 235, 0.08)');
+        gradient.addColorStop(1, 'rgba(16, 185, 129, 0.08)');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, width, height);
+
+        // Add pattern overlay
+        const pattern = ctx.createRadialGradient(width/2, height/2, 0, width/2, height/2, width/2);
+        pattern.addColorStop(0, 'rgba(37, 99, 235, 0.15)');
+        pattern.addColorStop(0.5, 'rgba(16, 185, 129, 0.08)');
+        pattern.addColorStop(1, 'rgba(245, 158, 11, 0.05)');
+        ctx.fillStyle = pattern;
+        ctx.fillRect(0, 0, width, height);
+
+        // Draw profile image
+        const scale = Math.min(width / profileImg.width, height / profileImg.height) * 0.9;
+        const x = (width / 2) - (profileImg.width / 2) * scale;
+        const y = (height / 2) - (profileImg.height / 2) * scale;
+
+        ctx.drawImage(profileImg, x, y, profileImg.width * scale, profileImg.height * scale);
+    }
+}
 
 // ===========================
 // Console Message (Optional)
