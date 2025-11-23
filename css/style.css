@@ -716,8 +716,8 @@ code {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-3xl);
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: var(--spacing-2xl);
     align-items: center;
     position: relative;
     z-index: 1;
@@ -840,8 +840,8 @@ code {
 
 /* When profile image exists */
 .hero-image img {
-    width: 550px;
-    height: 550px;
+    width: 750px;
+    height: 750px;
     object-fit: contain;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
@@ -852,8 +852,8 @@ code {
 /* Profile container and canvas */
 .profile-container {
     position: relative;
-    width: 550px;
-    height: 550px;
+    width: 750px;
+    height: 750px;
     animation: float 6s ease-in-out infinite;
 }
 
@@ -925,8 +925,8 @@ code {
 }
 
 #profileCanvas {
-    width: 550px;
-    height: 550px;
+    width: 750px;
+    height: 750px;
     display: block;
     background: transparent;
     transition: transform var(--transition-base);
@@ -1828,14 +1828,14 @@ code {
 
     .image-placeholder,
     .hero-image img {
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
     }
 
     .profile-container,
     #profileCanvas {
-        width: 400px;
-        height: 400px;
+        width: 500px;
+        height: 500px;
     }
 
     .contact-container {
