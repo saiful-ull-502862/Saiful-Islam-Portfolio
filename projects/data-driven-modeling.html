@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data-Driven Constitutive Modeling of Cartilage | Md Saiful Islam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .content-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+        }
+        .key-findings {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+        }
+        .key-findings ul {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+        .key-findings li {
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--text-secondary);
+        }
+        .key-findings li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-2xl);
+        }
+        .back-link:hover {
+            gap: var(--spacing-md);
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">Md Saiful Islam</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <div class="project-header">
+                <h1>Data-Driven Constitutive Modeling of Cartilage</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2022 - 2023</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>4MLAB, UL Lafayette</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Dr. Tanvir Faisal</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#FEA</span>
+                    <span class="tag">#Optimization</span>
+                    <span class="tag">#Python</span>
+                    <span class="tag">#Constitutive Modeling</span>
+                    <span class="tag">#Data-Driven</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This project develops a predictive finite element analysis framework for optimizing hyperelastic
+                        material parameters to accurately match experimental cartilage data. By combining computational
+                        modeling with experimental biomechanics, we enable quantitative assessment of osteoarthritis
+                        progression through changes in material properties.
+                    </p>
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-chart-line"></i> Innovation</h4>
+                        <p>
+                            This work bridges the gap between experimental testing and computational prediction by using
+                            inverse finite element analysis and optimization algorithms to extract constitutive parameters
+                            directly from mechanical testing data.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Research Objectives</h2>
+                    <ul class="experience-list">
+                        <li>Develop automated parameter identification framework for hyperelastic cartilage models</li>
+                        <li>Optimize constitutive model parameters to match experimental stress-strain data</li>
+                        <li>Validate predictions against independent experimental datasets (indentation, compression)</li>
+                        <li>Quantify cartilage degradation through parameter evolution during OA progression</li>
+                        <li>Create predictive models for patient-specific material property assessment</li>
+                        <li>Establish sensitivity analysis for understanding parameter influence on tissue behavior</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                        Experimental Data Collection
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Unconfined compression tests on cartilage samples at various degradation states</li>
+                        <li>Indentation testing for zone-specific mechanical characterization</li>
+                        <li>Enzymatic degradation protocols (trypsin, collagenase) to simulate OA conditions</li>
+                        <li>Multi-modal testing (confined, unconfined, indentation) for robust parameter identification</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Computational Framework
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>FEA Modeling:</strong> ABAQUS-based simulations replicating experimental test configurations</li>
+                        <li><strong>Constitutive Models:</strong> Neo-Hookean, Mooney-Rivlin, Ogden hyperelastic formulations</li>
+                        <li><strong>Optimization:</strong> Python-based algorithms (scipy.optimize, genetic algorithms) for parameter identification</li>
+                        <li><strong>Objective Function:</strong> Minimization of error between experimental and predicted force-displacement curves</li>
+                        <li><strong>Sensitivity Analysis:</strong> Morris screening and Sobol indices for parameter importance</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Workflow Automation
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Python scripts for automated FEA model generation and submission</li>
+                        <li>Parallel computing implementation for rapid parameter space exploration</li>
+                        <li>Post-processing pipelines for data extraction and visualization</li>
+                        <li>Integration with experimental databases for seamless data flow</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Key Findings</h2>
+                    <div class="key-findings">
+                        <h4>Research Outcomes:</h4>
+                        <ul>
+                            <li>Achieved <5% error between optimized FEA predictions and experimental data</li>
+                            <li>Identified degradation-dependent parameter evolution correlating with collagen loss</li>
+                            <li>Demonstrated superior fit of Ogden model for large-strain cartilage behavior</li>
+                            <li>Reduced parameter identification time from weeks to hours through automation</li>
+                            <li>Established baseline parameters for healthy vs. degenerative cartilage across anatomical zones</li>
+                            <li>Validated framework on independent test dataset with R² > 0.95</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Applications & Impact</h2>
+                    <ul class="experience-list">
+                        <li><strong>Clinical Diagnosis:</strong> Non-invasive material property assessment through imaging-based indentation</li>
+                        <li><strong>OA Staging:</strong> Quantitative grading of cartilage degradation severity</li>
+                        <li><strong>Treatment Monitoring:</strong> Tracking therapeutic efficacy through material property changes</li>
+                        <li><strong>Surgical Planning:</strong> Patient-specific models for optimizing surgical interventions</li>
+                        <li><strong>Tissue Engineering:</strong> Design criteria for cartilage scaffolds matching native properties</li>
+                        <li><strong>Drug Development:</strong> In silico platform for testing disease-modifying OA drugs</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Technical Contributions</h2>
+                    <ul class="experience-list">
+                        <li>Open-source Python library for automated FEA-based parameter identification</li>
+                        <li>Database of hyperelastic parameters for healthy and degenerative cartilage</li>
+                        <li>Validated protocols for enzymatic degradation simulating OA progression</li>
+                        <li>Guidelines for constitutive model selection based on loading conditions</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Future Directions</h2>
+                    <ul class="experience-list">
+                        <li>Integration with machine learning for real-time parameter prediction from imaging</li>
+                        <li>Extension to multi-physics models including fluid flow and biochemical reactions</li>
+                        <li>Clinical translation through collaboration with orthopedic surgeons</li>
+                        <li>Development of portable indentation devices for in-vivo measurements</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="../index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
