@@ -798,8 +798,6 @@ code {
 #profileCanvas {
     width: 450px;
     height: 450px;
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-xl);
     display: block;
     background: transparent;
 }
