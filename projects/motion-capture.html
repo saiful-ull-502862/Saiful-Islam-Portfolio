@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markerless Motion Capture & Knee Biomechanics | Md Saiful Islam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail {
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .key-findings {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings ul {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .key-findings li {
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .key-findings li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .back-link:hover {
+            gap: var(--spacing-md);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="../index.html">Md Saiful Islam</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Project Detail -->
+    <div class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
+
+            <div class="project-header">
+                <h1>Markerless Motion Capture & Knee Biomechanics</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2022 - Present</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>4MLAB, UL Lafayette</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Dr. Tanvir Faisal</span>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#Biomechanics</span>
+                    <span class="tag">#Motion Capture</span>
+                    <span class="tag">#FEA</span>
+                    <span class="tag">#Military Biomechanics</span>
+                    <span class="tag">#Osteoarthritis</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <!-- Overview -->
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This research project investigates knee joint mechanics under military load carriage conditions
+                        (30-50% body weight) to predict osteoarthritis (OA) risk in veterans. Using advanced markerless
+                        motion capture technology combined with finite element analysis, we analyze how heavy loads affect
+                        knee biomechanics and long-term joint health.
+                    </p>
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-bullseye"></i> Research Focus</h4>
+                        <p>
+                            Understanding the biomechanical mechanisms behind OA development in military personnel who
+                            regularly carry heavy loads during training and deployment. This work aims to develop
+                            predictive models for injury risk assessment and prevention strategies.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Objectives -->
+                <div class="content-section">
+                    <h2>Research Objectives</h2>
+                    <ul class="experience-list">
+                        <li>Capture and analyze gait patterns under various military load conditions using markerless motion capture</li>
+                        <li>Quantify knee joint loading patterns, contact stresses, and cartilage deformation</li>
+                        <li>Develop FEA models integrating motion capture data for tissue-level stress analysis</li>
+                        <li>Identify biomechanical risk factors for OA development in load-bearing populations</li>
+                        <li>Propose evidence-based recommendations for load distribution and training modifications</li>
+                        <li>Create predictive models for long-term joint health assessment in military personnel</li>
+                    </ul>
+                </div>
+
+                <!-- Methodology -->
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                        Experimental Protocol
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>Motion Capture:</strong> Markerless 3D motion capture system to record gait kinematics and kinetics</li>
+                        <li><strong>Loading Conditions:</strong> Progressive load testing (30%, 40%, 50% body weight) simulating military gear</li>
+                        <li><strong>Gait Analysis:</strong> Comprehensive evaluation of temporal-spatial parameters, joint angles, and ground reaction forces</li>
+                        <li><strong>Subject Pool:</strong> Healthy participants with varied anthropometric characteristics</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Computational Analysis
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>Motion Data Processing:</strong> Python-based algorithms for kinematic data extraction and filtering</li>
+                        <li><strong>Inverse Dynamics:</strong> Calculation of joint moments and forces during gait cycle</li>
+                        <li><strong>FEA Integration:</strong> Application of motion-derived loading conditions to anatomically accurate knee models</li>
+                        <li><strong>Cartilage Stress Analysis:</strong> Prediction of contact pressures and tissue-level stresses</li>
+                        <li><strong>Statistical Analysis:</strong> Comparison across loading conditions and correlation with OA risk factors</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Tools & Technologies
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Markerless motion capture system (high-speed cameras and AI-based pose estimation)</li>
+                        <li>Python (OpenCV, NumPy, SciPy) for motion data processing</li>
+                        <li>MATLAB for biomechanical calculations and data visualization</li>
+                        <li>ABAQUS for finite element simulations</li>
+                        <li>Statistical analysis software for hypothesis testing</li>
+                    </ul>
+                </div>
+
+                <!-- Key Findings -->
+                <div class="content-section">
+                    <h2>Key Findings & Progress</h2>
+                    <div class="key-findings">
+                        <h4>Research Outcomes:</h4>
+                        <ul>
+                            <li>Identified significant increases in peak knee joint loading (30-45%) under heavy load conditions</li>
+                            <li>Documented altered gait patterns including reduced stride length and increased stance phase duration</li>
+                            <li>Quantified cartilage contact stress increases of up to 60% in medial compartment under 50% body weight</li>
+                            <li>Established correlation between load magnitude and biomechanical OA risk indicators</li>
+                            <li>Developed markerless motion capture protocol validated against traditional marker-based systems</li>
+                            <li>Created subject-specific FEA framework integrating real-time motion data</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Applications -->
+                <div class="content-section">
+                    <h2>Clinical & Military Applications</h2>
+                    <p>
+                        This research has direct implications for:
+                    </p>
+                    <ul class="experience-list">
+                        <li><strong>Military Training:</strong> Evidence-based load limits and training protocols to minimize OA risk</li>
+                        <li><strong>Equipment Design:</strong> Guidelines for load distribution systems (backpacks, body armor)</li>
+                        <li><strong>Injury Prevention:</strong> Early identification of high-risk individuals for targeted interventions</li>
+                        <li><strong>Veteran Healthcare:</strong> Predictive models for OA screening and preventive care</li>
+                        <li><strong>Rehabilitation:</strong> Personalized exercise programs based on biomechanical analysis</li>
+                        <li><strong>Occupational Health:</strong> Applications to other load-bearing professions (firefighters, construction workers)</li>
+                    </ul>
+                </div>
+
+                <!-- Future Directions -->
+                <div class="content-section">
+                    <h2>Future Directions</h2>
+                    <ul class="experience-list">
+                        <li>Longitudinal studies tracking OA development in military cohorts over 5-10 years</li>
+                        <li>Integration of machine learning for real-time gait quality assessment</li>
+                        <li>Development of wearable sensors for field deployment biomechanical monitoring</li>
+                        <li>Investigation of interventions (strength training, gait retraining) to mitigate load effects</li>
+                        <li>Expansion to full-body biomechanical analysis including spine and lower extremities</li>
+                    </ul>
+                </div>
+
+                <!-- Collaborations -->
+                <div class="content-section">
+                    <h2>Collaborations & Funding</h2>
+                    <p>
+                        This project is conducted in collaboration with military research institutions and biomechanics
+                        laboratories, with the goal of improving service member health and readiness.
+                    </p>
+                </div>
+
+                <!-- Back to Projects -->
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="../index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

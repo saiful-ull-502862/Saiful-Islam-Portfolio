@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Bioprinter for Surgery | Md Saiful Islam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail { padding-top: calc(var(--header-height) + var(--spacing-2xl)); padding-bottom: var(--spacing-3xl); }
+        .project-header { text-align: center; margin-bottom: var(--spacing-3xl); }
+        .project-header h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
+        .project-meta { display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap; margin-bottom: var(--spacing-lg); color: var(--text-secondary); }
+        .project-meta-item { display: flex; align-items: center; gap: var(--spacing-sm); }
+        .project-content { max-width: 900px; margin: 0 auto; }
+        .content-section { margin-bottom: var(--spacing-3xl); }
+        .content-section h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-sm); border-bottom: 2px solid var(--border-color); }
+        .key-findings { background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
+        .key-findings ul { margin-top: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-md); }
+        .key-findings li { padding-left: var(--spacing-lg); position: relative; color: var(--text-secondary); }
+        .key-findings li::before { content: ''; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; font-size: 1.25rem; }
+        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-sm); color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-2xl); }
+        .back-link:hover { gap: var(--spacing-md); }
+        .highlight-box { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); padding: var(--spacing-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color); margin: var(--spacing-xl) 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <div class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+
+            <div class="project-header">
+                <h1>Compatible Bio-printing System for Surgery</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>2022 - 2023</span></div>
+                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>4MLAB, UL Lafayette</span></div>
+                    <div class="project-meta-item"><i class="fas fa-dollar-sign"></i><span>Budget: $1,000</span></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#3D Printing</span>
+                    <span class="tag">#CFD</span>
+                    <span class="tag">#Bioengineering</span>
+                    <span class="tag">#Tissue Engineering</span>
+                    <span class="tag">#Innovation</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This innovative project successfully converted a standard FDM 3D printer into a functional
+                        bioprinter for PCL-based hydrogel printing under a strict $1,000 budget constraint. Through
+                        computational fluid dynamics (CFD) optimization of the extrusion system, we achieved 100%
+                        cell viability during direct-ink printing, making bioprinting technology accessible for
+                        academic laboratories with limited resources.
+                    </p>
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-lightbulb"></i> Innovation</h4>
+                        <p>
+                            Democratizing bioprinting technology through cost-effective conversion while maintaining
+                            clinical-grade cell viability through computational optimization of printing parameters.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Project Objectives</h2>
+                    <ul class="experience-list">
+                        <li>Convert standard FDM printer to bioprinter within $1,000 budget</li>
+                        <li>Design and optimize extrusion system for hydrogel bioinks</li>
+                        <li>Achieve >95% cell viability during printing process</li>
+                        <li>Enable PCL-based scaffold fabrication for surgical applications</li>
+                        <li>Validate system performance through experimental testing</li>
+                        <li>Create reproducible protocol for other research laboratories</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                        Hardware Modifications
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>Base Platform:</strong> Commercial FDM 3D printer with motion control system</li>
+                        <li><strong>Extrusion System:</strong> Custom pneumatic dispensing system for hydrogels</li>
+                        <li><strong>Temperature Control:</strong> Heated print bed and nozzle for PCL processing</li>
+                        <li><strong>Sterile Environment:</strong> UV sterilization and HEPA filtration integration</li>
+                        <li><strong>Pressure Control:</strong> Precision pneumatic regulator for consistent extrusion</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        CFD Optimization
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>Nozzle Design:</strong> Computational modeling of flow through custom nozzle geometries</li>
+                        <li><strong>Shear Stress Analysis:</strong> Minimizing mechanical stress on cells during extrusion</li>
+                        <li><strong>Pressure Distribution:</strong> Optimizing print head geometry for uniform bioink flow</li>
+                        <li><strong>Parameter Sweep:</strong> Exploring extrusion pressure, nozzle diameter, and print speed</li>
+                        <li><strong>Software:</strong> ANSYS Fluent for CFD simulations</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Experimental Validation
+                    </h3>
+                    <ul class="experience-list">
+                        <li>PCL/gelatin hydrogel formulation and rheological characterization</li>
+                        <li>Cell encapsulation (fibroblasts, chondrocytes) in bioink</li>
+                        <li>Live/dead assays for cell viability assessment</li>
+                        <li>Scaffold printing and mechanical testing</li>
+                        <li>Long-term cell culture studies on printed constructs</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Key Achievements</h2>
+                    <div class="key-findings">
+                        <h4>Project Outcomes:</h4>
+                        <ul>
+                            <li>Successfully converted FDM printer to bioprinter for under $1,000</li>
+                            <li>Achieved 100% cell viability during direct-ink extrusion</li>
+                            <li>Optimized nozzle geometry reducing shear stress by 60%</li>
+                            <li>Demonstrated successful PCL scaffold fabrication for cartilage repair</li>
+                            <li>Maintained cell functionality and proliferation post-printing</li>
+                            <li>Created open-source documentation for replication by other labs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Applications</h2>
+                    <ul class="experience-list">
+                        <li><strong>Tissue Engineering:</strong> Fabrication of patient-specific tissue scaffolds</li>
+                        <li><strong>Surgical Planning:</strong> Creating anatomical models with integrated bioinks</li>
+                        <li><strong>Drug Testing:</strong> 3D tissue models for pharmaceutical screening</li>
+                        <li><strong>Wound Healing:</strong> Direct bioprinting of skin grafts</li>
+                        <li><strong>Cartilage Repair:</strong> PCL/cell scaffolds for joint resurfacing</li>
+                        <li><strong>Education:</strong> Hands-on bioprinting for bioengineering curriculum</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Publications</h2>
+                    <div class="publication-item">
+                        <div class="pub-header">
+                            <span class="pub-status published">Published</span>
+                            <span class="pub-year">2025</span>
+                        </div>
+                        <p class="pub-authors">
+                            Dang, Y.H., Dauzat, E., Istiak, A., Jackson, K., Songe, V., West, L., Kayes, M.I.,
+                            <strong>Islam, M.S.</strong>, and Faisal, T.R.
+                        </p>
+                        <p class="pub-title">
+                            Conversion of an FDM printer to direct ink write 3D bioprinter utilizing an efficient and
+                            cost-effective extrusion system
+                        </p>
+                        <p class="pub-journal">
+                            <em>Annals of 3D Printed Medicine</em>, 100212
+                        </p>
+                        <a href="https://www.sciencedirect.com/science/article/pii/S2666964124000638" class="pub-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Publication
+                        </a>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Impact & Future Directions</h2>
+                    <p>
+                        This project demonstrates that advanced bioprinting capabilities are achievable within limited
+                        budgets, making the technology accessible to educational institutions and research labs worldwide.
+                    </p>
+                    <ul class="experience-list">
+                        <li>Clinical translation for in-surgery bioprinting applications</li>
+                        <li>Multi-material printing for complex tissue constructs</li>
+                        <li>Integration with imaging systems for patient-specific scaffolds</li>
+                        <li>Commercialization as affordable bioprinting solution</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="../index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2025 Md Saiful Islam. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
