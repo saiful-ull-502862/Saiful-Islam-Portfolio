@@ -840,8 +840,8 @@ code {
 
 /* When profile image exists */
 .hero-image img {
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 550px;
     object-fit: contain;
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-xl);
@@ -852,15 +852,89 @@ code {
 /* Profile container and canvas */
 .profile-container {
     position: relative;
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 550px;
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Animated gradient border effect */
+.profile-container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg,
+        var(--primary-color),
+        var(--secondary-color),
+        var(--accent-purple),
+        var(--accent-color),
+        var(--primary-color));
+    background-size: 400% 400%;
+    border-radius: var(--radius-xl);
+    z-index: -1;
+    animation: gradientRotate 8s ease infinite;
+    opacity: 0.7;
+    filter: blur(10px);
+}
+
+/* Gradient animation */
+@keyframes gradientRotate {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glow effect on hover */
+.profile-container:hover {
+    animation: float 6s ease-in-out infinite, pulse-glow 2s ease-in-out infinite;
+}
+
+.profile-container:hover::before {
+    opacity: 1;
+    filter: blur(15px);
+}
+
+/* Pulse glow animation */
+@keyframes pulse-glow {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+        filter: drop-shadow(0 0 20px rgba(79, 70, 229, 0.3));
+    }
+    50% {
+        transform: translateY(-20px) scale(1.02);
+        filter: drop-shadow(0 0 40px rgba(79, 70, 229, 0.6));
+    }
 }
 
 #profileCanvas {
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 550px;
     display: block;
     background: transparent;
+    transition: transform var(--transition-base);
+}
+
+/* Add subtle rotation on hover */
+.profile-container:hover #profileCanvas {
+    transform: scale(1.02) rotate(2deg);
 }
 
 .scroll-down {
@@ -1754,8 +1828,14 @@ code {
 
     .image-placeholder,
     .hero-image img {
-        width: 350px;
-        height: 350px;
+        width: 400px;
+        height: 400px;
+    }
+
+    .profile-container,
+    #profileCanvas {
+        width: 400px;
+        height: 400px;
     }
 
     .contact-container {
