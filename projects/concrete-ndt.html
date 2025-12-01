@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaky Rayleigh Wave for Concrete NDT | Md Saiful Islam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail { padding-top: calc(var(--header-height) + var(--spacing-2xl)); padding-bottom: var(--spacing-3xl); }
+        .project-header { text-align: center; margin-bottom: var(--spacing-3xl); }
+        .project-header h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
+        .project-meta { display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap; margin-bottom: var(--spacing-lg); color: var(--text-secondary); }
+        .project-meta-item { display: flex; align-items: center; gap: var(--spacing-sm); }
+        .project-content { max-width: 900px; margin: 0 auto; }
+        .content-section { margin-bottom: var(--spacing-3xl); }
+        .content-section h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-sm); border-bottom: 2px solid var(--border-color); }
+        .key-findings { background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
+        .key-findings ul { margin-top: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-md); }
+        .key-findings li { padding-left: var(--spacing-lg); position: relative; color: var(--text-secondary); }
+        .key-findings li::before { content: ''; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; font-size: 1.25rem; }
+        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-sm); color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-2xl); }
+        .back-link:hover { gap: var(--spacing-md); }
+        .highlight-box { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); padding: var(--spacing-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color); margin: var(--spacing-xl) 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <div class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+
+            <div class="project-header">
+                <h1>Leaky Rayleigh Wave Modeling for Early-Age Concrete</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>January 2024 - August 2024</span></div>
+                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>Tran's Lab, Michigan Tech</span></div>
+                    <div class="project-meta-item"><i class="fas fa-user-tie"></i><span>Dr. Quang Tran</span></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#FEA</span>
+                    <span class="tag">#NDT</span>
+                    <span class="tag">#Multiphysics</span>
+                    <span class="tag">#Civil Engineering</span>
+                    <span class="tag">#Ultrasonics</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This research develops innovative non-contact ultrasonic techniques using air-coupled leaky
+                        Rayleigh waves for assessing early-stage concrete properties. By integrating finite element
+                        simulations with experimental validation, we enable real-time monitoring of concrete curing
+                        and strength development without physical contact, addressing a critical need in construction
+                        quality control.
+                    </p>
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-wave-square"></i> Non-Destructive Innovation</h4>
+                        <p>
+                            Air-coupled ultrasonics eliminate the need for physical coupling agents, enabling continuous
+                            monitoring of concrete from initial pour through final cure without interfering with the
+                            hydration process.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Research Objectives</h2>
+                    <ul class="experience-list">
+                        <li>Develop air-coupled finite element model for leaky Rayleigh wave propagation</li>
+                        <li>Characterize wave behavior in early-age concrete (0-72 hours)</li>
+                        <li>Correlate wave parameters with concrete mechanical properties</li>
+                        <li>Validate computational predictions against experimental measurements</li>
+                        <li>Create predictive models for strength development monitoring</li>
+                        <li>Contribute to NSF proposal on multiphysics modeling of concrete evolution</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                        Computational Modeling
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>Multiphysics FEA:</strong> Coupled acoustic-structural simulations in COMSOL/ABAQUS</li>
+                        <li><strong>Domain:</strong> Air-concrete interface with absorbing boundaries</li>
+                        <li><strong>Wave Generation:</strong> Piezoelectric transducer modeling for ultrasonic excitation</li>
+                        <li><strong>Material Evolution:</strong> Time-dependent properties modeling cement hydration</li>
+                        <li><strong>Parameter Studies:</strong> Frequency, angle, and mix design variations</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Experimental Setup
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Air-coupled ultrasonic transducers (100-500 kHz range)</li>
+                        <li>Automated data acquisition for continuous monitoring</li>
+                        <li>Standard concrete samples with varied mix designs</li>
+                        <li>Parallel mechanical testing (compression, elastic modulus) for correlation</li>
+                        <li>Environmental control (temperature, humidity) during curing</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Data Analysis
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Signal processing for wave velocity and attenuation extraction</li>
+                        <li>Dispersion curve analysis for depth-dependent property assessment</li>
+                        <li>Statistical modeling correlating NDT measurements with strength</li>
+                        <li>Machine learning for predictive strength assessment</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Key Findings</h2>
+                    <div class="key-findings">
+                        <h4>Research Outcomes:</h4>
+                        <ul>
+                            <li>Successfully modeled leaky Rayleigh wave propagation in air-concrete system</li>
+                            <li>Demonstrated strong correlation (R² > 0.85) between wave velocity and compressive strength</li>
+                            <li>Identified optimal frequency range (200-300 kHz) for early-age monitoring</li>
+                            <li>Validated FEA predictions against experimental data within 10% error</li>
+                            <li>Developed calibration curves for different concrete mix designs</li>
+                            <li>Contributed to NSF proposal on multiphysics modeling of concrete</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Applications & Impact</h2>
+                    <ul class="experience-list">
+                        <li><strong>Construction Quality Control:</strong> Real-time monitoring of concrete strength development</li>
+                        <li><strong>Formwork Removal:</strong> Objective criteria for safe stripping time determination</li>
+                        <li><strong>Cold Weather Concreting:</strong> Monitoring hydration in challenging conditions</li>
+                        <li><strong>Defect Detection:</strong> Early identification of curing anomalies or segregation</li>
+                        <li><strong>Research & Development:</strong> Rapid assessment of novel concrete formulations</li>
+                        <li><strong>Infrastructure Safety:</strong> Non-invasive evaluation without damaging structure</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Technical Innovations</h2>
+                    <ul class="experience-list">
+                        <li>Air-coupled FEA framework for acoustic-structural interaction</li>
+                        <li>Time-dependent material models capturing concrete curing kinetics</li>
+                        <li>Automated signal processing pipeline for continuous monitoring</li>
+                        <li>Calibration methodology adaptable to various mix designs</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>NSF Proposal Contribution</h2>
+                    <p>
+                        This research contributed to an NSF proposal on "Multiphysics Modeling of Early-Age Concrete
+                        Evolution Using Non-Contact Sensing," addressing critical knowledge gaps in understanding and
+                        predicting concrete performance during the critical early curing period.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h2>Future Directions</h2>
+                    <ul class="experience-list">
+                        <li>Extension to in-situ field deployment on construction sites</li>
+                        <li>Development of portable, wireless monitoring systems</li>
+                        <li>Integration with Building Information Modeling (BIM) platforms</li>
+                        <li>Application to other cementitious materials (shotcrete, repair mortars)</li>
+                        <li>AI-enhanced interpretation for automated quality assessment</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="../index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2025 Md Saiful Islam. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

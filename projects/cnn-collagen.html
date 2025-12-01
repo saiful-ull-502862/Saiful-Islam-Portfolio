@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNN-based Collagen Quantification | Md Saiful Islam</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-detail { padding-top: calc(var(--header-height) + var(--spacing-2xl)); padding-bottom: var(--spacing-3xl); }
+        .project-header { text-align: center; margin-bottom: var(--spacing-3xl); }
+        .project-header h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
+        .project-meta { display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap; margin-bottom: var(--spacing-lg); color: var(--text-secondary); }
+        .project-meta-item { display: flex; align-items: center; gap: var(--spacing-sm); }
+        .project-content { max-width: 900px; margin: 0 auto; }
+        .content-section { margin-bottom: var(--spacing-3xl); }
+        .content-section h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-sm); border-bottom: 2px solid var(--border-color); }
+        .key-findings { background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
+        .key-findings ul { margin-top: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-md); }
+        .key-findings li { padding-left: var(--spacing-lg); position: relative; color: var(--text-secondary); }
+        .key-findings li::before { content: ''; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; font-size: 1.25rem; }
+        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-sm); color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-2xl); }
+        .back-link:hover { gap: var(--spacing-md); }
+        .highlight-box { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); padding: var(--spacing-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color); margin: var(--spacing-xl) 0; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <div class="project-detail">
+        <div class="container">
+            <a href="../index.html#projects" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+
+            <div class="project-header">
+                <h1>CNN-based Collagen Quantification in Cartilage</h1>
+                <div class="project-meta">
+                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>2023 - 2024</span></div>
+                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>4MLAB, UL Lafayette</span></div>
+                    <div class="project-meta-item"><i class="fas fa-user-tie"></i><span>Dr. Tanvir Faisal</span></div>
+                </div>
+                <div class="tags">
+                    <span class="tag">#AI</span>
+                    <span class="tag">#CNN</span>
+                    <span class="tag">#Python</span>
+                    <span class="tag">#Image Analysis</span>
+                    <span class="tag">#Deep Learning</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <div class="content-section">
+                    <h2>Project Overview</h2>
+                    <p>
+                        This project develops an AI-driven approach for automated quantification of collagen content in
+                        articular cartilage using convolutional neural networks (CNN). By analyzing histological images,
+                        the system provides rapid, objective assessment of tissue composition that traditionally requires
+                        time-consuming manual analysis or expensive spectroscopic techniques.
+                    </p>
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-brain"></i> AI Innovation</h4>
+                        <p>
+                            Leveraging transfer learning and modified pre-trained CNN architectures to achieve high-accuracy
+                            collagen quantification from standard histological staining, validated against gold-standard
+                            FTIR spectroscopy measurements.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Research Objectives</h2>
+                    <ul class="experience-list">
+                        <li>Develop automated CNN-based pipeline for collagen quantification from histological images</li>
+                        <li>Validate predictions against FTIR spectroscopy reference measurements</li>
+                        <li>Enable high-throughput analysis for large-scale tissue studies</li>
+                        <li>Provide zone-specific collagen distribution mapping in cartilage samples</li>
+                        <li>Create accessible tool for researchers without spectroscopy equipment</li>
+                        <li>Correlate collagen content with biomechanical properties and OA severity</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Methodology</h2>
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                        Dataset Preparation
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Histological imaging of cartilage samples with standard H&E and picrosirius red staining</li>
+                        <li>FTIR spectroscopy measurements for ground-truth collagen quantification</li>
+                        <li>Image preprocessing (normalization, augmentation, region extraction)</li>
+                        <li>Dataset split: 70% training, 15% validation, 15% testing</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        CNN Architecture
+                    </h3>
+                    <ul class="experience-list">
+                        <li><strong>Base Model:</strong> Modified ResNet50/VGG16 with transfer learning from ImageNet</li>
+                        <li><strong>Custom Layers:</strong> Regression head for collagen percentage prediction</li>
+                        <li><strong>Optimization:</strong> Adam optimizer with learning rate scheduling</li>
+                        <li><strong>Regularization:</strong> Dropout, batch normalization, data augmentation</li>
+                        <li><strong>Loss Function:</strong> Mean squared error (MSE) for regression task</li>
+                    </ul>
+
+                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
+                        Implementation Stack
+                    </h3>
+                    <ul class="experience-list">
+                        <li>Python (TensorFlow/Keras or PyTorch) for deep learning</li>
+                        <li>OpenCV for image processing and analysis</li>
+                        <li>NumPy/Pandas for data manipulation</li>
+                        <li>Scikit-learn for evaluation metrics and statistical analysis</li>
+                        <li>Matplotlib/Seaborn for visualization and heatmap generation</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Key Findings</h2>
+                    <div class="key-findings">
+                        <h4>Research Outcomes:</h4>
+                        <ul>
+                            <li>Achieved R² > 0.90 correlation with FTIR spectroscopy measurements</li>
+                            <li>Reduced analysis time from hours to seconds per sample</li>
+                            <li>Demonstrated superior performance over traditional image analysis methods</li>
+                            <li>Successfully mapped zone-specific collagen distribution across cartilage depth</li>
+                            <li>Identified collagen depletion patterns characteristic of early OA</li>
+                            <li>Validated model generalization on independent sample cohort</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2>Applications & Impact</h2>
+                    <ul class="experience-list">
+                        <li><strong>Research Acceleration:</strong> High-throughput analysis for large tissue biobanks</li>
+                        <li><strong>Clinical Diagnostics:</strong> Quantitative OA grading from biopsy samples</li>
+                        <li><strong>Drug Development:</strong> Efficient evaluation of therapeutic interventions on tissue composition</li>
+                        <li><strong>Quality Control:</strong> Assessment of tissue-engineered cartilage products</li>
+                        <li><strong>Accessibility:</strong> Enables collagen quantification without expensive FTIR equipment</li>
+                        <li><strong>Standardization:</strong> Objective, reproducible measurements reducing inter-observer variability</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Technical Contributions</h2>
+                    <ul class="experience-list">
+                        <li>Pre-trained model weights and architecture for cartilage collagen analysis</li>
+                        <li>Annotated dataset of histological images with FTIR-validated collagen measurements</li>
+                        <li>Python package for end-to-end analysis pipeline</li>
+                        <li>Guidelines for optimal histological preparation and imaging protocols</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h2>Future Directions</h2>
+                    <ul class="experience-list">
+                        <li>Extension to multi-component analysis (proteoglycans, water content)</li>
+                        <li>Real-time analysis integration with digital pathology systems</li>
+                        <li>Expansion to other connective tissues (tendon, ligament, meniscus)</li>
+                        <li>Development of explainable AI techniques for understanding model decisions</li>
+                        <li>Web-based platform for collaborative tissue analysis</li>
+                    </ul>
+                </div>
+
+                <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                    <a href="../index.html#projects" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i> Back to All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom"><p>&copy; 2025 Md Saiful Islam. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
