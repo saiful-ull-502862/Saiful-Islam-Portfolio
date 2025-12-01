@@ -714,9 +714,34 @@ code {
     justify-content: center;
     position: relative;
     padding-top: 0;
-    /* Remove padding top to let background fill */
     overflow: hidden;
-    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 55%, #111111 55.1%, #111111 100%);
+    background-color: #E0E0E0;
+    /* Base grey color */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+    /* Cover right side */
+    background-color: #111111;
+    clip-path: ellipse(100% 100% at 70% 50%);
+    /* Create the curve */
+    z-index: 0;
+}
+
+/* Mobile adjustment for curve */
+@media (max-width: 992px) {
+    .hero::before {
+        width: 100%;
+        height: 50%;
+        top: auto;
+        bottom: 0;
+        clip-path: ellipse(140% 100% at 50% 100%);
+    }
 }
 
 .hero-background {
