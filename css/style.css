@@ -2950,3 +2950,153 @@ html {
 .section-title {
     color: var(--text-primary);
 }
+
+/* Highlights Redesign */
+.highlights-wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Project Slider */
+.project-slider-container {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.project-slider {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    margin-top: 1rem;
+}
+
+.project-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.slide-placeholder {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+}
+
+.slide-caption {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.slider-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background: var(--text-tertiary);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.indicator.active {
+    background: var(--primary-color);
+}
+
+/* Quick Summary */
+.quick-summary {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.summary-item {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-primary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-md);
+}
+
+.summary-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.summary-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-details strong {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.summary-details span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.summary-details small {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .highlights-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

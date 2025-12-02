@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=37">
+    <link rel="stylesheet" href="css/style.css?v=38">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -170,41 +170,97 @@
             </section>
 
             <!-- Highlights Section -->
+            <!-- Highlights Section -->
             <section id="highlights" class="section section-alt">
                 <div class="container">
                     <h2 class="section-title">Highlights</h2>
-                    <div class="highlights-grid">
-                        <!-- Education Highlight -->
-                        <div class="highlight-card"
-                            onclick="document.getElementById('education').querySelector('.slider-main-title').click(); window.location.href='#education'">
-                            <div class="highlight-icon"><i class="fas fa-graduation-cap"></i></div>
-                            <h3>Ph.D. Candidate</h3>
-                            <p>University of Louisiana at Lafayette</p>
-                            <span class="highlight-link">View Education <i class="fas fa-arrow-right"></i></span>
+                    <div class="highlights-wrapper">
+                        <!-- Project Slider (Left) -->
+                        <div class="project-slider-container">
+                            <h3>Featured Projects</h3>
+                            <div class="project-slider" id="projectSlider">
+                                <!-- Slide 1 -->
+                                <div class="project-slide active">
+                                    <div class="slide-placeholder"
+                                        style="background: linear-gradient(45deg, #2c3e50, #3498db);">
+                                        <i class="fas fa-brain"></i>
+                                    </div>
+                                    <div class="slide-caption">
+                                        <h4>Soft Tissue Mechanics</h4>
+                                        <p>Constitutive modeling of articular cartilage using ABAQUS.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="project-slide">
+                                    <div class="slide-placeholder"
+                                        style="background: linear-gradient(45deg, #c0392b, #e74c3c);">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="slide-caption">
+                                        <h4>FEA Automation</h4>
+                                        <p>Python scripting for high-throughput simulation analysis.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="project-slide">
+                                    <div class="slide-placeholder"
+                                        style="background: linear-gradient(45deg, #27ae60, #2ecc71);">
+                                        <i class="fas fa-microscope"></i>
+                                    </div>
+                                    <div class="slide-caption">
+                                        <h4>Biomaterials</h4>
+                                        <p>Characterization of hydrogels for tissue engineering applications.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                            </div>
                         </div>
-                        <!-- Experience Highlight -->
-                        <div class="highlight-card"
-                            onclick="document.getElementById('experience').querySelector('.slider-main-title').click(); window.location.href='#experience'">
-                            <div class="highlight-icon"><i class="fas fa-briefcase"></i></div>
-                            <h3>Research Assistant</h3>
-                            <p>4MLAB @ ULL</p>
-                            <span class="highlight-link">View Experience <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                        <!-- Skills Highlight -->
-                        <div class="highlight-card"
-                            onclick="document.getElementById('skills').querySelector('.section-title').click(); window.location.href='#skills'">
-                            <div class="highlight-icon"><i class="fas fa-code"></i></div>
-                            <h3>Computational FEA</h3>
-                            <p>ABAQUS, Python, AI/ML</p>
-                            <span class="highlight-link">View Skills <i class="fas fa-arrow-right"></i></span>
-                        </div>
-                        <!-- Projects Highlight -->
-                        <div class="highlight-card"
-                            onclick="document.getElementById('projects').querySelector('.section-title').click(); window.location.href='#projects'">
-                            <div class="highlight-icon"><i class="fas fa-project-diagram"></i></div>
-                            <h3>Key Projects</h3>
-                            <p>Biomechanics & Modeling</p>
-                            <span class="highlight-link">View Projects <i class="fas fa-arrow-right"></i></span>
+
+                        <!-- Quick Summary (Right) -->
+                        <div class="quick-summary">
+                            <h3>At a Glance</h3>
+                            <div class="summary-list">
+                                <div class="summary-item"
+                                    onclick="document.getElementById('education').querySelector('.slider-main-title').click(); window.location.href='#education'">
+                                    <div class="summary-icon"><i class="fas fa-graduation-cap"></i></div>
+                                    <div class="summary-details">
+                                        <strong>Ph.D. Candidate</strong>
+                                        <span>University of Louisiana at Lafayette</span>
+                                        <small>Expected 2025</small>
+                                    </div>
+                                </div>
+                                <div class="summary-item"
+                                    onclick="document.getElementById('experience').querySelector('.slider-main-title').click(); window.location.href='#experience'">
+                                    <div class="summary-icon"><i class="fas fa-briefcase"></i></div>
+                                    <div class="summary-details">
+                                        <strong>Research Assistant</strong>
+                                        <span>4MLab @ ULL</span>
+                                        <small>Biomechanics & FEA</small>
+                                    </div>
+                                </div>
+                                <div class="summary-item"
+                                    onclick="document.getElementById('publications').querySelector('.section-title').click(); window.location.href='#publications'">
+                                    <div class="summary-icon"><i class="fas fa-book"></i></div>
+                                    <div class="summary-details">
+                                        <strong>Recent Publication</strong>
+                                        <span>J. Mech. Behav. Biomed. Mater.</span>
+                                        <small>2024</small>
+                                    </div>
+                                </div>
+                                <div class="summary-item"
+                                    onclick="document.getElementById('publications').querySelector('.section-title').click(); window.location.href='#publications'">
+                                    <div class="summary-icon"><i class="fas fa-users"></i></div>
+                                    <div class="summary-details">
+                                        <strong>Conference</strong>
+                                        <span>SB3C 2024</span>
+                                        <small>Wisconsin, USA</small>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1354,7 +1410,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="js/main.js?v=3"></script>
+    <script src="js/main.js?v=4"></script>
 </body>
 
 </html>

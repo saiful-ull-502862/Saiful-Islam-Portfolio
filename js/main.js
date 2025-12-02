@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initContactForm();
     initCollapsibleSections();
+    initProjectSlider();
     updateLastModified();
 
     // Wrap potentially problematic functions in try-catch
@@ -682,8 +683,48 @@ window.portfolioFunctions = {
     initScrollAnimations,
     updateActiveNavLink,
     initExperienceSlider,
-    initCollapsibleSections
+    initCollapsibleSections,
+    initProjectSlider
 };
+
+// ===========================
+// Project Slider (Highlights)
+// ===========================
+function initProjectSlider() {
+    const slides = document.querySelectorAll('.project-slide');
+    const indicators = document.querySelectorAll('.indicator');
+
+    if (slides.length === 0) return;
+
+    let currentSlide = 0;
+    const slideInterval = 5000; // 5 seconds
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        indicators.forEach(ind => ind.classList.remove('active'));
+
+        slides[index].classList.add('active');
+        if (indicators[index]) indicators[index].classList.add('active');
+        currentSlide = index;
+    }
+
+    function nextSlide() {
+        let next = (currentSlide + 1) % slides.length;
+        showSlide(next);
+    }
+
+    // Auto play
+    let slideTimer = setInterval(nextSlide, slideInterval);
+
+    // Manual controls (indicators)
+    indicators.forEach((ind, index) => {
+        ind.addEventListener('click', () => {
+            clearInterval(slideTimer);
+            showSlide(index);
+            slideTimer = setInterval(nextSlide, slideInterval);
+        });
+    });
+}
 
 // ===========================
 // Collapsible Sections (Accordion)
