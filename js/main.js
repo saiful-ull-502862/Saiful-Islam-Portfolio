@@ -76,43 +76,9 @@ function updateThemeIcon(theme) {
 // Navigation
 // ===========================
 function initNavigation() {
-    const navbar = document.getElementById('navbar');
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    // Navbar scroll effect
+    // Update active nav link based on scroll position
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-
-        // Update active nav link based on scroll position
         updateActiveNavLink();
-    });
-
-    // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu when clicking a link
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!navbar.contains(e.target) && navMenu.classList.contains('active')) {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
     });
 
     // Smooth scrolling for anchor links
@@ -130,9 +96,9 @@ function initNavigation() {
 
             if (target) {
                 e.preventDefault();
-                const headerOffset = 70;
+                // No header offset needed for sidebar layout, but maybe some padding
                 const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                const offsetPosition = elementPosition + window.pageYOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
