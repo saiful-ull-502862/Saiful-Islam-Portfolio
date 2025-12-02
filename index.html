@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=10">
+    <link rel="stylesheet" href="css/style.css?v=11">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -256,83 +256,53 @@
         </div>
     </section>
 
-    <!-- Experience & Studies Section -->
-    <section id="experience-studies" class="section p-0">
-        <div class="exp-header-bg">
+    <!-- Education Section -->
+    <section id="education" class="section p-0">
+        <div class="slider-header-bg">
             <div class="container">
-                <div class="exp-header-content">
-                    <h2 class="exp-main-title">EXPERIENCE<br>& STUDIES</h2>
-                    <div class="exp-controls">
-                        <button id="expPrev" class="exp-nav-btn" aria-label="Previous"><i
+                <div class="slider-header-content">
+                    <h2 class="slider-main-title">EDUCATION</h2>
+                    <div class="slider-controls">
+                        <button class="slider-nav-btn prev-btn" data-target="education-slider" aria-label="Previous"><i
                                 class="fas fa-arrow-left"></i></button>
-                        <button id="expNext" class="exp-nav-btn" aria-label="Next"><i
+                        <button class="slider-nav-btn next-btn" data-target="education-slider" aria-label="Next"><i
                                 class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container exp-body">
+        <div class="container slider-body" id="education-slider">
             <!-- Slider Track -->
-            <div class="exp-slider-wrapper">
-                <div class="exp-track" id="expTrack">
+            <div class="slider-wrapper">
+                <div class="slider-track">
                     <!-- Item 1: PhD -->
-                    <div class="exp-card active" data-index="0">
-                        <span class="exp-period">2021 - 2027 (Exp)</span>
-                        <h3 class="exp-card-title">Ph.D. Candidate</h3>
-                        <span class="exp-label education">EDUCATION</span>
+                    <div class="slider-card active" data-index="0">
+                        <span class="card-period">2021 - 2027 (Exp)</span>
+                        <h3 class="card-title">Ph.D. Candidate</h3>
+                        <span class="card-label">ULL</span>
                     </div>
-                    <!-- Item 2: GRA -->
-                    <div class="exp-card" data-index="1">
-                        <span class="exp-period">2021 - Present</span>
-                        <h3 class="exp-card-title">Graduate Research Assistant</h3>
-                        <span class="exp-label experience">EXPERIENCE</span>
+                    <!-- Item 2: MSc -->
+                    <div class="slider-card" data-index="1">
+                        <span class="card-period">2021 - 2023</span>
+                        <h3 class="card-title">M.Sc. Mechanical Eng.</h3>
+                        <span class="card-label">ULL</span>
                     </div>
-                    <!-- Item 3: GTA -->
-                    <div class="exp-card" data-index="2">
-                        <span class="exp-period">2021 - Present</span>
-                        <h3 class="exp-card-title">Graduate Teaching Assistant</h3>
-                        <span class="exp-label experience">EXPERIENCE</span>
-                    </div>
-                    <!-- Item 4: Tech Intern -->
-                    <div class="exp-card" data-index="3">
-                        <span class="exp-period">Summer 2025</span>
-                        <h3 class="exp-card-title">Tech Intern</h3>
-                        <span class="exp-label experience">EXPERIENCE</span>
-                    </div>
-                    <!-- Item 5: RA (Tran's Lab) -->
-                    <div class="exp-card" data-index="4">
-                        <span class="exp-period">Jan 2024 - Aug 2024</span>
-                        <h3 class="exp-card-title">Research Assistant</h3>
-                        <span class="exp-label experience">EXPERIENCE</span>
-                    </div>
-                    <!-- Item 6: MSc -->
-                    <div class="exp-card" data-index="5">
-                        <span class="exp-period">2021 - 2023</span>
-                        <h3 class="exp-card-title">M.Sc. Mechanical Eng.</h3>
-                        <span class="exp-label education">EDUCATION</span>
-                    </div>
-                    <!-- Item 7: Service Engineer -->
-                    <div class="exp-card" data-index="6">
-                        <span class="exp-period">2019 - 2021</span>
-                        <h3 class="exp-card-title">Service Engineer</h3>
-                        <span class="exp-label experience">EXPERIENCE</span>
-                    </div>
-                    <!-- Item 8: BSc -->
-                    <div class="exp-card" data-index="7">
-                        <span class="exp-period">2013 - 2017</span>
-                        <h3 class="exp-card-title">B.Sc. Mechanical Eng.</h3>
-                        <span class="exp-label education">EDUCATION</span>
+                    <!-- Item 3: BSc -->
+                    <div class="slider-card" data-index="2">
+                        <span class="card-period">2013 - 2017</span>
+                        <h3 class="card-title">B.Sc. Mechanical Eng.</h3>
+                        <span class="card-label">IUT</span>
                     </div>
                 </div>
             </div>
 
             <!-- Details View -->
-            <div class="exp-details-container" id="expDetails">
+            <div class="slider-details-container">
                 <!-- Detail 1: PhD -->
-                <div class="exp-detail-item active" data-index="0">
+                <div class="detail-item active" data-index="0">
                     <h3 class="detail-role">Doctor of Philosophy (Ph.D.) in System Engineering</h3>
-                    <h4 class="detail-org">University of Louisiana at Lafayette (ULL)</h4>
+                    <h4 class="detail-org">University of Louisiana at Lafayette (ULL), R1 Institution</h4>
                     <p class="detail-desc">
                         <strong>GPA:</strong> 3.90/4.0<br>
                         <strong>Thesis:</strong> Developing a multi-scale finite element framework integrating
@@ -346,10 +316,97 @@
                         <span>Medical Device</span>
                     </div>
                 </div>
-                <!-- Detail 2: GRA -->
-                <div class="exp-detail-item" data-index="1">
+                <!-- Detail 2: MSc -->
+                <div class="detail-item" data-index="1">
+                    <h3 class="detail-role">Master of Science (M.Sc.) in Mechanical Engineering</h3>
+                    <h4 class="detail-org">University of Louisiana at Lafayette (ULL), R1 Institution</h4>
+                    <p class="detail-desc">
+                        <strong>GPA:</strong> 3.87/4.0<br>
+                        <strong>Thesis:</strong> Multi-structural fibril-reinforced poro-hyperelastic (MSFPH) finite
+                        element modeling approach for advanced understanding of articular cartilage pathomechanics.
+                    </p>
+                    <div class="detail-tags">
+                        <span>Computational Modeling</span>
+                        <span>Bioengineering</span>
+                    </div>
+                </div>
+                <!-- Detail 3: BSc -->
+                <div class="detail-item" data-index="2">
+                    <h3 class="detail-role">Bachelor of Science (B.Sc.) in Mechanical Engineering</h3>
+                    <h4 class="detail-org">Islamic University of Technology (IUT)</h4>
+                    <div class="detail-tags">
+                        <span>OIC Scholarship</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section p-0 section-alt">
+        <div class="slider-header-bg">
+            <div class="container">
+                <div class="slider-header-content">
+                    <h2 class="slider-main-title">EXPERIENCE</h2>
+                    <div class="slider-controls">
+                        <button class="slider-nav-btn prev-btn" data-target="experience-slider" aria-label="Previous"><i
+                                class="fas fa-arrow-left"></i></button>
+                        <button class="slider-nav-btn next-btn" data-target="experience-slider" aria-label="Next"><i
+                                class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container slider-body" id="experience-slider">
+            <!-- Slider Track -->
+            <div class="slider-wrapper">
+                <div class="slider-track">
+                    <!-- Item 1: GRA -->
+                    <div class="slider-card active" data-index="0">
+                        <span class="card-period">2021 - Present</span>
+                        <h3 class="card-title">Graduate Research Assistant</h3>
+                        <span class="card-label">4MLAB</span>
+                    </div>
+                    <!-- Item 2: GTA -->
+                    <div class="slider-card" data-index="1">
+                        <span class="card-period">2021 - Present</span>
+                        <h3 class="card-title">Graduate Teaching Assistant</h3>
+                        <span class="card-label">ULL</span>
+                    </div>
+                    <!-- Item 3: Tech Intern -->
+                    <div class="slider-card" data-index="2">
+                        <span class="card-period">Summer 2025</span>
+                        <h3 class="card-title">Tech Intern</h3>
+                        <span class="card-label">Opportunity Machine</span>
+                    </div>
+                    <!-- Item 4: RA -->
+                    <div class="slider-card" data-index="3">
+                        <span class="card-period">Jan 2024 - Aug 2024</span>
+                        <h3 class="card-title">Research Assistant</h3>
+                        <span class="card-label">Tran's Lab</span>
+                    </div>
+                    <!-- Item 5: Service Engineer -->
+                    <div class="slider-card" data-index="4">
+                        <span class="card-period">2019 - 2021</span>
+                        <h3 class="card-title">Service Engineer</h3>
+                        <span class="card-label">AUDI AG</span>
+                    </div>
+                    <!-- Item 6: Intern Engineer -->
+                    <div class="slider-card" data-index="5">
+                        <span class="card-period">2016</span>
+                        <h3 class="card-title">Intern Engineer</h3>
+                        <span class="card-label">Walton Hi-Tech</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Details View -->
+            <div class="slider-details-container">
+                <!-- Detail 1: GRA -->
+                <div class="detail-item active" data-index="0">
                     <h3 class="detail-role">Graduate Research Assistant (GRA)</h3>
-                    <h4 class="detail-org">4MLAB | UL Lafayette</h4>
+                    <h4 class="detail-org">4MLAB | UL Lafayette, Lafayette, LA</h4>
                     <ul class="detail-list">
                         <li>Leading multiple computational biomechanics research projects focusing on articular
                             cartilage mechanics and osteoarthritis.</li>
@@ -366,8 +423,8 @@
                         <span>AI/ML</span>
                     </div>
                 </div>
-                <!-- Detail 3: GTA -->
-                <div class="exp-detail-item" data-index="2">
+                <!-- Detail 2: GTA -->
+                <div class="detail-item" data-index="1">
                     <h3 class="detail-role">Graduate Teaching Assistant</h3>
                     <h4 class="detail-org">Department of Mechanical Engineering | ULL</h4>
                     <ul class="detail-list">
@@ -382,8 +439,8 @@
                         <span>ABAQUS</span>
                     </div>
                 </div>
-                <!-- Detail 4: Tech Intern -->
-                <div class="exp-detail-item" data-index="3">
+                <!-- Detail 3: Tech Intern -->
+                <div class="detail-item" data-index="2">
                     <h3 class="detail-role">Tech Intern</h3>
                     <h4 class="detail-org">Opportunity Machine | Lafayette, LA</h4>
                     <p class="detail-desc">
@@ -401,8 +458,8 @@
                         <span>Computer Vision</span>
                     </div>
                 </div>
-                <!-- Detail 5: RA -->
-                <div class="exp-detail-item" data-index="4">
+                <!-- Detail 4: RA -->
+                <div class="detail-item" data-index="3">
                     <h3 class="detail-role">Research Assistant</h3>
                     <h4 class="detail-org">Tran's Lab | Michigan Tech</h4>
                     <p class="detail-desc">
@@ -420,22 +477,8 @@
                         <span>Multiphysics</span>
                     </div>
                 </div>
-                <!-- Detail 6: MSc -->
-                <div class="exp-detail-item" data-index="5">
-                    <h3 class="detail-role">Master of Science (M.Sc.) in Mechanical Engineering</h3>
-                    <h4 class="detail-org">University of Louisiana at Lafayette (ULL)</h4>
-                    <p class="detail-desc">
-                        <strong>GPA:</strong> 3.87/4.0<br>
-                        <strong>Thesis:</strong> Multi-structural fibril-reinforced poro-hyperelastic (MSFPH) finite
-                        element modeling approach for advanced understanding of articular cartilage pathomechanics.
-                    </p>
-                    <div class="detail-tags">
-                        <span>Computational Modeling</span>
-                        <span>Bioengineering</span>
-                    </div>
-                </div>
-                <!-- Detail 7: Service Engineer -->
-                <div class="exp-detail-item" data-index="6">
+                <!-- Detail 5: Service Engineer -->
+                <div class="detail-item" data-index="4">
                     <h3 class="detail-role">Service Engineer</h3>
                     <h4 class="detail-org">AUDI AG | Bangladesh</h4>
                     <ul class="detail-list">
@@ -449,12 +492,17 @@
                         <span>Quality Management</span>
                     </div>
                 </div>
-                <!-- Detail 8: BSc -->
-                <div class="exp-detail-item" data-index="7">
-                    <h3 class="detail-role">Bachelor of Science (B.Sc.) in Mechanical Engineering</h3>
-                    <h4 class="detail-org">Islamic University of Technology (IUT)</h4>
+                <!-- Detail 6: Intern Engineer -->
+                <div class="detail-item" data-index="5">
+                    <h3 class="detail-role">Intern Engineer</h3>
+                    <h4 class="detail-org">Walton Hi-Tech Industries Ltd. | Bangladesh</h4>
+                    <ul class="detail-list">
+                        <li>Trained in HVAC R&D, gaining hands-on experience in refrigeration and air conditioning
+                            technologies.</li>
+                    </ul>
                     <div class="detail-tags">
-                        <span>OIC Scholarship</span>
+                        <span>HVAC</span>
+                        <span>R&D</span>
                     </div>
                 </div>
             </div>

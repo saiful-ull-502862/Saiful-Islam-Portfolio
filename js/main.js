@@ -509,14 +509,26 @@ console.log('%cInterested in collaboration? Let\'s connect!', 'font-size: 14px; 
 console.log('%cEmail: md-saiful.islam1@louisiana.edu', 'font-size: 12px; color: #6b7280;');
 
 // ===========================
-// Experience Slider
+// Generic Slider Initialization
 // ===========================
 function initExperienceSlider() {
-    const track = document.getElementById('expTrack');
-    const cards = document.querySelectorAll('.exp-card');
-    const details = document.querySelectorAll('.exp-detail-item');
-    const prevBtn = document.getElementById('expPrev');
-    const nextBtn = document.getElementById('expNext');
+    // Initialize Education Slider
+    initSlider('education-slider');
+    // Initialize Experience Slider
+    initSlider('experience-slider');
+}
+
+function initSlider(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const track = container.querySelector('.slider-track');
+    const cards = container.querySelectorAll('.slider-card');
+    const details = container.querySelectorAll('.detail-item');
+
+    // Find buttons that target this slider
+    const prevBtn = document.querySelector(`.prev-btn[data-target="${containerId}"]`);
+    const nextBtn = document.querySelector(`.next-btn[data-target="${containerId}"]`);
 
     if (!track || cards.length === 0) return;
 
@@ -529,19 +541,23 @@ function initExperienceSlider() {
     updateSlider(0);
 
     // Event Listeners
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex > 0) {
-            currentIndex--;
-            updateSlider(currentIndex);
-        }
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider(currentIndex);
+            }
+        });
+    }
 
-    nextBtn.addEventListener('click', () => {
-        if (currentIndex < totalItems - 1) {
-            currentIndex++;
-            updateSlider(currentIndex);
-        }
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex < totalItems - 1) {
+                currentIndex++;
+                updateSlider(currentIndex);
+            }
+        });
+    }
 
     // Click on card to select
     cards.forEach((card, index) => {
@@ -564,17 +580,23 @@ function initExperienceSlider() {
 
         // Scroll Track
         // Calculate offset to center the active card or keep it in view
-        // Simple logic: scroll so active card is first or centered?
-        // Let's try scrolling so active card is at the left edge, but handle bounds
+        // Logic: Keep active card visible. 
+        // If we want it simple: translate so active card is at index 0 position? 
+        // Or just slide by one card width.
+        // Let's slide so the active card is the first one on the left (if possible)
         const offset = -(index * (cardWidth + gap));
         track.style.transform = `translateX(${offset}px)`;
 
-        // Update Buttons
-        prevBtn.style.opacity = index === 0 ? '0.5' : '1';
-        prevBtn.style.pointerEvents = index === 0 ? 'none' : 'all';
+        // Update Buttons State
+        if (prevBtn) {
+            prevBtn.style.opacity = index === 0 ? '0.5' : '1';
+            prevBtn.style.pointerEvents = index === 0 ? 'none' : 'all';
+        }
 
-        nextBtn.style.opacity = index === totalItems - 1 ? '0.5' : '1';
-        nextBtn.style.pointerEvents = index === totalItems - 1 ? 'none' : 'all';
+        if (nextBtn) {
+            nextBtn.style.opacity = index === totalItems - 1 ? '0.5' : '1';
+            nextBtn.style.pointerEvents = index === totalItems - 1 ? 'none' : 'all';
+        }
     }
 }
 
