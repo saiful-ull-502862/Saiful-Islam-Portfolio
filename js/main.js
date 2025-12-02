@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
     initBackToTop();
     initContactForm();
+    initCollapsibleSections();
     updateLastModified();
 
     // Wrap potentially problematic functions in try-catch
@@ -707,5 +708,39 @@ window.portfolioFunctions = {
     initNavigation,
     initScrollAnimations,
     updateActiveNavLink,
-    initExperienceSlider
+    initExperienceSlider,
+    initCollapsibleSections
 };
+
+// ===========================
+// Collapsible Sections (Accordion)
+// ===========================
+function initCollapsibleSections() {
+    const collapsibles = document.querySelectorAll('.section-collapsible');
+
+    collapsibles.forEach(section => {
+        // Find the toggle element (either .section-title or .slider-main-title)
+        const toggle = section.querySelector('.section-title, .slider-main-title');
+
+        if (toggle) {
+            toggle.addEventListener('click', () => {
+                // Toggle active class
+                section.classList.toggle('active');
+
+                // Optional: Scroll into view if opening
+                if (section.classList.contains('active')) {
+                    setTimeout(() => {
+                        const headerOffset = 100; // Adjust for fixed header
+                        const elementPosition = section.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }, 300);
+                }
+            });
+        }
+    });
+}

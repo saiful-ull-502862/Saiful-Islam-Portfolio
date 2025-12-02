@@ -2673,7 +2673,56 @@ code {
         padding: 1.5rem;
     }
 
-    .detail-role {
-        font-size: 1.5rem;
+
+    /* Collapsible Sections (Accordion) */
+    .section-collapsible .section-title,
+    .section-collapsible .slider-main-title {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+        border-bottom: 1px solid var(--border-color);
+        margin-bottom: 2rem;
+        transition: color 0.3s ease;
     }
-}
+
+    .section-collapsible .section-title:hover,
+    .section-collapsible .slider-main-title:hover {
+        color: var(--primary-color);
+    }
+
+    .section-collapsible .section-title::after,
+    .section-collapsible .slider-main-title::after {
+        content: '\f078';
+        /* FontAwesome chevron-down */
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        font-size: 1.5rem;
+        transition: transform 0.3s ease;
+    }
+
+    .section-collapsible.active .section-title::after,
+    .section-collapsible.active .slider-main-title::after {
+        transform: rotate(180deg);
+    }
+
+    .section-content-wrapper {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+        opacity: 0;
+    }
+
+    .section-collapsible.active .section-content-wrapper {
+        max-height: 2000px;
+        /* Large enough to fit content */
+        opacity: 1;
+        margin-bottom: 4rem;
+        /* Add space when expanded */
+    }
+
+    /* Ensure padding doesn't mess up height calculation */
+    .section-collapsible .container {
+        padding-bottom: 0;
+    }
