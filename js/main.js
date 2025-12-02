@@ -549,6 +549,8 @@ function initSwipeSlider(containerId) {
     const track = container.querySelector('.slider-track');
     const cards = container.querySelectorAll('.slider-card');
     const details = container.querySelectorAll('.detail-item');
+    const leftArrow = container.querySelector('.slider-arrow-left');
+    const rightArrow = container.querySelector('.slider-arrow-right');
 
     if (!track || cards.length === 0) {
         console.log(`Track or cards not found in ${containerId}`);
@@ -573,6 +575,21 @@ function initSwipeSlider(containerId) {
     wrapper.appendChild(dotsContainer);
 
     const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+    // Arrow button click handlers
+    if (leftArrow) {
+        leftArrow.onclick = (e) => {
+            e.preventDefault();
+            goToSlide(currentIndex - 1);
+        };
+    }
+
+    if (rightArrow) {
+        rightArrow.onclick = (e) => {
+            e.preventDefault();
+            goToSlide(currentIndex + 1);
+        };
+    }
 
     // Touch/Mouse events for swiping
     track.addEventListener('touchstart', handleStart, { passive: true });
@@ -657,6 +674,14 @@ function initSwipeSlider(containerId) {
         // Update dots
         dots.forEach(d => d.classList.remove('active'));
         dots[index].classList.add('active');
+
+        // Update arrow states
+        if (leftArrow) {
+            leftArrow.disabled = index === 0;
+        }
+        if (rightArrow) {
+            rightArrow.disabled = index === cards.length - 1;
+        }
 
         // Slide to position
         const cardWidth = cards[0].offsetWidth + 32; // card width + gap
