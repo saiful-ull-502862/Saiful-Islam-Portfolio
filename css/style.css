@@ -2183,12 +2183,14 @@ code {
 
 .slider-header-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    /* Center the title */
     align-items: center;
+    position: relative;
+    /* For absolute positioning of controls */
 }
 
 .slider-main-title {
-    /* Inherit/Match .section-title styles but override for this context */
     font-size: 2.75rem;
     font-weight: 800;
     letter-spacing: -0.03em;
@@ -2196,9 +2198,11 @@ code {
     position: relative;
     padding-bottom: 0;
     text-transform: uppercase;
+    color: white;
+    text-align: center;
 }
 
-/* Add the underline effect similar to section-title but left-aligned */
+/* Center the underline */
 .slider-main-title::after {
     content: '';
     display: block;
@@ -2206,13 +2210,34 @@ code {
     height: 6px;
     background-color: var(--primary-color);
     border-radius: var(--radius-full);
-    margin-top: 0.5rem;
+    margin: 0.5rem auto 0;
+    /* Center horizontally */
     opacity: 1;
 }
 
 .slider-controls {
     display: flex;
     gap: 1rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 50;
+    /* High z-index to ensure clickability */
+}
+
+/* Mobile Responsive adjustment for controls */
+@media (max-width: 768px) {
+    .slider-header-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .slider-controls {
+        position: static;
+        /* Stack on mobile */
+        transform: none;
+    }
 }
 
 .slider-nav-btn {
