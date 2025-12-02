@@ -8,15 +8,32 @@
 // Initialization
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('🚀 DOM Content Loaded - Starting initialization...');
+
     initTheme();
     initNavigation();
     initScrollAnimations();
     initBackToTop();
     initContactForm();
     updateLastModified();
-    initBackgroundCustomizer();
-    initProfileBlending();
+
+    // Wrap potentially problematic functions in try-catch
+    try {
+        initBackgroundCustomizer();
+    } catch (e) {
+        console.warn('initBackgroundCustomizer failed:', e);
+    }
+
+    try {
+        initProfileBlending();
+    } catch (e) {
+        console.warn('initProfileBlending failed:', e);
+    }
+
+    // This MUST run
+    console.log('🎯 About to call initExperienceSlider...');
     initExperienceSlider();
+    console.log('✅ initExperienceSlider called');
 });
 
 // ===========================
