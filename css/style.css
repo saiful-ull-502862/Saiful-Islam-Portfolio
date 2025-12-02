@@ -774,10 +774,9 @@ code {
 }
 
 .name {
-    display: block;
     font-size: 6rem;
     font-weight: 900;
-    color: #000000;
+    color: #2c303b;
     margin: 0;
     line-height: 0.9;
     letter-spacing: -0.03em;
@@ -790,7 +789,7 @@ code {
 
 .hero-subtitle {
     font-size: 1.2rem;
-    color: #666666;
+    color: #5D5550;
     margin: 1rem 0 0 0;
     font-weight: 500;
     letter-spacing: 0.02em;
@@ -873,7 +872,7 @@ code {
     border-radius: 0 !important;
     box-shadow: none !important;
     padding: 0 !important;
-    background: transparent !important;
+    background: #2c303b !important;
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
