@@ -755,7 +755,7 @@ code {
 .hero-text {
     max-width: none;
     padding-left: 4rem;
-    padding-bottom: 4rem;
+    padding-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -764,36 +764,36 @@ code {
 
 .greeting {
     display: block;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #333333;
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0.5rem;
     text-transform: none;
     letter-spacing: normal;
     font-family: var(--font-heading);
 }
 
 .name {
-    font-size: 6rem;
-    font-weight: 900;
+    font-size: 4rem;
+    font-weight: 800;
     color: #000000;
     margin: 0;
-    line-height: 0.9;
-    letter-spacing: -0.03em;
-    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    text-transform: none;
 }
 
 .name .highlight {
-    display: block;
-    color: var(--primary-color);
+    display: inline;
+    color: inherit;
 }
 
 .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: #666666;
-    margin: 1rem 0 0 0;
+    margin: 0.5rem 0 2rem 0;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: normal;
 }
 
 .hero-tagline {
@@ -813,30 +813,28 @@ code {
 
 .hero-social {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 3rem;
+    gap: 1rem;
+    margin-top: 0;
 }
 
 .hero-social a {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #C4C4C4;
-    /* Grey box */
+    background-color: #E0E0E0;
     border-radius: 8px;
-    /* Slight rounding */
     color: #000000;
-    font-size: 2rem;
+    font-size: 1.25rem;
     transition: all var(--transition-base);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
 }
 
 .hero-social a:hover {
     background-color: #000000;
     color: #ffffff;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 /* Adjust image for the black side */
@@ -866,8 +864,8 @@ code {
 .hero-image img,
 .profile-img-hero {
     width: auto;
-    height: 85vh;
-    max-height: 85vh;
+    height: 90vh;
+    max-height: 90vh;
     object-fit: cover;
     object-position: top center;
     border-radius: 0 !important;
