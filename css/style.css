@@ -956,7 +956,8 @@ code {
 .profile-container {
     position: relative;
     width: 100%;
-    max-width: 500px;
+    max-width: 650px;
+    /* Increased size */
     height: auto;
     animation: none !important;
     padding: 0;
@@ -990,11 +991,7 @@ code {
 }
 
 #profileCanvas {
-    width: 550px;
-    height: 550px;
-    display: block;
-    background: transparent;
-    transition: transform var(--transition-base);
+    display: none !important;
 }
 
 /* Floating animation */
