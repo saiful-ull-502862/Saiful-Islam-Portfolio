@@ -2343,9 +2343,9 @@ code {
 /* Slider Container & Layout */
 .slider-content-container {
     position: relative;
-    max-width: 900px;
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 0 50px;
 }
 
 .slider-wrapper {
@@ -2370,17 +2370,20 @@ code {
     width: 100%;
     background: linear-gradient(145deg, #2c303b, #252830);
     color: white;
-    padding: 0;
+    padding: 4rem 3rem;
     border-radius: var(--radius-lg);
     cursor: pointer;
     transition: all 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.05);
-    min-height: 280px;
+    min-height: 400px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     position: relative;
     overflow: hidden;
-    display: flex;
-    align-items: center;
 }
 
 .slider-card::before {
@@ -2388,22 +2391,22 @@ code {
     position: absolute;
     top: 0;
     left: 0;
-    width: 6px;
-    height: 100%;
+    width: 100%;
+    height: 6px;
     background: var(--primary-color);
-    transform: scaleY(0);
+    transform: scaleX(0);
     transition: transform 0.4s ease;
-    transform-origin: top;
+    transform-origin: left;
 }
 
 .slider-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
     border-color: rgba(255, 255, 255, 0.1);
 }
 
 .slider-card:hover::before {
-    transform: scaleY(1);
+    transform: scaleX(1);
 }
 
 .slider-card.active {
@@ -2412,71 +2415,58 @@ code {
 }
 
 .slider-card.active::before {
-    transform: scaleY(1);
+    transform: scaleX(1);
 }
 
 /* Inner Layout: Side-by-Side */
-.card-layout {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 2.5rem 3rem;
-    gap: 3rem;
-}
+/* Removed .card-layout, .card-logo-container, .card-details as they are no longer needed for the vertical layout */
 
-/* Logo Container (Left) */
-.card-logo-container {
-    flex: 0 0 180px;
-    /* Fixed width for logo area */
-    height: 140px;
+/* Card Logo */
+.card-logo {
+    width: 200px;
+    height: 120px;
+    margin: 0 auto 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.card-logo-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+    background-color: white;
+    border-radius: var(--radius-md);
+    padding: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease;
 }
 
-.slider-card:hover .card-logo-container img {
+.slider-card:hover .card-logo {
     transform: scale(1.05);
 }
 
-/* Details Container (Right) */
-.card-details {
-    flex: 1;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.card-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 /* Typography */
 .card-period {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: var(--primary-color);
     font-weight: 700;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     display: block;
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 .card-title {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     font-weight: 800;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: white;
     line-height: 1.2;
 }
 
 .card-label {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: rgba(255, 255, 255, 0.7);
     font-weight: 500;
 }
@@ -2547,31 +2537,19 @@ code {
         padding: 0 40px;
     }
 
-    .card-layout {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 2rem 1.5rem;
+    .slider-card {
+        padding: 3rem 1.5rem;
+        min-height: 350px;
     }
 
-    .card-logo-container {
-        flex: 0 0 auto;
-        width: 100%;
+    .card-logo {
+        width: 160px;
         height: 100px;
-        margin-bottom: 0.5rem;
-    }
-
-    .card-logo-container img {
-        max-width: 150px;
-    }
-
-    .card-details {
-        text-align: center;
-        align-items: center;
+        margin-bottom: 1.5rem;
     }
 
     .card-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .slider-arrow {
@@ -2588,18 +2566,5 @@ code {
         right: -10px;
     }
 
-    .slider-card::before {
-        width: 100%;
-        height: 6px;
-        top: 0;
-        left: 0;
-        transform: scaleX(0);
-        transform-origin: left;
-    }
-
-    .slider-card:hover::before,
-    .slider-card.active::before {
-        transform: scaleX(1);
-        transform: scaleY(1);
-    }
+    /* Removed previous mobile adjustments for .slider-card::before, :hover::before, .card-layout, .card-logo-container, .card-details */
 }
