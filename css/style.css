@@ -902,8 +902,9 @@ html[data-theme="dark"] .hero-social a:hover {
     box-shadow: none !important;
     padding: 0 !important;
     filter: none !important;
-    mask-image: none !important;
-    -webkit-mask-image: none !important;
+    /* Stronger mask to fade the left edge */
+    mask-image: linear-gradient(to right, transparent 5%, black 25%, black 100%) !important;
+    -webkit-mask-image: linear-gradient(to right, transparent 5%, black 25%, black 100%) !important;
 }
 
 #profileCanvas {
@@ -915,10 +916,18 @@ html[data-theme="dark"] .hero-social a:hover {
     display: block !important;
 }
 
+/* Main Desktop Hero Background */
+.hero {
+    background: linear-gradient(105deg, var(--bg-secondary) 0%, var(--bg-secondary) 55%, #252830 55.1%, #252830 100%);
+    padding-top: var(--header-height);
+    position: relative;
+    overflow: hidden;
+}
+
 /* Mobile Responsiveness for the new design */
 @media (max-width: 992px) {
     .hero {
-        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
+        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #24272e 50.1%, #24272e 100%);
         padding-top: var(--header-height);
     }
 
