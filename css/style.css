@@ -2390,22 +2390,35 @@ code {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 3rem;
-            /* Space between logo and content */
+            gap: 4rem;
+            /* Increased space */
             padding: 2rem 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             min-height: 400px;
+            background: transparent !important;
+            /* Force transparent */
+            border: none !important;
+            /* Remove border */
+            box-shadow: none !important;
+            /* Remove shadow */
+        }
+
+        .slider-card:hover {
+            transform: none !important;
+            /* Disable card lift */
         }
 
         /* Left Side: Large Visual/Logo */
         .slide-visual {
-            flex: 0 0 40%;
-            /* Takes up 40% of width */
+            flex: 0 0 45%;
+            /* Larger logo area */
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 300px;
+            /* Center logo in its area */
+            height: 350px;
+            /* Taller area */
             position: relative;
             transition: transform 0.4s ease;
         }
@@ -2414,22 +2427,24 @@ code {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
-            /* Soft shadow for depth */
+            filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.2));
+            /* Stronger shadow for pop */
             transition: transform 0.4s ease;
+            max-width: 350px;
+            /* Limit max width */
         }
 
         .slider-card:hover .slide-visual img {
-            transform: scale(1.05);
+            transform: scale(1.08);
+            /* Scale logo on hover */
         }
 
         /* Right Side: Content Box */
         .slide-content {
             flex: 1;
-            /* Takes remaining space */
             background: linear-gradient(145deg, #2c303b, #252830);
             color: white;
-            padding: 3rem 2.5rem;
+            padding: 3.5rem 3rem;
             border-radius: var(--radius-lg);
             border: 1px solid rgba(255, 255, 255, 0.05);
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
@@ -2439,9 +2454,10 @@ code {
             position: relative;
             overflow: hidden;
             text-align: left;
-            /* Left align text in the box */
-            min-height: 280px;
+            min-height: 300px;
+            transition: all 0.3s ease;
         }
+
 
         .slide-content::before {
             content: '';
