@@ -710,13 +710,14 @@ code {
 .hero {
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    /* Align content to bottom */
     justify-content: center;
     position: relative;
     padding-top: 0;
     overflow: hidden;
     /* Match the dark grey/blue from the profile image */
-    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #252830 50.1%, #252830 100%);
+    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
 }
 
 .hero::before {
@@ -727,7 +728,8 @@ code {
 /* Mobile adjustment */
 @media (max-width: 992px) {
     .hero {
-        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #252830 50.1%, #252830 100%);
+        align-items: center;
+        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
     }
 }
 
@@ -741,12 +743,15 @@ code {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
+    /* Keep text centered vertically */
     position: relative;
     z-index: 1;
     width: 100%;
     max-width: 1400px;
     /* Wider container for this design */
     padding: 0 var(--spacing-2xl);
+    height: 100vh;
+    /* Full height to allow bottom alignment of image */
 }
 
 .hero-text {
@@ -831,7 +836,10 @@ code {
 .hero-image {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
+    /* Align image to bottom */
+    height: 100%;
+    padding-bottom: 0;
 }
 
 .profile-container {
@@ -873,7 +881,7 @@ code {
 /* Mobile Responsiveness for the new design */
 @media (max-width: 992px) {
     .hero {
-        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #252830 50.1%, #252830 100%);
+        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
         padding-top: var(--header-height);
     }
 
@@ -909,11 +917,8 @@ code {
     box-shadow: var(--shadow-lg);
 }
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
+
 
 .image-placeholder {
     width: 400px;
@@ -983,17 +988,21 @@ code {
 }
 
 .hero-image img {
-    width: 100%;
-    max-width: 700px;
-    /* Limit max width but allow it to be large */
-    height: auto;
-    object-fit: cover;
+    width: auto;
+    max-width: 100%;
+    height: 85vh;
+    /* Make image tall */
+    max-height: 900px;
+    object-fit: contain;
     /* Ensure it covers the area */
     border-radius: 0 !important;
     box-shadow: none !important;
     background: transparent !important;
     padding: 0 !important;
     filter: none !important;
+    /* Blend edges */
+    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
 }
 
 #profileCanvas {
