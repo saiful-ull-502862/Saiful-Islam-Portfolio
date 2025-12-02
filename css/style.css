@@ -890,14 +890,15 @@ html[data-theme="dark"] .hero-social a:hover {
 .hero-image img,
 .profile-img-hero {
     width: auto;
-    height: 90vh;
-    max-height: 90vh;
-    object-fit: cover;
-    object-position: top center;
+    height: auto;
+    max-height: 85vh;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: bottom center;
     border-radius: 0 !important;
     border: none !important;
     box-shadow: none !important;
-    background: #2c303b !important;
+    background: transparent !important;
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
