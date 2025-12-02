@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=4">
+    <link rel="stylesheet" href="css/style.css?v=5">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -72,46 +72,8 @@
         </div>
     </nav>
 
-    <!-- Background Customizer Panel -->
-    <div class="bg-customizer" id="bgCustomizer">
-        <div class="bg-customizer-header">
-            <h3>Customize Background</h3>
-            <button class="bg-close" id="bgClose" aria-label="Close customizer">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        <div class="bg-customizer-content">
-            <div class="bg-upload-section">
-                <label for="bgImageUpload" class="bg-upload-label">
-                    <i class="fas fa-cloud-upload-alt"></i>
-                    <span>Upload Background Image</span>
-                    <input type="file" id="bgImageUpload" accept="image/*" hidden>
-                </label>
-                <p class="bg-upload-note">Choose an image that represents you. Your profile picture will automatically
-                    blend with it.</p>
-            </div>
-            <div class="bg-preview-section" id="bgPreviewSection" style="display: none;">
-                <h4>Preview</h4>
-                <div class="bg-preview-container">
-                    <img id="bgPreview" alt="Background preview">
-                </div>
-                <div class="bg-actions">
-                    <button class="btn btn-primary btn-sm" id="applyBackground">
-                        <i class="fas fa-check"></i> Apply Background
-                    </button>
-                    <button class="btn btn-secondary btn-sm" id="resetBackground">
-                        <i class="fas fa-undo"></i> Reset to Default
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-overlay"></div>
-        </div>
         <div class="container hero-content">
             <div class="hero-text">
                 <h1 class="hero-title fade-in">

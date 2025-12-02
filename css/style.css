@@ -715,7 +715,8 @@ code {
     position: relative;
     padding-top: 0;
     overflow: hidden;
-    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #111111 50.1%, #111111 100%);
+    /* Match the dark grey/blue from the profile image */
+    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #252830 50.1%, #252830 100%);
 }
 
 .hero::before {
@@ -726,7 +727,7 @@ code {
 /* Mobile adjustment */
 @media (max-width: 992px) {
     .hero {
-        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #111111 50.1%, #111111 100%);
+        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #252830 50.1%, #252830 100%);
     }
 }
 
@@ -872,7 +873,7 @@ code {
 /* Mobile Responsiveness for the new design */
 @media (max-width: 992px) {
     .hero {
-        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #111111 50.1%, #111111 100%);
+        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #252830 50.1%, #252830 100%);
         padding-top: var(--header-height);
     }
 
@@ -956,13 +957,15 @@ code {
 .profile-container {
     position: relative;
     width: 100%;
-    max-width: 650px;
-    /* Increased size */
+    max-width: none;
+    /* Allow full width */
     height: auto;
     animation: none !important;
     padding: 0;
     background: none !important;
     box-shadow: none !important;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-container::before {
@@ -981,8 +984,11 @@ code {
 
 .hero-image img {
     width: 100%;
+    max-width: 700px;
+    /* Limit max width but allow it to be large */
     height: auto;
-    object-fit: contain;
+    object-fit: cover;
+    /* Ensure it covers the area */
     border-radius: 0 !important;
     box-shadow: none !important;
     background: transparent !important;
