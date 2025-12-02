@@ -542,21 +542,31 @@ function initSlider(containerId) {
 
     // Event Listeners
     if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
+        console.log(`Prev button found for ${containerId}`);
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(`Prev button clicked for ${containerId}, current index: ${currentIndex}`);
             if (currentIndex > 0) {
                 currentIndex--;
                 updateSlider(currentIndex);
             }
         });
+    } else {
+        console.error(`Prev button NOT found for ${containerId}`);
     }
 
     if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
+        console.log(`Next button found for ${containerId}`);
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(`Next button clicked for ${containerId}, current index: ${currentIndex}`);
             if (currentIndex < totalItems - 1) {
                 currentIndex++;
                 updateSlider(currentIndex);
             }
         });
+    } else {
+        console.error(`Next button NOT found for ${containerId}`);
     }
 
     // Click on card to select
@@ -590,12 +600,14 @@ function initSlider(containerId) {
         // Update Buttons State
         if (prevBtn) {
             prevBtn.style.opacity = index === 0 ? '0.5' : '1';
-            prevBtn.style.pointerEvents = index === 0 ? 'none' : 'all';
+            prevBtn.style.cursor = index === 0 ? 'not-allowed' : 'pointer';
+            // Removed pointer-events: none to ensure clicks are registered (even if they do nothing)
         }
 
         if (nextBtn) {
             nextBtn.style.opacity = index === totalItems - 1 ? '0.5' : '1';
-            nextBtn.style.pointerEvents = index === totalItems - 1 ? 'none' : 'all';
+            nextBtn.style.cursor = index === totalItems - 1 ? 'not-allowed' : 'pointer';
+            // Removed pointer-events: none
         }
     }
 }
