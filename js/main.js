@@ -526,51 +526,147 @@ console.log('%cInterested in collaboration? Let\'s connect!', 'font-size: 14px; 
 console.log('%cEmail: md-saiful.islam1@louisiana.edu', 'font-size: 12px; color: #6b7280;');
 
 // ===========================
-// Simple Card Click Handler
+// Swipe-Enabled Slider
 // ===========================
 function initExperienceSlider() {
-    console.log('=== Initializing card click handlers ===');
+    console.log('=== Initializing swipe sliders ===');
 
-    // Initialize Education cards
-    initCardClicks('education-slider');
+    // Initialize Education slider
+    initSwipeSlider('education-slider');
 
-    // Initialize Experience cards
-    initCardClicks('experience-slider');
+    // Initialize Experience slider
+    initSwipeSlider('experience-slider');
 }
 
-function initCardClicks(containerId) {
+function initSwipeSlider(containerId) {
     const container = document.getElementById(containerId);
     if (!container) {
         console.log(`Container not found: ${containerId}`);
         return;
     }
 
+    const wrapper = container.querySelector('.slider-wrapper');
+    const track = container.querySelector('.slider-track');
     const cards = container.querySelectorAll('.slider-card');
     const details = container.querySelectorAll('.detail-item');
 
-    console.log(`Found ${cards.length} cards in ${containerId}`);
+    if (!track || cards.length === 0) {
+        console.log(`Track or cards not found in ${containerId}`);
+        return;
+    }
 
-    // Add click handler to each card
-    cards.forEach((card, index) => {
-        card.style.cursor = 'pointer';
-        card.onclick = function () {
-            console.log(`Card ${index} clicked in ${containerId}`);
+    let currentIndex = 0;
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
 
-            // Remove active class from all cards
-            cards.forEach(c => c.classList.remove('active'));
-            // Add active to clicked card
-            card.classList.add('active');
+    // Create navigation dots
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'slider-nav-dots';
+    cards.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = `slider-dot ${index === 0 ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+        dot.onclick = () => goToSlide(index);
+        dotsContainer.appendChild(dot);
+    });
+    wrapper.appendChild(dotsContainer);
 
-            // Remove active class from all details
-            details.forEach(d => d.classList.remove('active'));
-            // Show corresponding detail
-            if (details[index]) {
-                details[index].classList.add('active');
-            }
-        };
+    const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+    // Touch/Mouse events for swiping
+    track.addEventListener('touchstart', handleStart, { passive: true });
+    track.addEventListener('mousedown', handleStart);
+
+    track.addEventListener('touchmove', handleMove, { passive: false });
+    track.addEventListener('mousemove', handleMove);
+
+    track.addEventListener('touchend', handleEnd);
+    track.addEventListener('mouseup', handleEnd);
+    track.addEventListener('mouseleave', handleEnd);
+
+    // Keyboard navigation
+    container.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            goToSlide(currentIndex - 1);
+        } else if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            goToSlide(currentIndex + 1);
+        }
     });
 
-    console.log(`✓ ${containerId} click handlers attached`);
+    function handleStart(e) {
+        isDragging = true;
+        startX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+        track.style.transition = 'none';
+    }
+
+    function handleMove(e) {
+        if (!isDragging) return;
+
+        e.preventDefault();
+        currentX = e.type.includes('mouse') ? e.pageX : e.touches[0].pageX;
+        const diff = currentX - startX;
+        const cardWidth = cards[0].offsetWidth + 32; // card width + gap
+        const currentOffset = -currentIndex * cardWidth;
+        track.style.transform = `translateX(${currentOffset + diff}px)`;
+    }
+
+    function handleEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const diff = currentX - startX;
+        const threshold = 50; // minimum swipe distance
+
+        track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+
+        if (diff > threshold && currentIndex > 0) {
+            // Swiped right - go to previous
+            goToSlide(currentIndex - 1);
+        } else if (diff < -threshold && currentIndex < cards.length - 1) {
+            // Swiped left - go to next
+            goToSlide(currentIndex + 1);
+        } else {
+            // Snap back to current
+            updateSlider(currentIndex);
+        }
+
+        startX = 0;
+        currentX = 0;
+    }
+
+    function goToSlide(index) {
+        if (index < 0 || index >= cards.length) return;
+        currentIndex = index;
+        updateSlider(index);
+    }
+
+    function updateSlider(index) {
+        // Update active card
+        cards.forEach(c => c.classList.remove('active'));
+        cards[index].classList.add('active');
+
+        // Update active detail
+        details.forEach(d => d.classList.remove('active'));
+        if (details[index]) {
+            details[index].classList.add('active');
+        }
+
+        // Update dots
+        dots.forEach(d => d.classList.remove('active'));
+        dots[index].classList.add('active');
+
+        // Slide to position
+        const cardWidth = cards[0].offsetWidth + 32; // card width + gap
+        const offset = -index * cardWidth;
+        track.style.transform = `translateX(${offset}px)`;
+    }
+
+    // Initialize
+    updateSlider(0);
+    console.log(`✓ ${containerId} swipe slider initialized with ${cards.length} cards`);
 }
 
 // ===========================
