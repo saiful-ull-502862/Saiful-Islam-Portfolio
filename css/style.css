@@ -1000,9 +1000,17 @@ code {
     background: transparent !important;
     padding: 0 !important;
     filter: none !important;
-    /* Blend the image into the background using a diagonal mask matching the divider angle */
-    mask-image: linear-gradient(105deg, transparent 15%, black 30%, black 90%, transparent 100%);
-    -webkit-mask-image: linear-gradient(105deg, transparent 15%, black 30%, black 90%, transparent 100%);
+    /* Blend the image into the background using a composite mask:
+       1. Diagonal gradient for the left divider edge
+       2. Radial gradient to fade the top and right edges into the background color */
+    mask-image:
+        linear-gradient(105deg, transparent 15%, black 30%, black 100%),
+        radial-gradient(circle at 60% 60%, black 0%, black 40%, transparent 80%);
+    -webkit-mask-image:
+        linear-gradient(105deg, transparent 15%, black 30%, black 100%),
+        radial-gradient(circle at 60% 60%, black 0%, black 40%, transparent 80%);
+    mask-composite: intersect;
+    -webkit-mask-composite: source-in;
 }
 
 #profileCanvas {
