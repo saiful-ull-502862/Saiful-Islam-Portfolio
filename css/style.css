@@ -871,6 +871,7 @@ html[data-theme="dark"] .hero-social a:hover {
     position: relative;
     animation: none !important;
     padding-left: 0;
+    z-index: 1;
 }
 
 .profile-container {
@@ -896,8 +897,7 @@ html[data-theme="dark"] .hero-social a:hover {
     border-radius: 0 !important;
     border: none !important;
     box-shadow: none !important;
-    padding: 0 !important;
-    background: transparent !important;
+    background: #2c303b !important;
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
@@ -3201,4 +3201,3 @@ html {
    Text is on Left. So it should be Dark Text.
    Image is on Right. So it should be on Dark Background.
 */
-}
