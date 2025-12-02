@@ -900,7 +900,7 @@ html[data-theme="dark"] .hero-social a:hover {
     border-radius: 0 !important;
     border: none !important;
     box-shadow: none !important;
-    background: transparent !important;
+    padding: 0 !important;
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
