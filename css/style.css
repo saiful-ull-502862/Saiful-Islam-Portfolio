@@ -2278,14 +2278,16 @@ code {
 }
 
 .slider-wrapper {
-    overflow: hidden;
     margin-bottom: 2rem;
 }
 
 .slider-track {
     display: flex;
+    flex-wrap: wrap;
+    /* Allow cards to wrap to next row */
     gap: 1.5rem;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    justify-content: center;
+    /* Center the cards */
 }
 
 .slider-card {
