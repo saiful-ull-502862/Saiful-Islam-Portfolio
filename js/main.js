@@ -96,6 +96,13 @@ function initNavigation() {
 
             if (target) {
                 e.preventDefault();
+
+                // If target is collapsible and not active, click its title to expand
+                if (target.classList.contains('section-collapsible') && !target.classList.contains('active')) {
+                    const toggle = target.querySelector('.section-title, .slider-main-title');
+                    if (toggle) toggle.click();
+                }
+
                 // No header offset needed for sidebar layout, but maybe some padding
                 const elementPosition = target.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset;

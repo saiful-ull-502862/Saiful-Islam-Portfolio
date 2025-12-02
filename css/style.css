@@ -2928,3 +2928,25 @@ html {
         /* Hide footer on mobile sidebar to save space */
     }
 }
+
+/* Section Spacing for Scrolling Flow */
+#home,
+#about,
+#highlights {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.main-content {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Ensure text is readable on light background */
+.section-title {
+    color: var(--text-primary);
+}
