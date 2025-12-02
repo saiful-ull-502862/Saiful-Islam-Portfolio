@@ -512,16 +512,26 @@ console.log('%cEmail: md-saiful.islam1@louisiana.edu', 'font-size: 12px; color: 
 // Generic Slider Initialization
 // ===========================
 function initExperienceSlider() {
-    // Initialize Education Slider
-    initSlider('education-slider', 'edu-prev', 'edu-next');
-    // Initialize Experience Slider
-    initSlider('experience-slider', 'exp-prev', 'exp-next');
+    console.log('=== SLIDER INIT START ===');
+
+    // Wait a bit to ensure DOM is fully loaded
+    setTimeout(() => {
+        console.log('Initializing Education Slider...');
+        initSlider('education-slider', 'edu-prev', 'edu-next');
+
+        console.log('Initializing Experience Slider...');
+        initSlider('experience-slider', 'exp-prev', 'exp-next');
+    }, 100);
 }
 
 function initSlider(containerId, prevBtnId, nextBtnId) {
+    console.log(`\n--- Starting ${containerId} initialization ---`);
+
     const container = document.getElementById(containerId);
+    console.log(`Container ${containerId}:`, container ? 'FOUND' : 'NOT FOUND');
+
     if (!container) {
-        console.error(`Slider container not found: ${containerId}`);
+        console.error(`❌ Slider container not found: ${containerId}`);
         return;
     }
 
@@ -529,60 +539,93 @@ function initSlider(containerId, prevBtnId, nextBtnId) {
     const cards = container.querySelectorAll('.slider-card');
     const details = container.querySelectorAll('.detail-item');
 
+    console.log(`Track:`, track ? 'FOUND' : 'NOT FOUND');
+    console.log(`Cards found: ${cards.length}`);
+    console.log(`Details found: ${details.length}`);
+
     // Select buttons by ID directly
     const prevBtn = document.getElementById(prevBtnId);
     const nextBtn = document.getElementById(nextBtnId);
 
+    console.log(`Button ${prevBtnId}:`, prevBtn ? 'FOUND ✓' : 'NOT FOUND ❌');
+    console.log(`Button ${nextBtnId}:`, nextBtn ? 'FOUND ✓' : 'NOT FOUND ❌');
+
     if (!track || cards.length === 0) {
-        console.error(`Slider track or cards not found in ${containerId}`);
+        console.error(`❌ Slider track or cards not found in ${containerId}`);
         return;
     }
 
     let currentIndex = 0;
-    const cardWidth = 300; // Card width
-    const gap = 24; // 1.5rem gap
+    const cardWidth = 300;
+    const gap = 24;
     const totalItems = cards.length;
 
     // Initialize
-    console.log(`Initializing slider: ${containerId}`);
     updateSlider(0);
 
-    // Event Listeners
+    // Event Listeners - Using direct onclick
     if (prevBtn) {
-        prevBtn.onclick = (e) => {
+        console.log(`✓ Attaching onclick to ${prevBtnId}`);
+        prevBtn.onclick = function (e) {
             e.preventDefault();
-            console.log(`Prev clicked: ${containerId}`);
+            e.stopPropagation();
+            console.log(`🔵 PREV CLICKED! Container: ${containerId}, Current: ${currentIndex}`);
             if (currentIndex > 0) {
                 currentIndex--;
+                console.log(`Moving to index: ${currentIndex}`);
                 updateSlider(currentIndex);
+            } else {
+                console.log('Already at first item');
             }
+            return false;
         };
+
+        // Also try addEventListener as backup
+        prevBtn.addEventListener('click', function (e) {
+            console.log(`🟢 PREV addEventListener fired for ${containerId}`);
+        }, true);
+
     } else {
-        console.error(`Prev button not found: ${prevBtnId}`);
+        console.error(`❌ Prev button not found: ${prevBtnId}`);
     }
 
     if (nextBtn) {
-        nextBtn.onclick = async (e) => {
+        console.log(`✓ Attaching onclick to ${nextBtnId}`);
+        nextBtn.onclick = function (e) {
             e.preventDefault();
-            console.log(`Next clicked: ${containerId}`);
+            e.stopPropagation();
+            console.log(`🔵 NEXT CLICKED! Container: ${containerId}, Current: ${currentIndex}`);
             if (currentIndex < totalItems - 1) {
                 currentIndex++;
+                console.log(`Moving to index: ${currentIndex}`);
                 updateSlider(currentIndex);
+            } else {
+                console.log('Already at last item');
             }
+            return false;
         };
+
+        // Also try addEventListener as backup
+        nextBtn.addEventListener('click', function (e) {
+            console.log(`🟢 NEXT addEventListener fired for ${containerId}`);
+        }, true);
+
     } else {
-        console.error(`Next button not found: ${nextBtnId}`);
+        console.error(`❌ Next button not found: ${nextBtnId}`);
     }
 
     // Click on card to select
     cards.forEach((card, index) => {
-        card.addEventListener('click', () => {
+        card.onclick = function () {
+            console.log(`Card ${index} clicked in ${containerId}`);
             currentIndex = index;
             updateSlider(currentIndex);
-        });
+        };
     });
 
     function updateSlider(index) {
+        console.log(`Updating slider ${containerId} to index ${index}`);
+
         // Update Active Card
         cards.forEach(c => c.classList.remove('active'));
         cards[index].classList.add('active');
@@ -601,13 +644,19 @@ function initSlider(containerId, prevBtnId, nextBtnId) {
         if (prevBtn) {
             prevBtn.style.opacity = index === 0 ? '0.5' : '1';
             prevBtn.style.cursor = index === 0 ? 'not-allowed' : 'pointer';
+            prevBtn.disabled = index === 0;
         }
 
         if (nextBtn) {
             nextBtn.style.opacity = index === totalItems - 1 ? '0.5' : '1';
             nextBtn.style.cursor = index === totalItems - 1 ? 'not-allowed' : 'pointer';
+            nextBtn.disabled = index === totalItems - 1;
         }
+
+        console.log(`✓ Slider updated successfully`);
     }
+
+    console.log(`--- ${containerId} initialization complete ---\n`);
 }
 
 // ===========================
