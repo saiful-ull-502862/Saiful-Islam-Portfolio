@@ -98,20 +98,35 @@ function initNavigation() {
             if (target) {
                 e.preventDefault();
 
-                // If target is collapsible and not active, click its title to expand
-                if (target.classList.contains('section-collapsible') && !target.classList.contains('active')) {
-                    const toggle = target.querySelector('.section-title, .slider-main-title');
-                    if (toggle) toggle.click();
+                // Handle Detail Sections (Tabbed View)
+                if (target.classList.contains('section-detail')) {
+                    // Hide all other detail sections first? 
+                    // Or just show this one? User said "redirect to me that section page".
+                    // Let's hide others to keep it clean, as if navigating to a new page.
+                    document.querySelectorAll('.section-detail').forEach(sec => {
+                        if (sec !== target) {
+                            sec.classList.remove('active');
+                            sec.style.display = 'none';
+                        }
+                    });
+
+                    // Show target
+                    target.style.display = 'block';
+                    setTimeout(() => {
+                        target.classList.add('active');
+                    }, 10);
                 }
 
-                // No header offset needed for sidebar layout, but maybe some padding
-                const elementPosition = target.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset;
+                // Wait for display change to affect layout
+                setTimeout(() => {
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset;
 
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 50);
             }
         });
     });
