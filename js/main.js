@@ -513,24 +513,30 @@ console.log('%cEmail: md-saiful.islam1@louisiana.edu', 'font-size: 12px; color: 
 // ===========================
 function initExperienceSlider() {
     // Initialize Education Slider
-    initSlider('education-slider');
+    initSlider('education-slider', 'edu-prev', 'edu-next');
     // Initialize Experience Slider
-    initSlider('experience-slider');
+    initSlider('experience-slider', 'exp-prev', 'exp-next');
 }
 
-function initSlider(containerId) {
+function initSlider(containerId, prevBtnId, nextBtnId) {
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if (!container) {
+        console.error(`Slider container not found: ${containerId}`);
+        return;
+    }
 
     const track = container.querySelector('.slider-track');
     const cards = container.querySelectorAll('.slider-card');
     const details = container.querySelectorAll('.detail-item');
 
-    // Find buttons that target this slider
-    const prevBtn = document.querySelector(`.prev-btn[data-target="${containerId}"]`);
-    const nextBtn = document.querySelector(`.next-btn[data-target="${containerId}"]`);
+    // Select buttons by ID directly
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
 
-    if (!track || cards.length === 0) return;
+    if (!track || cards.length === 0) {
+        console.error(`Slider track or cards not found in ${containerId}`);
+        return;
+    }
 
     let currentIndex = 0;
     const cardWidth = 300; // Card width
@@ -538,35 +544,34 @@ function initSlider(containerId) {
     const totalItems = cards.length;
 
     // Initialize
+    console.log(`Initializing slider: ${containerId}`);
     updateSlider(0);
 
     // Event Listeners
     if (prevBtn) {
-        console.log(`Prev button found for ${containerId}`);
-        prevBtn.addEventListener('click', (e) => {
+        prevBtn.onclick = (e) => {
             e.preventDefault();
-            console.log(`Prev button clicked for ${containerId}, current index: ${currentIndex}`);
+            console.log(`Prev clicked: ${containerId}`);
             if (currentIndex > 0) {
                 currentIndex--;
                 updateSlider(currentIndex);
             }
-        });
+        };
     } else {
-        console.error(`Prev button NOT found for ${containerId}`);
+        console.error(`Prev button not found: ${prevBtnId}`);
     }
 
     if (nextBtn) {
-        console.log(`Next button found for ${containerId}`);
-        nextBtn.addEventListener('click', (e) => {
+        nextBtn.onclick = async (e) => {
             e.preventDefault();
-            console.log(`Next button clicked for ${containerId}, current index: ${currentIndex}`);
+            console.log(`Next clicked: ${containerId}`);
             if (currentIndex < totalItems - 1) {
                 currentIndex++;
                 updateSlider(currentIndex);
             }
-        });
+        };
     } else {
-        console.error(`Next button NOT found for ${containerId}`);
+        console.error(`Next button not found: ${nextBtnId}`);
     }
 
     // Click on card to select
@@ -589,11 +594,6 @@ function initSlider(containerId) {
         }
 
         // Scroll Track
-        // Calculate offset to center the active card or keep it in view
-        // Logic: Keep active card visible. 
-        // If we want it simple: translate so active card is at index 0 position? 
-        // Or just slide by one card width.
-        // Let's slide so the active card is the first one on the left (if possible)
         const offset = -(index * (cardWidth + gap));
         track.style.transform = `translateX(${offset}px)`;
 
@@ -601,13 +601,11 @@ function initSlider(containerId) {
         if (prevBtn) {
             prevBtn.style.opacity = index === 0 ? '0.5' : '1';
             prevBtn.style.cursor = index === 0 ? 'not-allowed' : 'pointer';
-            // Removed pointer-events: none to ensure clicks are registered (even if they do nothing)
         }
 
         if (nextBtn) {
             nextBtn.style.opacity = index === totalItems - 1 ? '0.5' : '1';
             nextBtn.style.cursor = index === totalItems - 1 ? 'not-allowed' : 'pointer';
-            // Removed pointer-events: none
         }
     }
 }
