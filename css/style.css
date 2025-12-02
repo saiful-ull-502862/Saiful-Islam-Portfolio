@@ -1000,9 +1000,11 @@ code {
     background: transparent !important;
     padding: 0 !important;
     filter: none !important;
-    /* Blend edges */
-    mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    /* Clip the left edge to match the diagonal divider */
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+    /* Only blend the right edge */
+    mask-image: linear-gradient(to right, black 0%, black 85%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 0%, black 85%, transparent 100%);
 }
 
 #profileCanvas {
