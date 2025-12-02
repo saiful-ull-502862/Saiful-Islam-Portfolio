@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="stylesheet" href="css/style.css?v=10">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -256,199 +256,205 @@
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">Expected May 2027</span>
-                        <h3>Doctor of Philosophy (Ph.D.) in System Engineering</h3>
-                        <h4>University of Louisiana at Lafayette (ULL), R1 Institution</h4>
-                        <p class="gpa">GPA: 3.90/4.0</p>
-                        <p class="thesis-title">
-                            <strong>Thesis:</strong> Developing a multi-scale finite element framework integrating
-                            fibril-reinforced poro-hyperelastic modeling and homogenization for precise cartilage
-                            simulations.
-                        </p>
-                        <p><strong>Supervisor:</strong> Dr. Tanvir Faisal, Assistant Professor, Department of Mechanical
-                            Engineering</p>
-                        <div class="tags">
-                            <span class="tag">Computational Modeling</span>
-                            <span class="tag">Bioengineering</span>
-                            <span class="tag">Medical Device</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">December 2023</span>
-                        <h3>Master of Science (M.Sc.) in Mechanical Engineering</h3>
-                        <h4>University of Louisiana at Lafayette (ULL), R1 Institution</h4>
-                        <p class="gpa">GPA: 3.87/4.0</p>
-                        <p class="thesis-title">
-                            <strong>Thesis:</strong> Multi-structural fibril-reinforced poro-hyperelastic (MSFPH) finite
-                            element modeling approach for advanced understanding of articular cartilage pathomechanics
-                        </p>
-                        <p><strong>Supervisor:</strong> Dr. Tanvir Faisal, Assistant Professor, Department of Mechanical
-                            Engineering</p>
-                        <div class="tags">
-                            <span class="tag">Computational Modeling</span>
-                            <span class="tag">Bioengineering</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">November 2017</span>
-                        <h3>Bachelor of Science (B.Sc.) in Mechanical Engineering</h3>
-                        <h4>Islamic University of Technology (IUT)</h4>
-                        <div class="tags">
-                            <span class="tag">OIC Scholarship</span>
-                        </div>
+    <!-- Experience & Studies Section -->
+    <section id="experience-studies" class="section p-0">
+        <div class="exp-header-bg">
+            <div class="container">
+                <div class="exp-header-content">
+                    <h2 class="exp-main-title">EXPERIENCE<br>& STUDIES</h2>
+                    <div class="exp-controls">
+                        <button id="expPrev" class="exp-nav-btn" aria-label="Previous"><i
+                                class="fas fa-arrow-left"></i></button>
+                        <button id="expNext" class="exp-nav-btn" aria-label="Next"><i
+                                class="fas fa-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section section-alt">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">August 2021 - Present</span>
-                        <h3>Graduate Research Assistant (GRA)</h3>
-                        <h4>4MLAB | UL Lafayette, Lafayette, LA</h4>
-                        <p><strong>Advisor:</strong> Dr. Tanvir Faisal</p>
-                        <ul class="experience-list">
-                            <li>Leading multiple computational biomechanics research projects focusing on articular
-                                cartilage mechanics and osteoarthritis</li>
-                            <li>Developed validated micro-FE models and 3D multi-scale frameworks using homogenization
-                                techniques</li>
-                            <li>Conducting markerless motion capture analysis for military load carriage biomechanics
-                                research</li>
-                            <li>Implementing AI/ML approaches (CNN) for quantitative tissue analysis</li>
-                            <li>Mentoring 2 undergraduate students on research projects and senior capstone designs</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">FEA</span>
-                            <span class="tag">ABAQUS</span>
-                            <span class="tag">Python</span>
-                            <span class="tag">AI/ML</span>
-                        </div>
+        <div class="container exp-body">
+            <!-- Slider Track -->
+            <div class="exp-slider-wrapper">
+                <div class="exp-track" id="expTrack">
+                    <!-- Item 1: PhD -->
+                    <div class="exp-card active" data-index="0">
+                        <span class="exp-period">2021 - 2027 (Exp)</span>
+                        <h3 class="exp-card-title">Ph.D. Candidate</h3>
+                        <span class="exp-label education">EDUCATION</span>
+                    </div>
+                    <!-- Item 2: GRA -->
+                    <div class="exp-card" data-index="1">
+                        <span class="exp-period">2021 - Present</span>
+                        <h3 class="exp-card-title">Graduate Research Assistant</h3>
+                        <span class="exp-label experience">EXPERIENCE</span>
+                    </div>
+                    <!-- Item 3: GTA -->
+                    <div class="exp-card" data-index="2">
+                        <span class="exp-period">2021 - Present</span>
+                        <h3 class="exp-card-title">Graduate Teaching Assistant</h3>
+                        <span class="exp-label experience">EXPERIENCE</span>
+                    </div>
+                    <!-- Item 4: Tech Intern -->
+                    <div class="exp-card" data-index="3">
+                        <span class="exp-period">Summer 2025</span>
+                        <h3 class="exp-card-title">Tech Intern</h3>
+                        <span class="exp-label experience">EXPERIENCE</span>
+                    </div>
+                    <!-- Item 5: RA (Tran's Lab) -->
+                    <div class="exp-card" data-index="4">
+                        <span class="exp-period">Jan 2024 - Aug 2024</span>
+                        <h3 class="exp-card-title">Research Assistant</h3>
+                        <span class="exp-label experience">EXPERIENCE</span>
+                    </div>
+                    <!-- Item 6: MSc -->
+                    <div class="exp-card" data-index="5">
+                        <span class="exp-period">2021 - 2023</span>
+                        <h3 class="exp-card-title">M.Sc. Mechanical Eng.</h3>
+                        <span class="exp-label education">EDUCATION</span>
+                    </div>
+                    <!-- Item 7: Service Engineer -->
+                    <div class="exp-card" data-index="6">
+                        <span class="exp-period">2019 - 2021</span>
+                        <h3 class="exp-card-title">Service Engineer</h3>
+                        <span class="exp-label experience">EXPERIENCE</span>
+                    </div>
+                    <!-- Item 8: BSc -->
+                    <div class="exp-card" data-index="7">
+                        <span class="exp-period">2013 - 2017</span>
+                        <h3 class="exp-card-title">B.Sc. Mechanical Eng.</h3>
+                        <span class="exp-label education">EDUCATION</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">August 2021 - Present</span>
-                        <h3>Graduate Teaching Assistant</h3>
-                        <h4>Department of Mechanical Engineering | ULL</h4>
-                        <ul class="experience-list">
-                            <li>Taught 4 undergraduate and graduate level engineering courses to 400+ students</li>
-                            <li>Courses: Biomechanics-I, Mechanics of Materials, Finite Element Analysis, Graphical
-                                Communications and Design</li>
-                            <li>Developed solution manuals, exam questions, and conducted tutorial sessions</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">Teaching</span>
-                            <span class="tag">SolidWorks</span>
-                            <span class="tag">ABAQUS</span>
-                            <span class="tag">LaTeX</span>
-                        </div>
+            <!-- Details View -->
+            <div class="exp-details-container" id="expDetails">
+                <!-- Detail 1: PhD -->
+                <div class="exp-detail-item active" data-index="0">
+                    <h3 class="detail-role">Doctor of Philosophy (Ph.D.) in System Engineering</h3>
+                    <h4 class="detail-org">University of Louisiana at Lafayette (ULL)</h4>
+                    <p class="detail-desc">
+                        <strong>GPA:</strong> 3.90/4.0<br>
+                        <strong>Thesis:</strong> Developing a multi-scale finite element framework integrating
+                        fibril-reinforced poro-hyperelastic modeling and homogenization for precise cartilage
+                        simulations.<br>
+                        <strong>Supervisor:</strong> Dr. Tanvir Faisal
+                    </p>
+                    <div class="detail-tags">
+                        <span>Computational Modeling</span>
+                        <span>Bioengineering</span>
+                        <span>Medical Device</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">June 2025 - August 2025</span>
-                        <h3>Tech Intern</h3>
-                        <h4>Opportunity Machine | Louisiana, Lafayette, LA</h4>
-                        <p><strong>Project:</strong> AI-Driven Ear-Piercing Safety Assessment with VR Jewelry
-                            Visualization</p>
-                        <ul class="experience-list">
-                            <li>Developed AI-driven scanning system for anatomically safe ear piercing detection</li>
-                            <li>Integrated results into interactive VR simulation with customizable jewelry
-                                visualization</li>
-                            <li>Completed Launch Academy tech entrepreneurship program</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">AI/ML</span>
-                            <span class="tag">VR</span>
-                            <span class="tag">Computer Vision</span>
-                        </div>
+                <!-- Detail 2: GRA -->
+                <div class="exp-detail-item" data-index="1">
+                    <h3 class="detail-role">Graduate Research Assistant (GRA)</h3>
+                    <h4 class="detail-org">4MLAB | UL Lafayette</h4>
+                    <ul class="detail-list">
+                        <li>Leading multiple computational biomechanics research projects focusing on articular
+                            cartilage mechanics and osteoarthritis.</li>
+                        <li>Developed validated micro-FE models and 3D multi-scale frameworks using homogenization
+                            techniques.</li>
+                        <li>Conducting markerless motion capture analysis for military load carriage biomechanics
+                            research.</li>
+                        <li>Implementing AI/ML approaches (CNN) for quantitative tissue analysis.</li>
+                    </ul>
+                    <div class="detail-tags">
+                        <span>FEA</span>
+                        <span>ABAQUS</span>
+                        <span>Python</span>
+                        <span>AI/ML</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">January 2024 - August 2024</span>
-                        <h3>Research Assistant (RA)</h3>
-                        <h4>Tran's Lab | Michigan Tech, Houghton, MI</h4>
-                        <p><strong>Advisor:</strong> Dr. Quang Tran</p>
-                        <p><strong>Project:</strong> Development of Air-Coupled Finite Element Model for Early-Age
-                            Concrete Using Leaky Rayleigh Wave</p>
-                        <ul class="experience-list">
-                            <li>Developed innovative non-contact ultrasonic techniques for early-stage concrete
-                                assessment</li>
-                            <li>Integrated finite element simulations with experimental validation</li>
-                            <li>Contributed to NSF proposal on early-age concrete evolution using multiphysics modeling
-                            </li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">FEA</span>
-                            <span class="tag">NDT</span>
-                            <span class="tag">Multiphysics</span>
-                        </div>
+                <!-- Detail 3: GTA -->
+                <div class="exp-detail-item" data-index="2">
+                    <h3 class="detail-role">Graduate Teaching Assistant</h3>
+                    <h4 class="detail-org">Department of Mechanical Engineering | ULL</h4>
+                    <ul class="detail-list">
+                        <li>Taught 4 undergraduate and graduate level engineering courses to 400+ students.</li>
+                        <li>Courses: Biomechanics-I, Mechanics of Materials, Finite Element Analysis, Graphical
+                            Communications and Design.</li>
+                        <li>Developed solution manuals, exam questions, and conducted tutorial sessions.</li>
+                    </ul>
+                    <div class="detail-tags">
+                        <span>Teaching</span>
+                        <span>SolidWorks</span>
+                        <span>ABAQUS</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">January 2019 - August 2021</span>
-                        <h3>Service Engineer</h3>
-                        <h4>AUDI AG | Bangladesh, Dhaka</h4>
-                        <ul class="experience-list">
-                            <li>Led introduction of mild hybrid technology in Bangladesh</li>
-                            <li>Managed team of automotive experts, enhancing service efficiency</li>
-                            <li>Optimized inventory and supplier management while ensuring quality standards</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">Leadership</span>
-                            <span class="tag">Automotive</span>
-                            <span class="tag">Quality Management</span>
-                        </div>
+                <!-- Detail 4: Tech Intern -->
+                <div class="exp-detail-item" data-index="3">
+                    <h3 class="detail-role">Tech Intern</h3>
+                    <h4 class="detail-org">Opportunity Machine | Lafayette, LA</h4>
+                    <p class="detail-desc">
+                        <strong>Project:</strong> AI-Driven Ear-Piercing Safety Assessment with VR Jewelry Visualization
+                    </p>
+                    <ul class="detail-list">
+                        <li>Developed AI-driven scanning system for anatomically safe ear piercing detection.</li>
+                        <li>Integrated results into interactive VR simulation with customizable jewelry visualization.
+                        </li>
+                        <li>Completed Launch Academy tech entrepreneurship program.</li>
+                    </ul>
+                    <div class="detail-tags">
+                        <span>AI/ML</span>
+                        <span>VR</span>
+                        <span>Computer Vision</span>
                     </div>
                 </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <span class="timeline-date">October 2016 - December 2016</span>
-                        <h3>Intern Engineer</h3>
-                        <h4>Walton Hi-Tech Industries Ltd. | Bangladesh, Dhaka</h4>
-                        <ul class="experience-list">
-                            <li>Trained in HVAC R&D, gaining hands-on experience in refrigeration and air conditioning
-                                technologies</li>
-                        </ul>
-                        <div class="tags">
-                            <span class="tag">HVAC</span>
-                            <span class="tag">R&D</span>
-                        </div>
+                <!-- Detail 5: RA -->
+                <div class="exp-detail-item" data-index="4">
+                    <h3 class="detail-role">Research Assistant</h3>
+                    <h4 class="detail-org">Tran's Lab | Michigan Tech</h4>
+                    <p class="detail-desc">
+                        <strong>Project:</strong> Development of Air-Coupled Finite Element Model for Early-Age Concrete
+                        Using Leaky Rayleigh Wave
+                    </p>
+                    <ul class="detail-list">
+                        <li>Developed innovative non-contact ultrasonic techniques for early-stage concrete assessment.
+                        </li>
+                        <li>Integrated finite element simulations with experimental validation.</li>
+                    </ul>
+                    <div class="detail-tags">
+                        <span>FEA</span>
+                        <span>NDT</span>
+                        <span>Multiphysics</span>
+                    </div>
+                </div>
+                <!-- Detail 6: MSc -->
+                <div class="exp-detail-item" data-index="5">
+                    <h3 class="detail-role">Master of Science (M.Sc.) in Mechanical Engineering</h3>
+                    <h4 class="detail-org">University of Louisiana at Lafayette (ULL)</h4>
+                    <p class="detail-desc">
+                        <strong>GPA:</strong> 3.87/4.0<br>
+                        <strong>Thesis:</strong> Multi-structural fibril-reinforced poro-hyperelastic (MSFPH) finite
+                        element modeling approach for advanced understanding of articular cartilage pathomechanics.
+                    </p>
+                    <div class="detail-tags">
+                        <span>Computational Modeling</span>
+                        <span>Bioengineering</span>
+                    </div>
+                </div>
+                <!-- Detail 7: Service Engineer -->
+                <div class="exp-detail-item" data-index="6">
+                    <h3 class="detail-role">Service Engineer</h3>
+                    <h4 class="detail-org">AUDI AG | Bangladesh</h4>
+                    <ul class="detail-list">
+                        <li>Led introduction of mild hybrid technology in Bangladesh.</li>
+                        <li>Managed team of automotive experts, enhancing service efficiency.</li>
+                        <li>Optimized inventory and supplier management while ensuring quality standards.</li>
+                    </ul>
+                    <div class="detail-tags">
+                        <span>Leadership</span>
+                        <span>Automotive</span>
+                        <span>Quality Management</span>
+                    </div>
+                </div>
+                <!-- Detail 8: BSc -->
+                <div class="exp-detail-item" data-index="7">
+                    <h3 class="detail-role">Bachelor of Science (B.Sc.) in Mechanical Engineering</h3>
+                    <h4 class="detail-org">Islamic University of Technology (IUT)</h4>
+                    <div class="detail-tags">
+                        <span>OIC Scholarship</span>
                     </div>
                 </div>
             </div>
