@@ -862,31 +862,50 @@ html[data-theme="dark"] .hero-social a:hover {
     color: #ffffff !important;
 }
 
-.hero-image {
-    background-color: transparent !important;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 100%;
+/* Main Desktop Hero Background */
+.hero {
+    background: #252830;
+    /* Dark background matching image */
+    padding-top: var(--header-height);
     position: relative;
-    animation: none !important;
-    padding-left: 0;
-    z-index: 1;
+    overflow: hidden;
+    z-index: 0;
 }
 
-.profile-container {
-    position: relative;
+/* Create the Light Diagonal Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    max-width: none;
-    animation: none;
+    background: #E0E0E0;
+    /* Light grey */
+    /* Create the diagonal split: Top-left to Bottom-right */
+    clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    z-index: 2;
+    /* Sit on top of the image */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    /* Content sits on top of everything */
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    /* Occupy right side */
+    height: 100%;
+    z-index: 1;
+    /* Sit behind the white overlay */
     display: flex;
     align-items: flex-end;
     justify-content: center;
-}
-
-.profile-container::before {
-    display: none;
 }
 
 .hero-image img,
@@ -902,33 +921,43 @@ html[data-theme="dark"] .hero-social a:hover {
     box-shadow: none !important;
     padding: 0 !important;
     filter: none !important;
-    /* Stronger mask to fade the left edge */
-    mask-image: linear-gradient(to right, transparent 5%, black 25%, black 100%) !important;
-    -webkit-mask-image: linear-gradient(to right, transparent 5%, black 25%, black 100%) !important;
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+    /* Move slightly left to ensure edge is covered */
+    transform: translateX(-5%);
 }
 
 #profileCanvas {
     display: none;
-    /* Hide canvas if we just want the image */
 }
 
 #profileImage {
     display: block !important;
 }
 
-/* Main Desktop Hero Background */
-.hero {
-    background: linear-gradient(105deg, var(--bg-secondary) 0%, var(--bg-secondary) 55%, #252830 55.1%, #252830 100%);
-    padding-top: var(--header-height);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Mobile Responsiveness for the new design */
+/* Mobile Responsiveness */
 @media (max-width: 992px) {
     .hero {
-        background: linear-gradient(180deg, #E0E0E0 0%, #E0E0E0 50%, #24272e 50.1%, #24272e 100%);
-        padding-top: var(--header-height);
+        background: #252830;
+    }
+
+    .hero::before {
+        /* Horizontal split for mobile */
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+
+    .hero-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        transform: none;
+    }
+
+    .hero-image img,
+    .profile-img-hero {
+        transform: none;
+        max-height: 60vh;
     }
 
     .hero-content {
