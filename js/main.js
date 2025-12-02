@@ -655,7 +655,12 @@ function initSwipeSlider(containerId) {
     }
 
     function goToSlide(index) {
-        if (index < 0 || index >= cards.length) return;
+        // Enable infinite looping
+        if (index < 0) {
+            index = cards.length - 1; // Go to last card
+        } else if (index >= cards.length) {
+            index = 0; // Go to first card
+        }
         currentIndex = index;
         updateSlider(index);
     }
@@ -675,16 +680,16 @@ function initSwipeSlider(containerId) {
         dots.forEach(d => d.classList.remove('active'));
         dots[index].classList.add('active');
 
-        // Update arrow states
+        // Arrows are always enabled for infinite loop
         if (leftArrow) {
-            leftArrow.disabled = index === 0;
+            leftArrow.disabled = false;
         }
         if (rightArrow) {
-            rightArrow.disabled = index === cards.length - 1;
+            rightArrow.disabled = false;
         }
 
         // Slide to position
-        const cardWidth = cards[0].offsetWidth + 32; // card width + gap
+        const cardWidth = cards[0].offsetWidth;
         const offset = -index * cardWidth;
         track.style.transform = `translateX(${offset}px)`;
     }
