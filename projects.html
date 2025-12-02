@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Md Saiful Islam</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=40">
+    <style>
+        .section-detail {
+            display: block !important;
+            min-height: 100vh;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-photo-small">
+                    <span>MI</span>
+                </div>
+                <h3>Md Saiful Islam</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#highlights" class="nav-link">Highlights</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                    <li><a href="publications.html" class="nav-link">Publications</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="themeToggle" class="theme-btn-sidebar">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="social-links-sidebar">
+                    <a href="https://github.com/saiful-ull-502862" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/md-saiful-islam-ull" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="projects" class="section section-detail">
+                <div class="container">
+                    <h2 class="section-title">Research Projects</h2>
+                    <div class="section-content-wrapper">
+                        <p class="section-subtitle">Explore my key research initiatives in computational biomechanics,
+                            AI/ML applications, and material science</p>
+                        <div class="projects-grid">
+                            <!-- Project 1 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/cartilage-model.jpg" alt="Multi-scale cartilage modeling"
+                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>Multi-scale Cartilage Model</text></svg>'">
+                                    <div class="project-overlay">
+                                        <a href="#" class="btn btn-sm">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Multi-scale Modeling of Articular Cartilage</h3>
+                                    <p class="project-duration">August 2021 - Present</p>
+                                    <p class="project-description">
+                                        Developed validated micro-FE models to simulate cartilage mechanics and
+                                        osteoarthritis progression, using homogenization and optimization to link
+                                        microstructure to bulk behavior.
+                                    </p>
+                                    <div class="project-tags">
+                                        <span class="tag">#FEA</span>
+                                        <span class="tag">#Biomechanics</span>
+                                        <span class="tag">#ABAQUS</span>
+                                        <span class="tag">#Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 2 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/motion-capture.jpg" alt="Motion capture analysis"
+                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2218%22 fill=%22%23666%22>Markerless Motion Capture</text></svg>'">
+                                    <div class="project-overlay">
+                                        <a href="#" class="btn btn-sm">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Markerless Motion Capture & Knee Biomechanics</h3>
+                                    <p class="project-duration">2022 - Present</p>
+                                    <p class="project-description">
+                                        Analyzing knee mechanics under military load carriage (30-50% body weight) to
+                                        predict OA risk in veterans using markerless motion capture and FEA integration.
+                                    </p>
+                                    <div class="project-tags">
+                                        <span class="tag">#Biomechanics</span>
+                                        <span class="tag">#Motion Capture</span>
+                                        <span class="tag">#FEA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 3 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/data-driven.jpg" alt="Data-driven modeling"
+                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>Data-Driven Modeling</text></svg>'">
+                                    <div class="project-overlay">
+                                        <a href="#" class="btn btn-sm">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Data-Driven Constitutive Modeling of Cartilage</h3>
+                                    <p class="project-duration">2022 - 2023</p>
+                                    <p class="project-description">
+                                        Predictive FEA framework optimizing hyperelastic parameters to match
+                                        experimental cartilage data, enabling quantitative assessment of osteoarthritis
+                                        progression.
+                                    </p>
+                                    <div class="project-tags">
+                                        <span class="tag">#FEA</span>
+                                        <span class="tag">#Optimization</span>
+                                        <span class="tag">#Python</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 4 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/cnn-collagen.jpg" alt="CNN analysis"
+                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>CNN Collagen Analysis</text></svg>'">
+                                    <div class="project-overlay">
+                                        <a href="#" class="btn btn-sm">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>CNN-based Collagen Quantification in Cartilage</h3>
+                                    <p class="project-duration">2023 - 2024</p>
+                                    <p class="project-description">
+                                        Modified pre-trained CNN model to analyze histological images for quantifying
+                                        tissue collagen content, validated against FTIR spectroscopy results.
+                                    </p>
+                                    <div class="project-tags">
+                                        <span class="tag">#AI</span>
+                                        <span class="tag">#CNN</span>
+                                        <span class="tag">#Python</span>
+                                        <span class="tag">#Image Analysis</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project 5 -->
+                            <div class="project-card">
+                                <div class="project-image">
+                                    <img src="images/projects/bioprinter.jpg" alt="3D Bioprinter"
+                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>3D Bioprinter</text></svg>'">
+                                    <div class="project-overlay">
+                                        <a href="#" class="btn btn-sm">View Details</a>
+                                    </div>
+                                </div>
+                                <div class="project-content">
+                                    <h3>Compatible Bio-printing System for Surgery</h3>
+                                    <p class="project-duration">2022 - 2023</p>
+                                    <p class="project-description">
+                                        Converted FDM 3D printer to bioprinter ($1,000 budget) for PCL-based hydrogel
+                                        printing. CFD analysis achieved 100% cell viability during direct-ink extrusion.
+                                    </p>
+                                    <div class="project-tags">
+                                        <span class="tag">#3D Printing</span>
+                                        <span class="tag">#CFD</span>
+                                        <span class="tag">#Bioengineering</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/main.js?v=6"></script>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Md Saiful Islam</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css?v=40">
+    <style>
+        .section-detail {
+            display: block !important;
+            min-height: 100vh;
+            padding-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="profile-photo-small">
+                    <span>MI</span>
+                </div>
+                <h3>Md Saiful Islam</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="index.html#about" class="nav-link">About</a></li>
+                    <li><a href="index.html#highlights" class="nav-link">Highlights</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="publications.html" class="nav-link">Publications</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="themeToggle" class="theme-btn-sidebar">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="social-links-sidebar">
+                    <a href="https://github.com/saiful-ull-502862" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/md-saiful-islam-ull" target="_blank"><i
+                            class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <section id="contact" class="section section-detail">
+                <div class="container">
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-content-wrapper">
+                        <div class="contact-container">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    <div>
+                                        <h3>Email</h3>
+                                        <p><a
+                                                href="mailto:md-saiful.islam1@louisiana.edu">md-saiful.islam1@louisiana.edu</a>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <div>
+                                        <h3>Location</h3>
+                                        <p>Lafayette, Louisiana, USA</p>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fab fa-linkedin"></i>
+                                    <div>
+                                        <h3>LinkedIn</h3>
+                                        <p><a href="https://linkedin.com/in/md-saiful-islam-ull" target="_blank">Connect
+                                                on LinkedIn</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID"
+                                method="POST">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                            <p class="form-note" style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                                <strong>Note:</strong> To enable the contact form, replace <code>YOUR_FORM_ID</code> in
+                                the form action with your actual Formspree form ID. Visit <a href="https://formspree.io"
+                                    target="_blank">formspree.io</a> to create a free account.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="js/main.js?v=6"></script>
+</body>
+
+</html>

@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=39">
+    <link rel="stylesheet" href="css/style.css?v=40">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -49,15 +49,15 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#highlights" class="nav-link">Highlights</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#education" class="nav-link">Education</a></li>
-                    <li><a href="#experience" class="nav-link">Experience</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#publications" class="nav-link">Publications</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="education.html" class="nav-link">Education</a></li>
+                    <li><a href="experience.html" class="nav-link">Experience</a></li>
+                    <li><a href="projects.html" class="nav-link">Projects</a></li>
+                    <li><a href="publications.html" class="nav-link">Publications</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
@@ -76,26 +76,45 @@
         <main class="main-content">
             <!-- Home Section -->
             <section id="home" class="hero">
-                <div class="container hero-container">
-                    <div class="hero-content">
-                        <div class="hero-badge">Ph.D. Candidate & Researcher</div>
-                        <h1 class="name">Md Saiful <span class="highlight">Islam</span></h1>
-                        <h2 class="hero-subtitle">Computational Biomechanics & FEA Specialist</h2>
-                        <p class="hero-tagline">Bridging the gap between mechanics and biology through advanced
-                            computational modeling.</p>
-                        <div class="hero-cta">
-                            <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                            <a href="#projects" class="btn btn-secondary">View Work</a>
+                <div class="container hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title fade-in">
+                            <span class="greeting">Hello, I'm</span>
+                            <span class="name">Md Saiful Islam</span>
+                        </h1>
+                        <p class="hero-subtitle fade-in-delay-1">Ph.D. Candidate in Mechanical Engineering</p>
+                        <p class="hero-tagline fade-in-delay-2">
+                            Specializing in Finite Element Analysis, Biomechanics & Computational Modeling
+                        </p>
+                        <div class="hero-expertise fade-in-delay-3">
+                            <span class="expertise-tag">FEA</span>
+                            <span class="expertise-tag">Soft Materials</span>
+                            <span class="expertise-tag">ABAQUS</span>
+                            <span class="expertise-tag">Python</span>
+                            <span class="expertise-tag">AI/ML</span>
+                        </div>
+                        <div class="hero-cta fade-in-delay-4">
+                            <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+                            <a href="projects.html" class="btn btn-secondary">View Work</a>
+                        </div>
+                        <div class="hero-social fade-in-delay-5">
+                            <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email"><i
+                                    class="fas fa-envelope"></i></a>
+                            <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/saiful-ull-502862" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
+                                target="_blank"><i class="fas fa-graduation-cap"></i></a>
                         </div>
                     </div>
-                    <div class="hero-image">
+                    <div class="hero-image fade-in-delay-2">
                         <div class="profile-container">
-                            <img src="images/profile.png" alt="Md Saiful Islam" class="profile-img-hero">
+                            <img id="profileImage" src="images/profile.png" alt="Md Saiful Islam - Professional Photo"
+                                class="profile-img-hero">
                         </div>
                     </div>
                 </div>
-
-
             </section>
 
             <!-- About Section -->
@@ -170,7 +189,6 @@
             </section>
 
             <!-- Highlights Section -->
-            <!-- Highlights Section -->
             <section id="highlights" class="section section-alt">
                 <div class="container">
                     <h2 class="section-title">Highlights</h2>
@@ -224,8 +242,7 @@
                         <div class="quick-summary">
                             <h3>At a Glance</h3>
                             <div class="summary-list">
-                                <div class="summary-item"
-                                    onclick="document.getElementById('education').querySelector('.slider-main-title').click(); window.location.href='#education'">
+                                <div class="summary-item" onclick="window.location.href='education.html'">
                                     <div class="summary-icon"><i class="fas fa-graduation-cap"></i></div>
                                     <div class="summary-details">
                                         <strong>Ph.D. Candidate</strong>
@@ -233,8 +250,7 @@
                                         <small>Expected 2025</small>
                                     </div>
                                 </div>
-                                <div class="summary-item"
-                                    onclick="document.getElementById('experience').querySelector('.slider-main-title').click(); window.location.href='#experience'">
+                                <div class="summary-item" onclick="window.location.href='experience.html'">
                                     <div class="summary-icon"><i class="fas fa-briefcase"></i></div>
                                     <div class="summary-details">
                                         <strong>Research Assistant</strong>
@@ -242,8 +258,7 @@
                                         <small>Biomechanics & FEA</small>
                                     </div>
                                 </div>
-                                <div class="summary-item"
-                                    onclick="document.getElementById('publications').querySelector('.section-title').click(); window.location.href='#publications'">
+                                <div class="summary-item" onclick="window.location.href='publications.html'">
                                     <div class="summary-icon"><i class="fas fa-book"></i></div>
                                     <div class="summary-details">
                                         <strong>Recent Publication</strong>
@@ -251,8 +266,7 @@
                                         <small>2024</small>
                                     </div>
                                 </div>
-                                <div class="summary-item"
-                                    onclick="document.getElementById('publications').querySelector('.section-title').click(); window.location.href='#publications'">
+                                <div class="summary-item" onclick="window.location.href='publications.html'">
                                     <div class="summary-icon"><i class="fas fa-users"></i></div>
                                     <div class="summary-details">
                                         <strong>Conference</strong>
@@ -266,1076 +280,7 @@
                 </div>
             </section>
 
-            <!-- Skills Section -->
-            <section id="skills" class="section section-detail">
-                <div class="container">
-                    <h2 class="section-title">Skills & Expertise</h2>
-                    <div class="section-content-wrapper">
-                        <div class="skills-grid">
-                            <div class="skill-category">
-                                <div class="skill-icon">
-                                    <i class="fas fa-cube"></i>
-                                </div>
-                                <h3>Computational Tools</h3>
-                                <ul class="skill-list">
-                                    <li>ABAQUS (Standard & Explicit)</li>
-                                    <li>SolidWorks</li>
-                                    <li>MATLAB</li>
-                                    <li>Python</li>
-                                    <li>LaTeX</li>
-                                    <li>OriginPro</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <div class="skill-icon">
-                                    <i class="fas fa-code"></i>
-                                </div>
-                                <h3>Programming & Data Analysis</h3>
-                                <ul class="skill-list">
-                                    <li>Python (NumPy, SciPy, Pandas)</li>
-                                    <li>MATLAB</li>
-                                    <li>Data Visualization</li>
-                                    <li>Statistical Analysis</li>
-                                    <li>Machine Learning</li>
-                                    <li>CFD Analysis</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <div class="skill-icon">
-                                    <i class="fas fa-brain"></i>
-                                </div>
-                                <h3>Research Areas</h3>
-                                <ul class="skill-list">
-                                    <li>Finite Element Analysis</li>
-                                    <li>Multi-scale Modeling</li>
-                                    <li>Biomechanics</li>
-                                    <li>Soft Tissue Mechanics</li>
-                                    <li>Non-destructive Testing</li>
-                                    <li>AI/ML Applications</li>
-                                </ul>
-                            </div>
-                            <div class="skill-category">
-                                <div class="skill-icon">
-                                    <i class="fas fa-flask"></i>
-                                </div>
-                                <h3>Specialized Techniques</h3>
-                                <ul class="skill-list">
-                                    <li>Poro-Hyperelastic Modeling</li>
-                                    <li>Homogenization Methods</li>
-                                    <li>Constitutive Modeling</li>
-                                    <li>Motion Capture Analysis</li>
-                                    <li>CNN-based Image Analysis</li>
-                                    <li>3D Bioprinting</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Education Section -->
-            <section id="education" class="section section-detail">
-                <div class="slider-header-bg">
-                    <div class="container">
-                        <div class="slider-header-content">
-                            <h2 class="slider-main-title">EDUCATION</h2>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-content-wrapper">
-                    <div class="container slider-body" id="education-slider">
-                        <div class="slider-content-container">
-                            <!-- Arrow Navigation -->
-                            <button class="slider-arrow slider-arrow-left" data-slider="education-slider"
-                                aria-label="Previous">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="slider-arrow slider-arrow-right" data-slider="education-slider"
-                                aria-label="Next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-
-                            <!-- Slider Track -->
-                            <div class="slider-wrapper">
-                                <div class="slider-track">
-                                    <!-- Item 1: PhD -->
-                                    <div class="slider-card active" data-index="0">
-                                        <div class="card-logo">
-                                            <img src="images/logos/ull-logo.png" alt="ULL Logo">
-                                        </div>
-                                        <span class="card-period">2021 - 2027 (Exp)</span>
-                                        <h3 class="card-title">Ph.D. Candidate</h3>
-                                        <span class="card-label">ULL</span>
-                                    </div>
-                                    <!-- Item 2: MSc -->
-                                    <div class="slider-card" data-index="1">
-                                        <div class="card-logo">
-                                            <img src="images/logos/ull-logo.png" alt="ULL Logo">
-                                        </div>
-                                        <span class="card-period">2021 - 2023</span>
-                                        <h3 class="card-title">M.Sc. Mechanical Eng.</h3>
-                                        <span class="card-label">ULL</span>
-                                    </div>
-                                    <!-- Item 3: BSc -->
-                                    <div class="slider-card" data-index="2">
-                                        <div class="card-logo">
-                                            <img src="images/logos/iut-logo.png" alt="IUT Logo">
-                                        </div>
-                                        <span class="card-period">2013 - 2017</span>
-                                        <h3 class="card-title">B.Sc. Mechanical Eng.</h3>
-                                        <span class="card-label">Islamic University of Technology</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Details View -->
-                        <div class="slider-details-container">
-                            <!-- Detail 1: PhD -->
-                            <div class="detail-item active" data-index="0">
-                                <h3 class="detail-role">Doctor of Philosophy (Ph.D.) in System Engineering</h3>
-                                <h4 class="detail-org">University of Louisiana at Lafayette (ULL), R1 Institution
-                                </h4>
-                                <p class="detail-desc">
-                                    <strong>GPA:</strong> 3.90/4.0<br>
-                                    <strong>Thesis:</strong> Developing a multi-scale finite element framework
-                                    integrating
-                                    fibril-reinforced poro-hyperelastic modeling and homogenization for precise
-                                    cartilage
-                                    simulations.<br>
-                                    <strong>Supervisor:</strong> Dr. Tanvir Faisal
-                                </p>
-                                <div class="detail-tags">
-                                    <span>Computational Modeling</span>
-                                    <span>Bioengineering</span>
-                                    <span>Medical Device</span>
-                                </div>
-                            </div>
-                            <!-- Detail 2: MSc -->
-                            <div class="detail-item" data-index="1">
-                                <h3 class="detail-role">Master of Science (M.Sc.) in Mechanical Engineering</h3>
-                                <h4 class="detail-org">University of Louisiana at Lafayette (ULL), R1 Institution
-                                </h4>
-                                <p class="detail-desc">
-                                    <strong>GPA:</strong> 3.87/4.0<br>
-                                    <strong>Thesis:</strong> Multi-structural fibril-reinforced poro-hyperelastic
-                                    (MSFPH) finite
-                                    element modeling approach for advanced understanding of articular cartilage
-                                    pathomechanics.
-                                </p>
-                                <div class="detail-tags">
-                                    <span>Computational Modeling</span>
-                                    <span>Bioengineering</span>
-                                </div>
-                            </div>
-                            <!-- Detail 3: BSc -->
-                            <div class="detail-item" data-index="2">
-                                <h3 class="detail-role">Bachelor of Science (B.Sc.) in Mechanical Engineering</h3>
-                                <h4 class="detail-org">Islamic University of Technology (IUT)</h4>
-                                <div class="detail-tags">
-                                    <span>OIC Scholarship</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Experience Section -->
-            <section id="experience" class="section section-detail">
-                <div class="slider-header-bg">
-                    <div class="container">
-                        <div class="slider-header-content">
-                            <h2 class="slider-main-title">EXPERIENCE</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-content-wrapper">
-                    <div class="container slider-body" id="experience-slider">
-                        <div class="slider-content-container">
-                            <!-- Arrow Navigation -->
-                            <button class="slider-arrow slider-arrow-left" aria-label="Previous">
-                                <i class="fas fa-chevron-left"></i>
-                            </button>
-                            <button class="slider-arrow slider-arrow-right" aria-label="Next">
-                                <i class="fas fa-chevron-right"></i>
-                            </button>
-
-                            <!-- Slider Track -->
-                            <div class="slider-wrapper">
-                                <div class="slider-track">
-                                    <!-- Item 1: GRA -->
-                                    <div class="slider-card active" data-index="0">
-                                        <div class="card-logo">
-                                            <img src="images/logos/4mlab-logo.png" alt="4MLab Logo">
-                                        </div>
-                                        <span class="card-period">2021 - Present</span>
-                                        <h3 class="card-title">Graduate Research Assistant</h3>
-                                        <span class="card-label">4MLAB @ ULL</span>
-                                    </div>
-                                    <!-- Item 2: GTA -->
-                                    <div class="slider-card" data-index="1">
-                                        <div class="card-logo">
-                                            <img src="images/logos/ull-logo-full.png" alt="ULL Logo">
-                                        </div>
-                                        <span class="card-period">2021 - Present</span>
-                                        <h3 class="card-title">Graduate Teaching Assistant</h3>
-                                        <span class="card-label">University of Louisiana at Lafayette</span>
-                                    </div>
-                                    <!-- Item 3: Tech Intern -->
-                                    <div class="slider-card" data-index="2">
-                                        <div class="card-logo">
-                                            <img src="images/logos/opportunity-machine-logo.png"
-                                                alt="Opportunity Machine Logo">
-                                        </div>
-                                        <span class="card-period">Summer 2025</span>
-                                        <h3 class="card-title">Tech Intern</h3>
-                                        <span class="card-label">Opportunity Machine</span>
-                                    </div>
-                                    <!-- Item 4: RA -->
-                                    <div class="slider-card" data-index="3">
-                                        <div class="card-logo">
-                                            <img src="images/logos/michigan-tech-logo.png" alt="Michigan Tech Logo">
-                                        </div>
-                                        <span class="card-period">Jan 2024 - Aug 2024</span>
-                                        <h3 class="card-title">Research Assistant</h3>
-                                        <span class="card-label">Tran's Lab @ Michigan Tech</span>
-                                    </div>
-                                    <!-- Item 5: Service Engineer -->
-                                    <div class="slider-card" data-index="4">
-                                        <div class="card-logo">
-                                            <img src="images/logos/audi-logo.png" alt="AUDI Logo">
-                                        </div>
-                                        <span class="card-period">2019 - 2021</span>
-                                        <h3 class="card-title">Service Engineer</h3>
-                                        <span class="card-label">AUDI AG</span>
-                                    </div>
-                                    <!-- Item 6: Intern Engineer -->
-                                    <div class="slider-card" data-index="5">
-                                        <div class="card-logo">
-                                            <img src="images/logos/walton-logo.png" alt="Walton Logo">
-                                        </div>
-                                        <span class="card-period">2016</span>
-                                        <h3 class="card-title">Intern Engineer</h3>
-                                        <span class="card-label">Walton Hi-Tech</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Details View -->
-                        <div class="slider-details-container">
-                            <!-- Detail 1: GRA -->
-                            <div class="detail-item active" data-index="0">
-                                <h3 class="detail-role">Graduate Research Assistant (GRA)</h3>
-                                <h4 class="detail-org">4MLAB | UL Lafayette, Lafayette, LA</h4>
-                                <ul class="detail-list">
-                                    <li>Leading multiple computational biomechanics research projects focusing on
-                                        articular
-                                        cartilage mechanics and osteoarthritis.</li>
-                                    <li>Developed validated micro-FE models and 3D multi-scale frameworks using
-                                        homogenization
-                                        techniques.</li>
-                                    <li>Conducting markerless motion capture analysis for military load carriage
-                                        biomechanics
-                                        research.</li>
-                                    <li>Implementing AI/ML approaches (CNN) for quantitative tissue analysis.</li>
-                                </ul>
-                                <div class="detail-tags">
-                                    <span>FEA</span>
-                                    <span>ABAQUS</span>
-                                    <span>Python</span>
-                                    <span>AI/ML</span>
-                                </div>
-                            </div>
-                            <!-- Detail 2: GTA -->
-                            <div class="detail-item" data-index="1">
-                                <h3 class="detail-role">Graduate Teaching Assistant</h3>
-                                <h4 class="detail-org">Department of Mechanical Engineering | ULL</h4>
-                                <ul class="detail-list">
-                                    <li>Taught 4 undergraduate and graduate level engineering courses to 400+
-                                        students.</li>
-                                    <li>Courses: Biomechanics-I, Mechanics of Materials, Finite Element Analysis,
-                                        Graphical
-                                        Communications and Design.</li>
-                                    <li>Developed solution manuals, exam questions, and conducted tutorial sessions.
-                                    </li>
-                                </ul>
-                                <div class="detail-tags">
-                                    <span>Teaching</span>
-                                    <span>SolidWorks</span>
-                                    <span>ABAQUS</span>
-                                </div>
-                            </div>
-                            <!-- Detail 3: Tech Intern -->
-                            <div class="detail-item" data-index="2">
-                                <h3 class="detail-role">Tech Intern</h3>
-                                <h4 class="detail-org">Opportunity Machine | Lafayette, LA</h4>
-                                <p class="detail-desc">
-                                    <strong>Project:</strong> AI-Driven Ear-Piercing Safety Assessment with VR
-                                    Jewelry
-                                    Visualization
-                                </p>
-                                <ul class="detail-list">
-                                    <li>Developed AI-driven scanning system for anatomically safe ear piercing
-                                        detection.</li>
-                                    <li>Integrated results into interactive VR simulation with customizable jewelry
-                                        visualization.
-                                    </li>
-                                    <li>Completed Launch Academy tech entrepreneurship program.</li>
-                                </ul>
-                                <div class="detail-tags">
-                                    <span>AI/ML</span>
-                                    <span>VR</span>
-                                    <span>Computer Vision</span>
-                                </div>
-                            </div>
-                            <!-- Detail 4: RA -->
-                            <div class="detail-item" data-index="3">
-                                <h3 class="detail-role">Research Assistant</h3>
-                                <h4 class="detail-org">Tran's Lab | Michigan Tech</h4>
-                                <p class="detail-desc">
-                                    <strong>Project:</strong> Development of Air-Coupled Finite Element Model for
-                                    Early-Age
-                                    Concrete
-                                    Using Leaky Rayleigh Wave
-                                </p>
-                                <ul class="detail-list">
-                                    <li>Developed innovative non-contact ultrasonic techniques for early-stage
-                                        concrete
-                                        assessment.
-                                    </li>
-                                    <li>Integrated finite element simulations with experimental validation.</li>
-                                </ul>
-                                <div class="detail-tags">
-                                    <span>FEA</span>
-                                    <span>NDT</span>
-                                    <span>Multiphysics</span>
-                                </div>
-                            </div>
-                            <!-- Detail 5: Service Engineer -->
-                            <div class="detail-item" data-index="4">
-                                <h3 class="detail-role">Service Engineer</h3>
-                                <h4 class="detail-org">AUDI AG | Bangladesh</h4>
-                                <ul class="detail-list">
-                                    <li>Led introduction of mild hybrid technology in Bangladesh.</li>
-                                    <li>Managed team of automotive experts, enhancing service efficiency.</li>
-                                    <li>Optimized inventory and supplier management while ensuring quality
-                                        standards.</li>
-                                </ul>
-                                <div class="detail-tags">
-                                    <span>Leadership</span>
-                                    <span>Automotive</span>
-                                    <span>Quality Management</span>
-                                </div>
-                            </div>
-                            <!-- Detail 6: Intern Engineer -->
-                            <div class="detail-item" data-index="5">
-                                <h3 class="detail-role">Intern Engineer</h3>
-                                <h4 class="detail-org">Walton Hi-Tech Industries Ltd. | Bangladesh</h4>
-                                <ul class="detail-list">
-                                    <li>Trained in HVAC R&D, gaining hands-on experience in refrigeration and air
-                                        conditioning
-                                        technologies.</li>
-                                </ul>
-                                <div class="detail-tags">
-                                    <span>HVAC</span>
-                                    <span>R&D</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section section-detail">
-                <div class="container">
-                    <h2 class="section-title">Research Projects</h2>
-                    <div class="section-content-wrapper">
-                        <p class="section-subtitle">Explore my key research initiatives in computational
-                            biomechanics, AI/ML
-                            applications, and material science</p>
-                        <div class="projects-grid">
-                            <!-- Project 1 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/cartilage-model.jpg" alt="Multi-scale cartilage modeling"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>Multi-scale Cartilage Model</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/multiscale-cartilage.html" class="btn btn-sm">View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>Multi-scale Modeling of Articular Cartilage</h3>
-                                    <p class="project-duration">August 2021 - Present</p>
-                                    <p class="project-description">
-                                        Developed validated micro-FE models to simulate cartilage mechanics and
-                                        osteoarthritis
-                                        progression,
-                                        using homogenization and optimization to link microstructure to bulk
-                                        behavior.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#FEA</span>
-                                        <span class="tag">#Biomechanics</span>
-                                        <span class="tag">#ABAQUS</span>
-                                        <span class="tag">#Python</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 2 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/motion-capture.jpg" alt="Motion capture analysis"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2218%22 fill=%22%23666%22>Markerless Motion Capture</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/motion-capture.html" class="btn btn-sm">View Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>Markerless Motion Capture & Knee Biomechanics</h3>
-                                    <p class="project-duration">2022 - Present</p>
-                                    <p class="project-description">
-                                        Analyzing knee mechanics under military load carriage (30-50% body weight)
-                                        to predict OA
-                                        risk
-                                        in veterans using markerless motion capture and FEA integration.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#Biomechanics</span>
-                                        <span class="tag">#Motion Capture</span>
-                                        <span class="tag">#FEA</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 3 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/data-driven.jpg" alt="Data-driven modeling"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>Data-Driven Modeling</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/data-driven-modeling.html" class="btn btn-sm">View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>Data-Driven Constitutive Modeling of Cartilage</h3>
-                                    <p class="project-duration">2022 - 2023</p>
-                                    <p class="project-description">
-                                        Predictive FEA framework optimizing hyperelastic parameters to match
-                                        experimental
-                                        cartilage
-                                        data,
-                                        enabling quantitative assessment of osteoarthritis progression.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#FEA</span>
-                                        <span class="tag">#Optimization</span>
-                                        <span class="tag">#Python</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 4 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/cnn-collagen.jpg" alt="CNN analysis"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>CNN Collagen Analysis</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/cnn-collagen.html" class="btn btn-sm">View Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>CNN-based Collagen Quantification in Cartilage</h3>
-                                    <p class="project-duration">2023 - 2024</p>
-                                    <p class="project-description">
-                                        Modified pre-trained CNN model to analyze histological images for
-                                        quantifying tissue
-                                        collagen content,
-                                        validated against FTIR spectroscopy results.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#AI</span>
-                                        <span class="tag">#CNN</span>
-                                        <span class="tag">#Python</span>
-                                        <span class="tag">#Image Analysis</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 5 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/bioprinter.jpg" alt="3D Bioprinter"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>3D Bioprinter</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/bioprinter.html" class="btn btn-sm">View Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>Compatible Bio-printing System for Surgery</h3>
-                                    <p class="project-duration">2022 - 2023</p>
-                                    <p class="project-description">
-                                        Converted FDM 3D printer to bioprinter ($1,000 budget) for PCL-based
-                                        hydrogel printing.
-                                        CFD analysis achieved 100% cell viability during direct-ink extrusion.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#3D Printing</span>
-                                        <span class="tag">#CFD</span>
-                                        <span class="tag">#Bioengineering</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 6 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/concrete.jpg" alt="Concrete NDT"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2220%22 fill=%22%23666%22>Early-Age Concrete</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/concrete-ndt.html" class="btn btn-sm">View Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>Leaky Rayleigh Wave Modeling for Early-Age Concrete</h3>
-                                    <p class="project-duration">January 2024 - August 2024</p>
-                                    <p class="project-description">
-                                        Developed non-contact ultrasonic techniques using leaky Rayleigh waves for
-                                        assessing
-                                        early-stage
-                                        concrete properties, integrating FEA with experimental validation.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#FEA</span>
-                                        <span class="tag">#NDT</span>
-                                        <span class="tag">#Multiphysics</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 7 -->
-                            <div class="project-card">
-                                <div class="project-image">
-                                    <img src="images/projects/ear-piercing.jpg" alt="AI Ear Piercing"
-                                        onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 300%22><rect fill=%22%23f0f0f0%22 width=%22400%22 height=%22300%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22monospace%22 font-size=%2218%22 fill=%22%23666%22>AI Ear Piercing Safety</text></svg>'">
-                                    <div class="project-overlay">
-                                        <a href="projects/ear-piercing-ai.html" class="btn btn-sm">View Details</a>
-                                    </div>
-                                </div>
-                                <div class="project-content">
-                                    <h3>AI-Driven Ear-Piercing Safety Assessment with VR</h3>
-                                    <p class="project-duration">June 2025 - August 2025</p>
-                                    <p class="project-description">
-                                        AI-powered scanning system detecting anatomically safe ear piercing
-                                        locations,
-                                        integrated
-                                        with
-                                        interactive VR for personalized jewelry visualization on safe zones.
-                                    </p>
-                                    <div class="project-tags">
-                                        <span class="tag">#AI</span>
-                                        <span class="tag">#VR</span>
-                                        <span class="tag">#Computer Vision</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Publications Section -->
-            <section id="publications" class="section section-detail">
-                <div class="container">
-                    <h2 class="section-title">Publications & Presentations</h2>
-                    <div class="section-content-wrapper">
-                        <div class="publications-container">
-                            <!-- Peer-Reviewed Journals -->
-                            <div class="publication-category">
-                                <h3><i class="fas fa-file-alt"></i> Peer-Reviewed Journals</h3>
-
-                                <div class="publication-item">
-                                    <div class="pub-header">
-                                        <span class="pub-status published">Published</span>
-                                        <span class="pub-year">2025</span>
-                                    </div>
-                                    <p class="pub-authors">
-                                        Istiak, A., <strong>Islam, S.</strong>, Adouni, M., Faisal, T. R.
-                                    </p>
-                                    <p class="pub-title">
-                                        Hyperelastic constitutive modeling of healthy and enzymatically mediated
-                                        degraded
-                                        articular
-                                        cartilage
-                                    </p>
-                                    <p class="pub-journal">
-                                        <em>Biomechanics and Modeling in Mechanobiology</em>, 1-17
-                                    </p>
-                                    <a href="https://link.springer.com/article/10.1007/s10237-024-01912-5"
-                                        class="pub-link" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt"></i> View Publication
-                                    </a>
-                                </div>
-
-                                <div class="publication-item">
-                                    <div class="pub-header">
-                                        <span class="pub-status published">Published</span>
-                                        <span class="pub-year">2025</span>
-                                    </div>
-                                    <p class="pub-authors">
-                                        Dang, Y.H., Dauzat, E., Istiak, A., Jackson, K., Songe, V., West, L., Kayes,
-                                        M.I.,
-                                        <strong>Islam, M.S.</strong>, and Faisal, T.R.
-                                    </p>
-                                    <p class="pub-title">
-                                        Conversion of an FDM printer to direct ink write 3D bioprinter utilizing an
-                                        efficient
-                                        and
-                                        cost-effective extrusion system
-                                    </p>
-                                    <p class="pub-journal">
-                                        <em>Annals of 3D Printed Medicine</em>, 100212
-                                    </p>
-                                    <a href="https://www.sciencedirect.com/science/article/pii/S2666964124000638"
-                                        class="pub-link" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt"></i> View Publication
-                                    </a>
-                                </div>
-
-                                <div class="publication-item">
-                                    <div class="pub-header">
-                                        <span class="pub-status published">Published</span>
-                                        <span class="pub-year">2021</span>
-                                    </div>
-                                    <p class="pub-authors">
-                                        Patwari, A. U., Hasan, S. U., & <strong>Islam, S.</strong>
-                                    </p>
-                                    <p class="pub-title">
-                                        Development of a Thermo-Acoustic Device for the conversion of sound waves
-                                        into cold air
-                                    </p>
-                                    <p class="pub-journal">
-                                        <em>Acta Technica Corviniensis-Bulletin of Engineering</em>, 14(1), 57-60
-                                    </p>
-                                    <a href="https://actatechnica.corvinus.ro/index.php?page=journal&volume=14&issue=1"
-                                        class="pub-link" target="_blank" rel="noopener noreferrer">
-                                        <i class="fas fa-external-link-alt"></i> View Publication
-                                    </a>
-                                </div>
-
-                                <div class="publication-item">
-                                    <div class="pub-header">
-                                        <span class="pub-status under-review">Under Review</span>
-                                        <span class="pub-year">2025</span>
-                                    </div>
-                                    <p class="pub-authors">
-                                        <strong>Islam, S.</strong>, Adouni, M., Faisal, T. R.
-                                    </p>
-                                    <p class="pub-title">
-                                        Multi-structural fibril-reinforced poro-hyperelastic (MS-FRPHE) finite
-                                        element model to
-                                        investigate
-                                        the zone-specific mechanics of cartilage and its constituents
-                                    </p>
-                                    <p class="pub-journal">
-                                        <em>Biomechanics and Modeling in Mechanobiology</em>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Conference Presentations -->
-                            <div class="publication-category">
-                                <h3><i class="fas fa-presentation"></i> Selected Conference Presentations</h3>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-location">Barcelona, Spain</span>
-                                        <span class="conf-year">2025</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        Zone-specific cartilage mechanics following cartilage degradation: a
-                                        combined AI
-                                        (Convolutional Neural Network) and FE approach
-                                    </p>
-                                    <p class="conf-event">
-                                        20th International Symposium on Computer Methods in Biomechanics and
-                                        Biomedical
-                                        Engineering
-                                        (CMBBE 2025)
-                                    </p>
-                                    <p class="conf-authors">
-                                        <strong>S. Islam</strong>, Istiak, A, I. Kayes, and T. R. Faisal
-                                    </p>
-                                </div>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-location">Texas, USA</span>
-                                        <span class="conf-year">2025</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        Computational Homogenization of the Mechanics of Depth-Dependent Articular
-                                        Cartilage
-                                        under
-                                        Compressive Loading
-                                    </p>
-                                    <p class="conf-event">
-                                        41st Southern Biomedical Engineering Conference (SBEC 2025)
-                                    </p>
-                                    <p class="conf-authors">
-                                        <strong>S. Islam</strong>, T. R. Faisal
-                                    </p>
-                                </div>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-location">Vancouver, Canada</span>
-                                        <span class="conf-year">2024</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        Multiscale fibril-reinforced poro-hyperelastic model for cartilage and
-                                        chondrocyte
-                                        mechanobiology
-                                    </p>
-                                    <p class="conf-event">
-                                        19th International Symposium on Computer Methods in Biomechanics and
-                                        Biomedical
-                                        Engineering
-                                        (CMBBE 2024)
-                                    </p>
-                                    <p class="conf-authors">
-                                        Istiak, A, <strong>S. Islam</strong>, and T. R. Faisal
-                                    </p>
-                                </div>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-location">Shreveport, LA, USA</span>
-                                        <span class="conf-year">2024</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        Advanced Multiscale Modeling of Cartilage: Assessing the Mechanical
-                                        Influence of Zonal
-                                        and
-                                        Radial Cell Variability
-                                    </p>
-                                    <p class="conf-event">
-                                        40th Southern Biomedical Engineering Conference (SBEC 2024)
-                                    </p>
-                                    <p class="conf-authors">
-                                        <strong>S. Islam</strong>, T. R. Faisal
-                                    </p>
-                                </div>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-location">Long Beach, CA, USA</span>
-                                        <span class="conf-year">2024</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        Multi-structural Fibril-reinforced Poro-hyperelastic (MSFPH) Finite Element
-                                        Modeling
-                                        Approach for the Understanding of Articular Cartilage Pathomechanics
-                                    </p>
-                                    <p class="conf-event">
-                                        Orthopedic Research Society (ORS) 2024
-                                    </p>
-                                    <p class="conf-authors">
-                                        <strong>S. Islam</strong>, T. R. Faisal
-                                    </p>
-                                </div>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-location">Baton Rouge, LA, USA</span>
-                                        <span class="conf-year">2023</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        A Multi-Structural Fibril-Reinforced Poro-Hyperelastic (MSFPH) Finite
-                                        Element Model to
-                                        Understand the Pathomechanics of Articular Cartilage
-                                    </p>
-                                    <p class="conf-event">
-                                        39th Southern Biomedical Engineering Conference (SBEC 2023)
-                                    </p>
-                                    <p class="conf-authors">
-                                        <strong>S. Islam</strong>, T. R. Faisal
-                                    </p>
-                                </div>
-
-                                <div class="conference-item">
-                                    <div class="conf-header">
-                                        <span class="conf-type oral">Oral</span>
-                                        <span class="conf-year">2023</span>
-                                    </div>
-                                    <p class="conf-title">
-                                        A multi-structural fibril-reinforced poro-hyperelastic (MSFPH) finite
-                                        element model is
-                                        instrumental in understanding the pathomechanics of articular cartilage
-                                    </p>
-                                    <p class="conf-event">
-                                        Carnegie Mellon Forum on Biomedical Engineering, 2023
-                                    </p>
-                                    <p class="conf-authors">
-                                        <strong>S. Islam</strong>, T. R. Faisal
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- Awards & Honors -->
-                            <div class="publication-category">
-                                <h3><i class="fas fa-award"></i> Awards & Honors</h3>
-
-                                <div class="award-grid">
-                                    <div class="award-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <h4>Full Tuition Aid</h4>
-                                        <p>Department of Mechanical Engineering, UL Lafayette</p>
-                                        <span class="award-year">2021 - 2026</span>
-                                    </div>
-                                    <div class="award-item">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <h4>Full Tuition Aid</h4>
-                                        <p>Department of Civil Engineering, Michigan Tech</p>
-                                        <span class="award-year">Jan - Aug 2024</span>
-                                    </div>
-                                    <div class="award-item">
-                                        <i class="fas fa-plane"></i>
-                                        <h4>Research Travel Grant</h4>
-                                        <p>Southern Biomedical Engineering Conference</p>
-                                        <span class="award-year">2024</span>
-                                    </div>
-                                    <div class="award-item">
-                                        <i class="fas fa-user-tie"></i>
-                                        <h4>Designing Leadership Program</h4>
-                                        <p>UL Lafayette</p>
-                                        <span class="award-year">2024</span>
-                                    </div>
-                                    <div class="award-item">
-                                        <i class="fas fa-globe"></i>
-                                        <h4>BSTF Travel Grant</h4>
-                                        <p>Bangladesh-Sweden Trust Fund</p>
-                                        <span class="award-year">2021-2022</span>
-                                    </div>
-                                    <div class="award-item">
-                                        <i class="fas fa-certificate"></i>
-                                        <h4>OIC Undergraduate Scholarship</h4>
-                                        <p>Islamic University of Technology</p>
-                                        <span class="award-year">2014 - 2017</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Leadership & Service -->
-                            <div class="publication-category">
-                                <h3><i class="fas fa-hands-helping"></i> Leadership & Service</h3>
-
-                                <div class="service-list">
-                                    <div class="service-item">
-                                        <div class="service-icon"><i class="fas fa-hand-holding-heart"></i></div>
-                                        <div class="service-content">
-                                            <h4>Volunteer, BMES Annual Meeting</h4>
-                                            <p class="service-org">Biomedical Engineering Society, San Antonio, TX
-                                            </p>
-                                            <p class="service-desc">
-                                                Supported conference operations through registration assistance,
-                                                session
-                                                coordination,
-                                                poster and platform session support, attendee guidance, and special
-                                                event
-                                                logistics
-                                            </p>
-                                            <span class="service-date">October 2022</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="service-item">
-                                        <div class="service-icon"><i class="fas fa-users"></i></div>
-                                        <div class="service-content">
-                                            <h4>Vice President, Bangladesh Student Association</h4>
-                                            <p class="service-org">UL Lafayette</p>
-                                            <p class="service-desc">
-                                                Collaborated with international communities to foster diverse
-                                                cultural
-                                                exchanges.
-                                                Managed $6000 budget and led 2 fundraising initiatives generating
-                                                $3000
-                                            </p>
-                                            <span class="service-date">January 2022 - December 2023</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="service-item">
-                                        <div class="service-icon"><i class="fas fa-user-friends"></i></div>
-                                        <div class="service-content">
-                                            <h4>Member, Society of Asian Scientists & Engineers</h4>
-                                            <p class="service-org">UL Lafayette</p>
-                                            <span class="service-date">January 2022 - Present</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="service-item">
-                                        <div class="service-icon"><i class="fas fa-calendar-alt"></i></div>
-                                        <div class="service-content">
-                                            <h4>Head of Event Management, IMechE Student Chapter</h4>
-                                            <p class="service-org">Islamic University of Technology</p>
-                                            <p class="service-desc">
-                                                Successfully organized two World Bank-supported seminars on
-                                                Fabrication Lab and
-                                                3D
-                                                printing
-                                            </p>
-                                            <span class="service-date">January 2016 - January 2017</span>
-                                        </div>
-                                    </div>
-
-                                    <div class="service-item">
-                                        <div class="service-icon"><i class="fas fa-trophy"></i></div>
-                                        <div class="service-content">
-                                            <h4>Logistic Chair, Mecceleration 2017</h4>
-                                            <p class="service-org">Islamic University of Technology</p>
-                                            <p class="service-desc">
-                                                Orchestrated the largest mechanical fest in the country,
-                                                demonstrating
-                                                exceptional
-                                                organizational and leadership skills
-                                            </p>
-                                            <span class="service-date">2017</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-
-            <!-- Contact Section -->
-            <section id="contact" class="section">
-                <div class="container">
-                    <h2 class="section-title">Get In Touch</h2>
-                    <p class="section-subtitle">
-                        I'm always open to discussing research collaborations, industrial internship opportunities,
-                        or consulting projects in finite element analysis and computational modeling.
-                    </p>
-
-                    <div class="contact-container">
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Email</h4>
-                                    <a href="mailto:md-saiful.islam1@louisiana.edu">md-saiful.islam1@louisiana.edu</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Phone</h4>
-                                    <a href="tel:+13374550914">337-455-0914</a>
-                                </div>
-                            </div>
-
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Location</h4>
-                                    <p>Lafayette, Louisiana, USA</p>
-                                </div>
-                            </div>
-
-                            <div class="contact-social">
-                                <h4>Connect with me</h4>
-                                <div class="social-links">
-                                    <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-linkedin"></i>
-                                        <span>LinkedIn</span>
-                                    </a>
-                                    <a href="https://github.com/saiful-ull-502862" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-github"></i>
-                                        <span>GitHub</span>
-                                    </a>
-                                    <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
-                                        target="_blank" rel="noopener noreferrer" class="social-link">
-                                        <i class="fas fa-graduation-cap"></i>
-                                        <span>Google Scholar</span>
-                                    </a>
-                                    <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
-                                        rel="noopener noreferrer" class="social-link">
-                                        <i class="fab fa-researchgate"></i>
-                                        <span>ResearchGate</span>
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div class="resume-download">
-                                <a href="Md Saiful Islam Resume 2.pdf" class="btn btn-primary" download>
-                                    <i class="fas fa-download"></i> Download Full Resume
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="contact-form-wrapper">
-                            <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID"
-                                method="POST">
-                                <div class="form-group">
-                                    <label for="name">Name</label>
-                                    <input type="text" id="name" name="name" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="subject">Subject</label>
-                                    <input type="text" id="subject" name="subject" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="message">Message</label>
-                                    <textarea id="message" name="message" rows="6" required></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fas fa-paper-plane"></i> Send Message
-                                </button>
-                            </form>
-                            <p class="form-note">
-                                <strong>Note:</strong> To enable the contact form, replace <code>YOUR_FORM_ID</code>
-                                in the form
-                                action
-                                with your actual Formspree form ID. Visit <a href="https://formspree.io"
-                                    target="_blank">formspree.io</a>
-                                to create a free account and get your form ID.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- Detailed sections moved to separate pages -->
 
             <!-- Footer -->
             <footer class="footer">
@@ -1350,11 +295,11 @@
                         <div class="footer-section">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About</a></li>
-                                <li><a href="#projects">Projects</a></li>
-                                <li><a href="#publications">Publications</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about">About</a></li>
+                                <li><a href="projects.html">Projects</a></li>
+                                <li><a href="publications.html">Publications</a></li>
+                                <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
 
@@ -1410,7 +355,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="js/main.js?v=5"></script>
+    <script src="js/main.js?v=6"></script>
 </body>
 
 </html>

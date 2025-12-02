@@ -77,59 +77,42 @@ function updateThemeIcon(theme) {
 // Navigation
 // ===========================
 function initNavigation() {
-    // Update active nav link based on scroll position
-    window.addEventListener('scroll', () => {
-        updateActiveNavLink();
-    });
+    // Determine current page
+    const path = window.location.pathname;
+    const page = path.split('/').pop() || 'index.html';
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const href = this.getAttribute('href');
+    // Handle Active Link Highlighting
+    if (page === 'index.html' || page === '') {
+        // On Home Page: Use Scroll Spy
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink(); // Initial check
 
-            // Skip if href is just "#"
-            if (href === '#') {
-                e.preventDefault();
-                return;
-            }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
 
-            const target = document.querySelector(href);
-
-            if (target) {
-                e.preventDefault();
-
-                // Handle Detail Sections (Tabbed View)
-                if (target.classList.contains('section-detail')) {
-                    // Hide all other detail sections first? 
-                    // Or just show this one? User said "redirect to me that section page".
-                    // Let's hide others to keep it clean, as if navigating to a new page.
-                    document.querySelectorAll('.section-detail').forEach(sec => {
-                        if (sec !== target) {
-                            sec.classList.remove('active');
-                            sec.style.display = 'none';
-                        }
-                    });
-
-                    // Show target
-                    target.style.display = 'block';
-                    setTimeout(() => {
-                        target.classList.add('active');
-                    }, 10);
-                }
-
-                // Wait for display change to affect layout
-                setTimeout(() => {
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({
                         behavior: 'smooth'
                     });
-                }, 50);
+                }
+            });
+        });
+    } else {
+        // On Other Pages: Static Highlight
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            // Check if link href matches current page
+            if (link.getAttribute('href') === page) {
+                link.classList.add('active');
             }
         });
-    });
+    }
 }
 
 function updateActiveNavLink() {
@@ -140,16 +123,23 @@ function updateActiveNavLink() {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (window.pageYOffset >= sectionTop - 100) {
+        // const sectionHeight = section.clientHeight;
+        if (window.pageYOffset >= sectionTop - 150) {
             currentSection = section.getAttribute('id');
         }
     });
 
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === `#${currentSection}`) {
+        const href = link.getAttribute('href');
+
+        // Match section ID
+        if (href === `#${currentSection}`) {
+            link.classList.add('active');
+        }
+
+        // Special case for Home
+        if ((currentSection === 'home' || !currentSection) && href === 'index.html') {
             link.classList.add('active');
         }
     });
