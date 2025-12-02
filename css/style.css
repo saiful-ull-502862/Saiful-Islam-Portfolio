@@ -2222,8 +2222,9 @@ code {
     right: 0;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 50;
-    /* High z-index to ensure clickability */
+    z-index: 100;
+    /* Increased z-index */
+    pointer-events: auto;
 }
 
 /* Mobile Responsive adjustment for controls */
@@ -2237,6 +2238,9 @@ code {
         position: static;
         /* Stack on mobile */
         transform: none;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
     }
 }
 
@@ -2253,6 +2257,8 @@ code {
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 1.2rem;
+    position: relative;
+    z-index: 101;
 }
 
 .slider-nav-btn:hover {
@@ -2263,10 +2269,12 @@ code {
 
 .slider-body {
     position: relative;
-    margin-top: -3rem;
-    /* Overlap the header */
+    margin-top: 0;
+    /* Removed negative margin to fix overlap */
     padding-bottom: 4rem;
     z-index: 10;
+    padding-top: 2rem;
+    /* Add some space between header and cards */
 }
 
 .slider-wrapper {
