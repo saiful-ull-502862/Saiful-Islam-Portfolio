@@ -717,7 +717,7 @@ code {
     padding-top: 0;
     overflow: hidden;
     /* Match the dark grey/blue from the profile image */
-    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
+    background: #2c303b;
 }
 
 .hero::before {
@@ -729,12 +729,12 @@ code {
     width: 100%;
     height: 100%;
     background: #E0E0E0;
-    /* Light grey */
-    clip-path: polygon(0 0, 60% 0, 50% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 60% 0, 50% 100%, 0 100%);
+    /* Light grey - perfectly straight diagonal using simple two-point line */
+    clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
     z-index: 2;
     /* Subtle white divider line */
-    box-shadow: inset -2px 0 0 #ffffff;
+    box-shadow: none;
 }
 
 /* Mobile adjustment */
@@ -883,7 +883,7 @@ html[data-theme="dark"] .hero-social a:hover {
     position: relative;
     padding-top: 0;
     overflow: hidden;
-    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
+    background: #2c303b;
     z-index: 0;
 }
 
@@ -896,10 +896,10 @@ html[data-theme="dark"] .hero-social a:hover {
     width: 100%;
     height: 100%;
     background: #E0E0E0;
-    /* Light grey */
+    /* Light grey - perfectly straight diagonal using simple two-point line */
     /* Create the diagonal split: Top-left to Bottom-right */
-    clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
     z-index: 2;
     /* Sit on top of the image */
 }
@@ -914,14 +914,15 @@ html[data-theme="dark"] .hero-social a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    width: 60%;
+    width: 50%;
     /* Occupy right side */
     height: 100%;
     z-index: 1;
     /* Sit behind the white overlay */
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-right: 5%;
 }
 
 .hero-image img,
@@ -939,8 +940,8 @@ html[data-theme="dark"] .hero-social a:hover {
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
-    /* Move significantly right to stay completely in dark area */
-    transform: translateX(15%) scale(1.05);
+    /* Move to the right side, well clear of diagonal */
+    transform: translateX(0%) scale(1.05);
 }
 
 #profileCanvas {
@@ -2869,6 +2870,15 @@ html {
     color: white;
     font-weight: bold;
     font-size: 1.5rem;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.profile-photo-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .sidebar-nav ul {
