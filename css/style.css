@@ -939,8 +939,8 @@ html[data-theme="dark"] .hero-social a:hover {
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
-    /* Move right and make larger to cover exposed area */
-    transform: translateX(5%) scale(1.05);
+    /* Move significantly right to stay completely in dark area */
+    transform: translateX(15%) scale(1.05);
 }
 
 #profileCanvas {
