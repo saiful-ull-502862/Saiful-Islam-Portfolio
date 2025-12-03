@@ -187,6 +187,8 @@ function initScrollAnimations() {
 function initBackToTop() {
     const backToTopButton = document.getElementById('backToTop');
 
+    if (!backToTopButton) return;
+
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 300) {
             backToTopButton.classList.add('visible');
