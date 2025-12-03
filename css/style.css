@@ -928,8 +928,8 @@ html[data-theme="dark"] .hero-social a:hover {
 .profile-img-hero {
     width: auto;
     height: auto;
-    max-height: 95vh;
-    max-width: 100%;
+    max-height: 100vh;
+    max-width: 110%;
     object-fit: contain;
     object-position: bottom center;
     border-radius: 0 !important;
@@ -939,8 +939,8 @@ html[data-theme="dark"] .hero-social a:hover {
     filter: none !important;
     mask-image: none !important;
     -webkit-mask-image: none !important;
-    /* Move slightly left to ensure edge is covered */
-    transform: translateX(-5%);
+    /* Move right and make larger to cover exposed area */
+    transform: translateX(5%) scale(1.05);
 }
 
 #profileCanvas {
