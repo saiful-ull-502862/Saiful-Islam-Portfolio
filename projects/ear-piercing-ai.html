@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,110 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .project-detail { padding-top: calc(var(--header-height) + var(--spacing-2xl)); padding-bottom: var(--spacing-3xl); }
-        .project-header { text-align: center; margin-bottom: var(--spacing-3xl); }
-        .project-header h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
-        .project-meta { display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap; margin-bottom: var(--spacing-lg); color: var(--text-secondary); }
-        .project-meta-item { display: flex; align-items: center; gap: var(--spacing-sm); }
-        .project-content { max-width: 900px; margin: 0 auto; }
-        .content-section { margin-bottom: var(--spacing-3xl); }
-        .content-section h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-sm); border-bottom: 2px solid var(--border-color); }
-        .key-findings { background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
-        .key-findings ul { margin-top: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-md); }
-        .key-findings li { padding-left: var(--spacing-lg); position: relative; color: var(--text-secondary); }
-        .key-findings li::before { content: ''; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; font-size: 1.25rem; }
-        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-sm); color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-2xl); }
-        .back-link:hover { gap: var(--spacing-md); }
-        .highlight-box { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); padding: var(--spacing-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color); margin: var(--spacing-xl) 0; }
+        .project-detail {
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .key-findings {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings ul {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .key-findings li {
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .key-findings li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .back-link:hover {
+            gap: var(--spacing-md);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i
+                    class="fas fa-moon"></i></button>
         </div>
     </nav>
 
@@ -39,8 +122,10 @@
             <div class="project-header">
                 <h1>AI-Driven Ear-Piercing Safety Assessment with VR</h1>
                 <div class="project-meta">
-                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>June 2025 - August 2025</span></div>
-                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>Opportunity Machine, Lafayette, LA</span></div>
+                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>June 2025 - August 2025</span>
+                    </div>
+                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>Opportunity Machine,
+                            Lafayette, LA</span></div>
                     <div class="project-meta-item"><i class="fas fa-briefcase"></i><span>Tech Internship</span></div>
                 </div>
                 <div class="tags">
@@ -57,8 +142,10 @@
                     <h2>Project Overview</h2>
                     <p>
                         This innovative tech internship project developed an AI-powered scanning system that detects
-                        anatomically safe ear piercing locations and integrates results into an interactive virtual reality
-                        environment for personalized jewelry visualization. Combining computer vision, anatomical analysis,
+                        anatomically safe ear piercing locations and integrates results into an interactive virtual
+                        reality
+                        environment for personalized jewelry visualization. Combining computer vision, anatomical
+                        analysis,
                         and immersive VR technology, the system enhances piercing safety while providing an engaging
                         customer experience.
                     </p>
@@ -66,7 +153,8 @@
                         <h4><i class="fas fa-shield-alt"></i> Safety Innovation</h4>
                         <p>
                             Using AI to identify safe piercing zones based on ear anatomy, preventing nerve damage and
-                            ensuring optimal placement while allowing customers to visualize their choices in virtual reality
+                            ensuring optimal placement while allowing customers to visualize their choices in virtual
+                            reality
                             before committing to permanent modifications.
                         </p>
                     </div>
@@ -90,23 +178,33 @@
                         AI Scanning System
                     </h3>
                     <ul class="experience-list">
-                        <li><strong>Image Acquisition:</strong> Multi-angle ear photography with standardized lighting</li>
-                        <li><strong>Anatomical Segmentation:</strong> Deep learning models (U-Net, Mask R-CNN) for ear structure detection</li>
-                        <li><strong>Landmark Detection:</strong> Identification of key anatomical features (tragus, helix, lobe, etc.)</li>
-                        <li><strong>Safety Zone Mapping:</strong> Rule-based and ML algorithms identifying safe piercing regions</li>
-                        <li><strong>Contraindication Detection:</strong> Identifying high-risk areas (major blood vessels, nerves, cartilage stress points)</li>
+                        <li><strong>Image Acquisition:</strong> Multi-angle ear photography with standardized lighting
+                        </li>
+                        <li><strong>Anatomical Segmentation:</strong> Deep learning models (U-Net, Mask R-CNN) for ear
+                            structure detection</li>
+                        <li><strong>Landmark Detection:</strong> Identification of key anatomical features (tragus,
+                            helix, lobe, etc.)</li>
+                        <li><strong>Safety Zone Mapping:</strong> Rule-based and ML algorithms identifying safe piercing
+                            regions</li>
+                        <li><strong>Contraindication Detection:</strong> Identifying high-risk areas (major blood
+                            vessels, nerves, cartilage stress points)</li>
                     </ul>
 
                     <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
                         VR Integration
                     </h3>
                     <ul class="experience-list">
-                        <li><strong>3D Reconstruction:</strong> Converting 2D scans to 3D ear models using photogrammetry</li>
+                        <li><strong>3D Reconstruction:</strong> Converting 2D scans to 3D ear models using
+                            photogrammetry</li>
                         <li><strong>VR Platform:</strong> Unity-based VR application for immersive visualization</li>
-                        <li><strong>Jewelry Library:</strong> Extensive catalog of earrings, studs, hoops with realistic rendering</li>
-                        <li><strong>Interactive Placement:</strong> Drag-and-drop interface for jewelry positioning on safe zones</li>
-                        <li><strong>Personalization:</strong> Customizable metals, gems, and styles with real-time preview</li>
-                        <li><strong>Safety Feedback:</strong> Visual indicators (green/yellow/red) for placement safety</li>
+                        <li><strong>Jewelry Library:</strong> Extensive catalog of earrings, studs, hoops with realistic
+                            rendering</li>
+                        <li><strong>Interactive Placement:</strong> Drag-and-drop interface for jewelry positioning on
+                            safe zones</li>
+                        <li><strong>Personalization:</strong> Customizable metals, gems, and styles with real-time
+                            preview</li>
+                        <li><strong>Safety Feedback:</strong> Visual indicators (green/yellow/red) for placement safety
+                        </li>
                     </ul>
 
                     <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
@@ -140,10 +238,12 @@
                 <div class="content-section">
                     <h2>Business & Market Impact</h2>
                     <ul class="experience-list">
-                        <li><strong>Customer Safety:</strong> Reduced risk of complications from poorly placed piercings</li>
+                        <li><strong>Customer Safety:</strong> Reduced risk of complications from poorly placed piercings
+                        </li>
                         <li><strong>Enhanced Experience:</strong> Interactive VR preview before commitment</li>
                         <li><strong>Professional Training:</strong> Educational tool for piercing technicians</li>
-                        <li><strong>Market Differentiation:</strong> Competitive advantage for early-adopting studios</li>
+                        <li><strong>Market Differentiation:</strong> Competitive advantage for early-adopting studios
+                        </li>
                         <li><strong>Liability Reduction:</strong> Documented safety assessment for legal protection</li>
                         <li><strong>Scalability:</strong> Cloud-based system deployable across multiple locations</li>
                     </ul>
@@ -191,7 +291,8 @@
                     <h2>Commercialization Potential</h2>
                     <p>
                         The technology addresses a $2B+ global body piercing market with growing consumer demand for
-                        personalization and safety. Target customers include high-end piercing studios, jewelry retailers,
+                        personalization and safety. Target customers include high-end piercing studios, jewelry
+                        retailers,
                         and medical aesthetic practices.
                     </p>
                 </div>
@@ -205,12 +306,71 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-bottom"><p>&copy; 2025 Md Saiful Islam. All rights reserved.</p></div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Md Saiful Islam</h3>
+                    <p>Ph.D. Candidate in Mechanical Engineering</p>
+                    <p>University of Louisiana at Lafayette</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Research Areas</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>Biomechanics</li>
+                        <li>Computational Modeling</li>
+                        <li>Soft Materials</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
+                            target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
+                            rel="noopener noreferrer" aria-label="ResearchGate">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+                <p>Last updated: <span id="lastUpdated">January 2025</span></p>
+            </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
 </body>
+
 </html>
