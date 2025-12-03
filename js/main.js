@@ -796,7 +796,7 @@ function initMenuToggle() {
     if (sidebarOverlay) {
         sidebarOverlay.addEventListener('click', () => {
             menuToggle.classList.remove('active');
-            sidebar.classList.remove('collapsed');
+            sidebar.classList.add('collapsed');
             sidebarOverlay.classList.remove('active');
         });
     }
@@ -806,7 +806,7 @@ function initMenuToggle() {
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             menuToggle.classList.remove('active');
-            sidebar.classList.remove('collapsed');
+            sidebar.classList.add('collapsed');
             if (sidebarOverlay) {
                 sidebarOverlay.classList.remove('active');
             }
