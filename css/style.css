@@ -721,8 +721,20 @@ code {
 }
 
 .hero::before {
-    display: none;
-    /* Remove the curve */
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #E0E0E0;
+    /* Light grey */
+    clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    z-index: 2;
+    /* Subtle white divider line */
+    box-shadow: inset -2px 0 0 #ffffff;
 }
 
 /* Mobile adjustment */
@@ -862,13 +874,16 @@ html[data-theme="dark"] .hero-social a:hover {
     color: #ffffff !important;
 }
 
-/* Main Desktop Hero Background */
+/* Main Desktop Hero Background (kept from earlier definition) */
 .hero {
-    background: #252830;
-    /* Dark background matching image */
-    padding-top: var(--header-height);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
     position: relative;
+    padding-top: 0;
     overflow: hidden;
+    background: linear-gradient(105deg, #E0E0E0 0%, #E0E0E0 50%, #2c303b 50.1%, #2c303b 100%);
     z-index: 0;
 }
 
