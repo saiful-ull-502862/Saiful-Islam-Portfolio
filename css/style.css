@@ -884,6 +884,7 @@ html[data-theme="dark"] .hero-social a:hover {
     /* Light grey */
     /* Create the diagonal split: Top-left to Bottom-right */
     clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
     z-index: 2;
     /* Sit on top of the image */
 }
@@ -944,6 +945,7 @@ html[data-theme="dark"] .hero-social a:hover {
     .hero::before {
         /* Horizontal split for mobile */
         clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
     }
 
     .hero-image {
@@ -3197,57 +3199,4 @@ html {
     max-width: 1400px;
 }
 
-.hero-text {
-    order: 1;
-    text-align: left;
-}
-
-.hero-image {
-    order: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.profile-img-hero {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid white;
-    box-shadow: var(--shadow-xl);
-}
-
-/* Detail Sections (Tabbed View) */
-.section-detail {
-    display: none;
-    /* Hidden by default */
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    min-height: 90vh;
-}
-
-.section-detail.active {
-    display: block;
-    animation: fadeIn 0.5s ease;
-}
-
-/* Override collapsible styles */
-.section-detail .section-content-wrapper {
-    max-height: none !important;
-    opacity: 1 !important;
-}
-
-/* Ensure Hero Text is visible on Light Background */
-.hero-text h1,
-.hero-text h2,
-.hero-text p {
-    color: var(--text-primary);
-}
-
-/* But if it's on the dark side? 
-   The gradient is 105deg. 
-   Left side is Light. Right side is Dark.
-   Text is on Left. So it should be Dark Text.
-   Image is on Right. So it should be on Dark Background.
-*/
+/* Legacy styles removed */
