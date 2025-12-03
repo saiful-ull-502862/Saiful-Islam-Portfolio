@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initCollapsibleSections();
     initProjectSlider();
+    initMenuToggle();
     updateLastModified();
 
     // Wrap potentially problematic functions in try-catch
@@ -696,37 +697,45 @@ window.portfolioFunctions = {
 // Project Slider (Highlights)
 // ===========================
 function initProjectSlider() {
-    const slides = document.querySelectorAll('.project-slide');
-    const indicators = document.querySelectorAll('.indicator');
+    // Find all project slider containers
+    const sliderContainers = document.querySelectorAll('.project-slider-container');
 
-    if (slides.length === 0) return;
+    if (sliderContainers.length === 0) return;
 
-    let currentSlide = 0;
-    const slideInterval = 5000; // 5 seconds
+    // Initialize each slider independently
+    sliderContainers.forEach(container => {
+        const slides = container.querySelectorAll('.project-slide');
+        const indicators = container.querySelectorAll('.indicator');
 
-    function showSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        indicators.forEach(ind => ind.classList.remove('active'));
+        if (slides.length === 0) return;
 
-        slides[index].classList.add('active');
-        if (indicators[index]) indicators[index].classList.add('active');
-        currentSlide = index;
-    }
+        let currentSlide = 0;
+        const slideInterval = 5000; // 5 seconds
 
-    function nextSlide() {
-        let next = (currentSlide + 1) % slides.length;
-        showSlide(next);
-    }
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(ind => ind.classList.remove('active'));
 
-    // Auto play
-    let slideTimer = setInterval(nextSlide, slideInterval);
+            slides[index].classList.add('active');
+            if (indicators[index]) indicators[index].classList.add('active');
+            currentSlide = index;
+        }
 
-    // Manual controls (indicators)
-    indicators.forEach((ind, index) => {
-        ind.addEventListener('click', () => {
-            clearInterval(slideTimer);
-            showSlide(index);
-            slideTimer = setInterval(nextSlide, slideInterval);
+        function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+        // Auto play
+        let slideTimer = setInterval(nextSlide, slideInterval);
+
+        // Manual controls (indicators)
+        indicators.forEach((ind, index) => {
+            ind.addEventListener('click', () => {
+                clearInterval(slideTimer);
+                showSlide(index);
+                slideTimer = setInterval(nextSlide, slideInterval);
+            });
         });
     });
 }
@@ -762,4 +771,48 @@ function initCollapsibleSections() {
             });
         }
     });
+}
+
+// ===========================
+// Menu Toggle (Hamburger Menu)
+// ===========================
+function initMenuToggle() {
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+    if (!menuToggle || !sidebar) return;
+
+    // Toggle menu on button click
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        sidebar.classList.toggle('collapsed');
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.toggle('active');
+        }
+    });
+
+    // Close menu when clicking overlay
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('collapsed');
+            sidebarOverlay.classList.remove('active');
+        });
+    }
+
+    // Close menu when clicking a nav link
+    const navLinks = sidebar.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            sidebar.classList.remove('collapsed');
+            if (sidebarOverlay) {
+                sidebarOverlay.classList.remove('active');
+            }
+        });
+    });
+
+    // Start with sidebar collapsed
+    sidebar.classList.add('collapsed');
 }

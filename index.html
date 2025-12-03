@@ -39,8 +39,18 @@
 
 <body>
     <div class="app-layout">
+        <!-- Hamburger Menu Button -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
         <!-- Sidebar Navigation -->
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-header">
                 <div class="profile-photo-small">
                     <img src="images/profile.jpg" alt="Md Saiful Islam">
@@ -49,15 +59,14 @@
             </div>
             <nav class="sidebar-nav">
                 <ul>
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#highlights" class="nav-link">Highlights</a></li>
-                    <li><a href="skills.html" class="nav-link">Skills</a></li>
-                    <li><a href="education.html" class="nav-link">Education</a></li>
-                    <li><a href="experience.html" class="nav-link">Experience</a></li>
-                    <li><a href="projects.html" class="nav-link">Projects</a></li>
-                    <li><a href="publications.html" class="nav-link">Publications</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li><a href="index.html" class="nav-link active">HOME</a></li>
+                    <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                    <li><a href="skills.html" class="nav-link">SKILLS</a></li>
+                    <li><a href="education.html" class="nav-link">EDUCATION</a></li>
+                    <li><a href="experience.html" class="nav-link">EXPERIENCE</a></li>
+                    <li><a href="projects.html" class="nav-link">PROJECTS</a></li>
+                    <li><a href="publications.html" class="nav-link">PUBLICATIONS</a></li>
+                    <li><a href="contact.html" class="nav-link">CONTACT</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
@@ -95,169 +104,6 @@
                 </div>
                 <div class="hero-image">
                     <img src="images/profile.jpg" alt="Md Saiful Islam" class="profile-img-hero">
-                </div>
-            </section>
-
-            <!-- About Section -->
-            <section id="about" class="section">
-                <div class="container">
-                    <h2 class="section-title">About Me</h2>
-                    <div class="about-content">
-                        <div class="about-text">
-                            <p class="lead">
-                                Ph.D. candidate specializing in finite element analysis, soft materials, and
-                                biomechanics.
-                                Seeking industrial internship opportunities to apply advanced research skills in
-                                material
-                                science
-                                and numerical simulation for real-world innovation.
-                            </p>
-                            <p>
-                                With over 4 years of hands-on experience in computational modeling and finite
-                                element analysis,
-                                I focus on developing multi-scale frameworks to understand complex biomechanical
-                                systems,
-                                particularly articular cartilage pathomechanics and osteoarthritis progression.
-                            </p>
-                            <p>
-                                My research bridges computational modeling, bioengineering, and mechanical
-                                engineering,
-                                combining advanced FEA techniques with AI/ML approaches to solve challenging
-                                problems in
-                                biomechanics and material science.
-                            </p>
-
-                            <div class="about-highlights">
-                                <div class="highlight-item">
-                                    <i class="fas fa-laptop-code"></i>
-                                    <div>
-                                        <h4>Modeling & Simulation</h4>
-                                        <p>4+ years of hands-on FEA experience with ABAQUS (Standard & Explicit) and
-                                            Python
-                                            scripting, SolidWorks</p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-industry"></i>
-                                    <div>
-                                        <h4>Industrial Experience</h4>
-                                        <p>3 years as Service Advisor at AUDI AG, leading a team of automotive
-                                            experts</p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-file-alt"></i>
-                                    <div>
-                                        <h4>Writing & Communication</h4>
-                                        <p>Authored multiple research publications, delivered talks and presented
-                                            posters at
-                                            international conferences</p>
-                                    </div>
-                                </div>
-                                <div class="highlight-item">
-                                    <i class="fas fa-users"></i>
-                                    <div>
-                                        <h4>Collaborations</h4>
-                                        <p>Leading numerical modeling projects at 4Mlab, mentoring researchers,
-                                            collaborating
-                                            with teams in Kuwait and the U.S.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Highlights Section -->
-            <section id="highlights" class="section section-alt">
-                <div class="container">
-                    <h2 class="section-title">Highlights</h2>
-                    <div class="highlights-wrapper">
-                        <!-- Project Slider (Left) -->
-                        <div class="project-slider-container">
-                            <h3>Featured Projects</h3>
-                            <div class="project-slider" id="projectSlider">
-                                <!-- Slide 1 -->
-                                <div class="project-slide active">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #2c3e50, #3498db);">
-                                        <i class="fas fa-brain"></i>
-                                    </div>
-                                    <div class="slide-caption">
-                                        <h4>Soft Tissue Mechanics</h4>
-                                        <p>Constitutive modeling of articular cartilage using ABAQUS.</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 2 -->
-                                <div class="project-slide">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #c0392b, #e74c3c);">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <div class="slide-caption">
-                                        <h4>FEA Automation</h4>
-                                        <p>Python scripting for high-throughput simulation analysis.</p>
-                                    </div>
-                                </div>
-                                <!-- Slide 3 -->
-                                <div class="project-slide">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #27ae60, #2ecc71);">
-                                        <i class="fas fa-microscope"></i>
-                                    </div>
-                                    <div class="slide-caption">
-                                        <h4>Biomaterials</h4>
-                                        <p>Characterization of hydrogels for tissue engineering applications.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slider-indicators">
-                                <span class="indicator active" data-slide="0"></span>
-                                <span class="indicator" data-slide="1"></span>
-                                <span class="indicator" data-slide="2"></span>
-                            </div>
-                        </div>
-
-                        <!-- Quick Summary (Right) -->
-                        <div class="quick-summary">
-                            <h3>At a Glance</h3>
-                            <div class="summary-list">
-                                <div class="summary-item" onclick="window.location.href='education.html'">
-                                    <div class="summary-icon"><i class="fas fa-graduation-cap"></i></div>
-                                    <div class="summary-details">
-                                        <strong>Ph.D. Candidate</strong>
-                                        <span>University of Louisiana at Lafayette</span>
-                                        <small>Expected 2025</small>
-                                    </div>
-                                </div>
-                                <div class="summary-item" onclick="window.location.href='experience.html'">
-                                    <div class="summary-icon"><i class="fas fa-briefcase"></i></div>
-                                    <div class="summary-details">
-                                        <strong>Research Assistant</strong>
-                                        <span>4MLab @ ULL</span>
-                                        <small>Biomechanics & FEA</small>
-                                    </div>
-                                </div>
-                                <div class="summary-item" onclick="window.location.href='publications.html'">
-                                    <div class="summary-icon"><i class="fas fa-book"></i></div>
-                                    <div class="summary-details">
-                                        <strong>Recent Publication</strong>
-                                        <span>J. Mech. Behav. Biomed. Mater.</span>
-                                        <small>2024</small>
-                                    </div>
-                                </div>
-                                <div class="summary-item" onclick="window.location.href='publications.html'">
-                                    <div class="summary-icon"><i class="fas fa-users"></i></div>
-                                    <div class="summary-details">
-                                        <strong>Conference</strong>
-                                        <span>SB3C 2024</span>
-                                        <small>Wisconsin, USA</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
 
