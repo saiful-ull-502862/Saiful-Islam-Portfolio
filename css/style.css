@@ -2891,6 +2891,14 @@ html[data-theme="dark"] .hero-social a:hover {
     /* Add space when expanded */
 }
 
+/* Ensure content is visible on separate pages */
+.section-detail .section-content-wrapper {
+    max-height: none;
+    opacity: 1;
+    overflow: visible;
+    margin-bottom: 4rem;
+}
+
 /* Ensure padding doesn't mess up height calculation */
 .section-collapsible .container {
     padding-bottom: 0;
