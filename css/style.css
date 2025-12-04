@@ -730,8 +730,8 @@ code {
     height: 100%;
     background: #E0E0E0;
     /* Light grey - perfectly straight diagonal using simple two-point line */
-    clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
     z-index: 2;
     /* Subtle white divider line */
     box-shadow: none;
@@ -757,7 +757,7 @@ code {
     align-items: end;
     position: relative;
     z-index: 1;
-    width: 100%;
+    width: calc(100% - 280px);
     max-width: none;
     padding: 0;
     height: 100vh;
@@ -898,8 +898,8 @@ html[data-theme="dark"] .hero-social a:hover {
     background: #E0E0E0;
     /* Light grey - perfectly straight diagonal using simple two-point line */
     /* Create the diagonal split: Top-left to Bottom-right */
-    clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, 52% 0, 48% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
     z-index: 2;
     /* Sit on top of the image */
 }
@@ -914,7 +914,7 @@ html[data-theme="dark"] .hero-social a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: calc(50% - 140px);
     /* Occupy right side */
     height: 100%;
     z-index: 1;
@@ -982,6 +982,8 @@ html[data-theme="dark"] .hero-social a:hover {
         grid-template-columns: 1fr;
         gap: var(--spacing-xl);
         text-align: center;
+        margin-left: 0;
+        width: 100%;
     }
 
     .hero-text {
