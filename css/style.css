@@ -1227,7 +1227,7 @@ html[data-theme="dark"] .hero-social a:hover {
    About Section
    =========================== */
 .about-content {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
