@@ -3149,7 +3149,6 @@ html {
 }
 
 /* Highlights Redesign */
-/* Highlights Redesign */
 .highlights-wrapper {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -3174,6 +3173,8 @@ html {
     border-radius: var(--radius-md);
     margin-top: 1rem;
     flex: 1;
+    background: var(--bg-primary);
+    /* Fallback background */
 }
 
 .project-slide {
@@ -3187,6 +3188,8 @@ html {
     display: flex;
     flex-direction: column;
     background: var(--bg-secondary);
+    visibility: hidden;
+    /* Hide non-active slides from screen readers/clicks */
 }
 
 .project-slide img {
@@ -3197,7 +3200,8 @@ html {
 
 .project-slide.active {
     opacity: 1;
-    z-index: 1;
+    z-index: 10;
+    visibility: visible;
 }
 
 .slide-placeholder {
