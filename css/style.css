@@ -67,7 +67,7 @@
     --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 
     /* Layout */
-    --max-width: 1600px;
+    --max-width: 95vw;
     --header-height: 80px;
 }
 
@@ -202,7 +202,7 @@ code {
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 var(--spacing-xl);
+    padding: 0 1rem;
 }
 
 .section {
