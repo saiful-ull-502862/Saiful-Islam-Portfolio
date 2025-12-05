@@ -115,40 +115,27 @@
                     <div class="highlights-wrapper">
                         <!-- Project Slider (Left) -->
                         <div class="project-slider-container featured-projects">
-                            <h3>Featured Projects</h3>
+                            <h3>Featured Projects <span id="projectTitle" class="dynamic-project-title"></span></h3>
                             <div class="project-slider" id="projectSliderAbout">
                                 <!-- Slide 1: CNN Project (Active) -->
-                                <div class="project-slide active">
+                                <div class="project-slide active" data-title="AI in Biomechanics">
                                     <img src="images/projects/cnn-collagen.png" alt="CNN Collagen Analysis">
                                     <div class="slide-caption">
                                         <h4>AI in Biomechanics</h4>
                                         <p>CNN-based collagen quantification in articular cartilage.</p>
                                     </div>
                                 </div>
-                                <!-- Slide 2 -->
-                                <div class="project-slide">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #2c3e50, #3498db);">
-                                        <i class="fas fa-brain"></i>
-                                    </div>
-                                    <div class="slide-caption">
-                                        <h4>Soft Tissue Mechanics</h4>
-                                        <p>Constitutive modeling of articular cartilage using ABAQUS.</p>
-                                    </div>
+                                <!-- Slide 2: Multi-scale Cartilage Modeling -->
+                                <div class="project-slide" data-title="Multi-scale Cartilage Modeling">
+                                    <img src="images/projects/multiscale-cartilage.png"
+                                        alt="Multi-scale Cartilage Modeling">
                                 </div>
-                                <!-- Slide 3 -->
-                                <div class="project-slide">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #c0392b, #e74c3c);">
-                                        <i class="fas fa-code"></i>
-                                    </div>
-                                    <div class="slide-caption">
-                                        <h4>FEA Automation</h4>
-                                        <p>Python scripting for high-throughput simulation analysis.</p>
-                                    </div>
+                                <!-- Slide 3: Data-Driven Modeling -->
+                                <div class="project-slide" data-title="Constitutive Modeling of Cartilage">
+                                    <img src="images/projects/data-driven-cartilage.png" alt="Data-Driven Modeling">
                                 </div>
                                 <!-- Slide 4 -->
-                                <div class="project-slide">
+                                <div class="project-slide" data-title="Biomaterials">
                                     <div class="slide-placeholder"
                                         style="background: linear-gradient(45deg, #27ae60, #2ecc71);">
                                         <i class="fas fa-microscope"></i>
@@ -289,7 +276,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="js/main.js?v=42"></script>
+    <script src="js/main.js?v=46"></script>
 </body>
 
 </html>

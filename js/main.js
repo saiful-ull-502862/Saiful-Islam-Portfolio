@@ -708,6 +708,7 @@ function initProjectSlider() {
     sliderContainers.forEach(container => {
         const slides = container.querySelectorAll('.project-slide');
         const indicators = container.querySelectorAll('.indicator');
+        const titleElement = container.querySelector('.dynamic-project-title');
 
         if (slides.length === 0) return;
 
@@ -720,12 +721,33 @@ function initProjectSlider() {
 
             slides[index].classList.add('active');
             if (indicators[index]) indicators[index].classList.add('active');
+
+            // Update dynamic title if it exists
+            if (titleElement) {
+                const title = slides[index].getAttribute('data-title');
+                if (title) {
+                    titleElement.style.opacity = '0';
+                    setTimeout(() => {
+                        titleElement.textContent = `| ${title}`;
+                        titleElement.style.opacity = '1';
+                    }, 300); // Wait for fade out
+                } else {
+                    titleElement.style.opacity = '0'; // Hide if no title
+                }
+            }
+
             currentSlide = index;
         }
 
         function nextSlide() {
             let next = (currentSlide + 1) % slides.length;
             showSlide(next);
+        }
+
+        // Initialize first slide title immediately
+        if (titleElement && slides[0].getAttribute('data-title')) {
+            titleElement.textContent = `| ${slides[0].getAttribute('data-title')}`;
+            titleElement.style.opacity = '1';
         }
 
         // Auto play
