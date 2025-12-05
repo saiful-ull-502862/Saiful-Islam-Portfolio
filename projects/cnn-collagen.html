@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,110 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .project-detail { padding-top: calc(var(--header-height) + var(--spacing-2xl)); padding-bottom: var(--spacing-3xl); }
-        .project-header { text-align: center; margin-bottom: var(--spacing-3xl); }
-        .project-header h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
-        .project-meta { display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap; margin-bottom: var(--spacing-lg); color: var(--text-secondary); }
-        .project-meta-item { display: flex; align-items: center; gap: var(--spacing-sm); }
-        .project-content { max-width: 900px; margin: 0 auto; }
-        .content-section { margin-bottom: var(--spacing-3xl); }
-        .content-section h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-sm); border-bottom: 2px solid var(--border-color); }
-        .key-findings { background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
-        .key-findings ul { margin-top: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-md); }
-        .key-findings li { padding-left: var(--spacing-lg); position: relative; color: var(--text-secondary); }
-        .key-findings li::before { content: ''; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; font-size: 1.25rem; }
-        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-sm); color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-2xl); }
-        .back-link:hover { gap: var(--spacing-md); }
-        .highlight-box { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); padding: var(--spacing-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color); margin: var(--spacing-xl) 0; }
+        .project-detail {
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .key-findings {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings ul {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .key-findings li {
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .key-findings li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .back-link:hover {
+            gap: var(--spacing-md);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i
+                    class="fas fa-moon"></i></button>
         </div>
     </nav>
 
@@ -37,18 +120,19 @@
             <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
 
             <div class="project-header">
-                <h1>CNN-based Collagen Quantification in Cartilage</h1>
+                <h1>Quantitative Image Analysis & FE Modeling of Cartilage Degradation</h1>
                 <div class="project-meta">
-                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>2023 - 2024</span></div>
-                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>4MLAB, UL Lafayette</span></div>
+                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>2024 - Present</span></div>
+                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>4MLAB, UL Lafayette</span>
+                    </div>
                     <div class="project-meta-item"><i class="fas fa-user-tie"></i><span>Dr. Tanvir Faisal</span></div>
                 </div>
                 <div class="tags">
-                    <span class="tag">#AI</span>
-                    <span class="tag">#CNN</span>
-                    <span class="tag">#Python</span>
                     <span class="tag">#Image Analysis</span>
-                    <span class="tag">#Deep Learning</span>
+                    <span class="tag">#FEA</span>
+                    <span class="tag">#Biomechanics</span>
+                    <span class="tag">#Mechanobiology</span>
+                    <span class="tag">#Osteoarthritis</span>
                 </div>
             </div>
 
@@ -56,17 +140,18 @@
                 <div class="content-section">
                     <h2>Project Overview</h2>
                     <p>
-                        This project develops an AI-driven approach for automated quantification of collagen content in
-                        articular cartilage using convolutional neural networks (CNN). By analyzing histological images,
-                        the system provides rapid, objective assessment of tissue composition that traditionally requires
-                        time-consuming manual analysis or expensive spectroscopic techniques.
+                        Progressive collagen network degradation represents a critical pathomechanical feature of
+                        osteoarthritis (OA), disrupting cartilage load-bearing capacity and altering the mechanical
+                        microenvironment of chondrocytes. This study combines quantitative image analysis (IA) with
+                        computational biomechanics to map enzymatic collagen degradation patterns and predict their
+                        impact on cartilage tissue mechanics and chondrocyte deformation behavior.
                     </p>
                     <div class="highlight-box">
-                        <h4><i class="fas fa-brain"></i> AI Innovation</h4>
+                        <h4><i class="fas fa-brain"></i> Key Innovation</h4>
                         <p>
-                            Leveraging transfer learning and modified pre-trained CNN architectures to achieve high-accuracy
-                            collagen quantification from standard histological staining, validated against gold-standard
-                            FTIR spectroscopy measurements.
+                            Integrated experimental-computational framework establishing quantitative relationships
+                            between tissue composition and cellular mechanics, enabling prediction of disease
+                            progression patterns and identification of biomechanical intervention targets.
                         </p>
                     </div>
                 </div>
@@ -74,47 +159,40 @@
                 <div class="content-section">
                     <h2>Research Objectives</h2>
                     <ul class="experience-list">
-                        <li>Develop automated CNN-based pipeline for collagen quantification from histological images</li>
-                        <li>Validate predictions against FTIR spectroscopy reference measurements</li>
-                        <li>Enable high-throughput analysis for large-scale tissue studies</li>
-                        <li>Provide zone-specific collagen distribution mapping in cartilage samples</li>
-                        <li>Create accessible tool for researchers without spectroscopy equipment</li>
-                        <li>Correlate collagen content with biomechanical properties and OA severity</li>
+                        <li>Map spatial heterogeneity of collagen degradation using quantitative image analysis</li>
+                        <li>Characterize zone-specific biomechanical consequences of collagen loss</li>
+                        <li>Establish quantitative relationship between matrix degradation severity and cellular
+                            mechanical strain</li>
+                        <li>Predict impact of degradation on chondrocyte mechanobiological responses</li>
+                        <li>Develop validated FE models incorporating key ECM constituents (collagen fibrils, PGs, PCM)
+                        </li>
                     </ul>
                 </div>
 
                 <div class="content-section">
                     <h2>Methodology</h2>
                     <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
-                        Dataset Preparation
+                        Experimental Framework
                     </h3>
                     <ul class="experience-list">
-                        <li>Histological imaging of cartilage samples with standard H&E and picrosirius red staining</li>
-                        <li>FTIR spectroscopy measurements for ground-truth collagen quantification</li>
-                        <li>Image preprocessing (normalization, augmentation, region extraction)</li>
-                        <li>Dataset split: 70% training, 15% validation, 15% testing</li>
+                        <li><strong>Enzymatic Digestion:</strong> MMPs and ADAMTS treatment to simulate pathological
+                            degradation</li>
+                        <li><strong>Histology:</strong> Picrosirius Red staining and sectioning at 5 µm thickness</li>
+                        <li><strong>Quantification:</strong> Image analysis based on red intensity, validated by FTIR
+                            spectroscopy</li>
+                        <li><strong>Degradation Mapping:</strong> IA-derived degradation values: 25% (Superficial), 22%
+                            (Middle), 16% (Deep)</li>
                     </ul>
 
                     <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
-                        CNN Architecture
+                        Computational Modeling
                     </h3>
                     <ul class="experience-list">
-                        <li><strong>Base Model:</strong> Modified ResNet50/VGG16 with transfer learning from ImageNet</li>
-                        <li><strong>Custom Layers:</strong> Regression head for collagen percentage prediction</li>
-                        <li><strong>Optimization:</strong> Adam optimizer with learning rate scheduling</li>
-                        <li><strong>Regularization:</strong> Dropout, batch normalization, data augmentation</li>
-                        <li><strong>Loss Function:</strong> Mean squared error (MSE) for regression task</li>
-                    </ul>
-
-                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
-                        Implementation Stack
-                    </h3>
-                    <ul class="experience-list">
-                        <li>Python (TensorFlow/Keras or PyTorch) for deep learning</li>
-                        <li>OpenCV for image processing and analysis</li>
-                        <li>NumPy/Pandas for data manipulation</li>
-                        <li>Scikit-learn for evaluation metrics and statistical analysis</li>
-                        <li>Matplotlib/Seaborn for visualization and heatmap generation</li>
+                        <li><strong>FE Model:</strong> Axisymmetric model incorporating type II/VI collagen, PGs, PCM,
+                            and chondrocytes</li>
+                        <li><strong>Validation:</strong> Validated against healthy cartilage properties</li>
+                        <li><strong>Simulation:</strong> Implemented graded collagen loss to investigate chondrocyte
+                            responses</li>
                     </ul>
                 </div>
 
@@ -123,46 +201,40 @@
                     <div class="key-findings">
                         <h4>Research Outcomes:</h4>
                         <ul>
-                            <li>Achieved R > 0.90 correlation with FTIR spectroscopy measurements</li>
-                            <li>Reduced analysis time from hours to seconds per sample</li>
-                            <li>Demonstrated superior performance over traditional image analysis methods</li>
-                            <li>Successfully mapped zone-specific collagen distribution across cartilage depth</li>
-                            <li>Identified collagen depletion patterns characteristic of early OA</li>
-                            <li>Validated model generalization on independent sample cohort</li>
+                            <li><strong>Depth-Dependent Degradation:</strong> Significantly higher degradation in
+                                Superficial Zone (24.62 ± 14.42%) vs Deep Zone (15.80 ± 10.51%)</li>
+                            <li><strong>Cellular Strain:</strong> Collagen degradation induced chondrocyte aspect ratio
+                                changes of 6.35% (SZ), 5.99% (MZ), and 3.77% (DZ)</li>
+                            <li><strong>Mechanobiology:</strong> Established quantitative link between matrix
+                                degradation and cellular mechanical strain</li>
+                            <li><strong>Pathology Insight:</strong> Confirmed collagen network integrity is critical for
+                                protecting cells from excessive strain</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="content-section">
-                    <h2>Applications & Impact</h2>
+                    <h2>Significance & Clinical Relevance</h2>
+                    <p>
+                        This integrated approach addresses a critical gap in understanding how early-stage matrix
+                        degradation drives chondrocyte mechanical dysfunction. By linking tissue composition to cellular
+                        mechanics, the framework enables:
+                    </p>
                     <ul class="experience-list">
-                        <li><strong>Research Acceleration:</strong> High-throughput analysis for large tissue biobanks</li>
-                        <li><strong>Clinical Diagnostics:</strong> Quantitative OA grading from biopsy samples</li>
-                        <li><strong>Drug Development:</strong> Efficient evaluation of therapeutic interventions on tissue composition</li>
-                        <li><strong>Quality Control:</strong> Assessment of tissue-engineered cartilage products</li>
-                        <li><strong>Accessibility:</strong> Enables collagen quantification without expensive FTIR equipment</li>
-                        <li><strong>Standardization:</strong> Objective, reproducible measurements reducing inter-observer variability</li>
-                    </ul>
-                </div>
-
-                <div class="content-section">
-                    <h2>Technical Contributions</h2>
-                    <ul class="experience-list">
-                        <li>Pre-trained model weights and architecture for cartilage collagen analysis</li>
-                        <li>Annotated dataset of histological images with FTIR-validated collagen measurements</li>
-                        <li>Python package for end-to-end analysis pipeline</li>
-                        <li>Guidelines for optimal histological preparation and imaging protocols</li>
+                        <li>Prediction of disease progression patterns</li>
+                        <li>Identification of biomechanical intervention targets</li>
+                        <li>Development of structure-modifying therapies</li>
+                        <li>Early diagnostic strategies for osteoarthritis</li>
                     </ul>
                 </div>
 
                 <div class="content-section">
                     <h2>Future Directions</h2>
                     <ul class="experience-list">
-                        <li>Extension to multi-component analysis (proteoglycans, water content)</li>
-                        <li>Real-time analysis integration with digital pathology systems</li>
-                        <li>Expansion to other connective tissues (tendon, ligament, meniscus)</li>
-                        <li>Development of explainable AI techniques for understanding model decisions</li>
-                        <li>Web-based platform for collaborative tissue analysis</li>
+                        <li>Integration of concurrent proteoglycan loss simulation</li>
+                        <li>Experimental validation of predicted cellular deformations</li>
+                        <li>Extension to patient-specific models for personalized medicine</li>
+                        <li>Application to other connective tissues and pathologies</li>
                     </ul>
                 </div>
 
@@ -176,69 +248,70 @@
     </div>
 
     <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Md Saiful Islam</h3>
-                <p>Ph.D. Candidate in Mechanical Engineering</p>
-                <p>University of Louisiana at Lafayette</p>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Md Saiful Islam</h3>
+                    <p>Ph.D. Candidate in Mechanical Engineering</p>
+                    <p>University of Louisiana at Lafayette</p>
+                </div>
 
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-section">
-                <h4>Research Areas</h4>
-                <ul>
-                    <li>Finite Element Analysis</li>
-                    <li>Biomechanics</li>
-                    <li>Computational Modeling</li>
-                    <li>Soft Materials</li>
-                </ul>
-            </div>
+                <div class="footer-section">
+                    <h4>Research Areas</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>Biomechanics</li>
+                        <li>Computational Modeling</li>
+                        <li>Soft Materials</li>
+                    </ul>
+                </div>
 
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <div class="footer-social">
-                    <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
-                        rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2" target="_blank"
-                        rel="noopener noreferrer" aria-label="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
-                        rel="noopener noreferrer" aria-label="ResearchGate">
-                        <i class="fab fa-researchgate"></i>
-                    </a>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
+                            target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
+                            rel="noopener noreferrer" aria-label="ResearchGate">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
-            <p>Last updated: <span id="lastUpdated">January 2025</span></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+                <p>Last updated: <span id="lastUpdated">January 2025</span></p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="../js/main.js"></script>
 </body>
+
 </html>
