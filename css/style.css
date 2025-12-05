@@ -3149,11 +3149,12 @@ html {
 }
 
 /* Highlights Redesign */
+/* Highlights Redesign */
 .highlights-wrapper {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
-    gap: 3rem;
-    align-items: start;
+    gap: 2rem;
+    align-items: stretch;
 }
 
 /* Project Slider */
@@ -3162,14 +3163,17 @@ html {
     padding: 2rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .project-slider {
     position: relative;
-    height: 350px;
+    height: 450px;
     overflow: hidden;
     border-radius: var(--radius-md);
     margin-top: 1rem;
+    flex: 1;
 }
 
 .project-slide {
@@ -3183,6 +3187,12 @@ html {
     display: flex;
     flex-direction: column;
     background: var(--bg-secondary);
+}
+
+.project-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .project-slide.active {
