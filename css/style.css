@@ -3169,13 +3169,12 @@ html {
 
 .project-slider {
     position: relative;
+    min-height: 450px;
     height: 450px;
     overflow: hidden;
     border-radius: var(--radius-md);
     margin-top: 1rem;
-    flex: 1;
     background: var(--bg-primary);
-    /* Fallback background */
 }
 
 .project-slide {
