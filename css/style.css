@@ -1481,6 +1481,8 @@ html[data-theme="dark"] .hero-social a:hover {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    background: #ffffff;
+    /* Force white background for transparent chart PNGs */
     transition: transform var(--transition-slow);
 }
 
@@ -3201,9 +3203,9 @@ html {
     object-fit: contain;
     /* Forces image to fit perfectly without distortion */
     display: block;
-    background: var(--bg-primary);
+    background: #ffffff;
+    /* Force white background for transparent chart PNGs */
     padding: 0;
-    /* Remove padding to maximize size */
 }
 
 /* Dynamic Project Title in Header */
