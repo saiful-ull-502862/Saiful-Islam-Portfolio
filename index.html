@@ -31,7 +31,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=42">
+    <link rel="stylesheet" href="css/style.css?v=50">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -107,7 +107,128 @@
                 </div>
             </section>
 
-            <!-- Detailed sections moved to separate pages -->
+            <!-- About Me Section -->
+            <section id="about" class="section">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <div class="about-text">
+                            <p class="lead">
+                                I am a <strong>Ph.D. Candidate in Mechanical Engineering</strong> at the University of
+                                Louisiana at Lafayette,
+                                specializing in <strong>Finite Element Analysis, Soft Materials, and Computational
+                                    Biomechanics</strong>.
+                                With 4+ years of hands-on experience, I develop advanced multi-scale computational
+                                frameworks
+                                to solve complex challenges in cartilage mechanics and osteoarthritis research.
+                            </p>
+                            <p>
+                                My research uniquely bridges <strong>mechanical engineering</strong> and
+                                <strong>bioengineering</strong>,
+                                integrating constitutive modeling, image analysis, and AI/ML approaches in ABAQUS and
+                                Python.
+                                I have authored peer-reviewed publications, presented at international conferences
+                                (SB3C, ORS, CMBBE),
+                                and developed novel methodologies for tissue characterization that advance understanding
+                                of disease progression.
+                            </p>
+                            <p>
+                                I am actively seeking <strong>industrial internship opportunities</strong> in R&D,
+                                simulation engineering,
+                                or computational mechanics roles where I can apply my expertise in FEA, material
+                                modeling, and data-driven
+                                analysis to deliver innovative engineering solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Featured Projects and Recent News -->
+                    <div class="highlights-wrapper">
+                        <!-- Project Slider (Left) -->
+                        <div class="project-slider-container featured-projects">
+                            <h3>Featured Projects <span id="projectTitle" class="dynamic-project-title"></span></h3>
+                            <div class="project-slider" id="projectSliderAbout">
+                                <!-- Slide 1: Quantitative Image Analysis -->
+                                <div class="project-slide active" data-title="Quantitative Image Analysis">
+                                    <a href="projects/cnn-collagen.html">
+                                        <img src="images/projects/cnn-collagen.png" alt="Quantitative Image Analysis">
+                                    </a>
+                                </div>
+                                <!-- Slide 2: Multi-scale Cartilage Modeling -->
+                                <div class="project-slide" data-title="Multi-scale Cartilage Modeling">
+                                    <a href="projects/multiscale-cartilage.html">
+                                        <img src="images/projects/multiscale-cartilage.png"
+                                            alt="Multi-scale Cartilage Modeling">
+                                    </a>
+                                </div>
+                                <!-- Slide 3: Data-Driven Modeling -->
+                                <div class="project-slide" data-title="Data-Driven Constitutive Modeling">
+                                    <a href="projects/data-driven-modeling.html">
+                                        <img src="images/projects/data-driven-cartilage.png" alt="Data-Driven Modeling">
+                                    </a>
+                                </div>
+                                <!-- Slide 4: Bio-printing System -->
+                                <div class="project-slide" data-title="Bio-printing System">
+                                    <a href="projects/bioprinter.html">
+                                        <img src="images/projects/bioprinting-system.png" alt="Bio-printing System">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                                <span class="indicator" data-slide="3"></span>
+                            </div>
+                        </div>
+
+                        <!-- Recent News (Right) -->
+                        <div class="project-slider-container recent-news">
+                            <h3>Recent News</h3>
+                            <div class="project-slider" id="newsSlider">
+                                <!-- Slide 1: ORS 2026 Acceptance -->
+                                <div class="project-slide active" data-title="ORS 2026 Acceptance">
+                                    <img src="images/news/ors-2026.webp" alt="ORS 2026 Poster Acceptance">
+                                    <div class="slide-caption">
+                                        <h4>ORS 2026 Acceptance</h4>
+                                        <p>Accepted for Poster presentation at ORS 2026 Annual Meeting.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 2: Internship -->
+                                <div class="project-slide" data-title="Summer Internship">
+                                    <img src="images/news/internship-2025.png" alt="Summer 2025 Internship">
+                                    <div class="slide-caption">
+                                        <h4>Summer Internship</h4>
+                                        <p>Worked as Tech Intern at Opportunity Machine in Summer 2025.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 3: SBEC 2025 -->
+                                <div class="project-slide" data-title="SBEC 2025 Conference">
+                                    <img src="images/news/sbec-2025.jpg" alt="SBEC 2025 Presentation">
+                                    <div class="slide-caption">
+                                        <h4>SBEC 2025 Conference</h4>
+                                        <p>Presented my research at SBEC 2025 conference.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 4: PhD Comprehensive Exam -->
+                                <div class="project-slide" data-title="PhD Milestone">
+                                    <img src="images/news/phd-exam.jpg" alt="PhD Comprehensive Exam">
+                                    <div class="slide-caption">
+                                        <h4>PhD Milestone</h4>
+                                        <p>Completed my PhD comprehensive exam.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-indicators">
+                                <span class="indicator active" data-slide="0"></span>
+                                <span class="indicator" data-slide="1"></span>
+                                <span class="indicator" data-slide="2"></span>
+                                <span class="indicator" data-slide="3"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- Footer -->
             <footer class="footer">
@@ -182,7 +303,7 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="js/main.js?v=42"></script>
+    <script src="js/main.js?v=50"></script>
 </body>
 
 </html>

@@ -24,7 +24,7 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css?v=49">
+    <link rel="stylesheet" href="css/style.css?v=50">
 
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -117,26 +117,30 @@
                         <div class="project-slider-container featured-projects">
                             <h3>Featured Projects <span id="projectTitle" class="dynamic-project-title"></span></h3>
                             <div class="project-slider" id="projectSliderAbout">
-                                <!-- Slide 1: CNN Project (Active) -->
-                                <div class="project-slide active" data-title="AI in Biomechanics">
-                                    <img src="images/projects/cnn-collagen.png" alt="CNN Collagen Analysis">
-                                    <div class="slide-caption">
-                                        <h4>AI in Biomechanics</h4>
-                                        <p>CNN-based collagen quantification in articular cartilage.</p>
-                                    </div>
+                                <!-- Slide 1: Quantitative Image Analysis -->
+                                <div class="project-slide active" data-title="Quantitative Image Analysis">
+                                    <a href="projects/cnn-collagen.html">
+                                        <img src="images/projects/cnn-collagen.png" alt="Quantitative Image Analysis">
+                                    </a>
                                 </div>
                                 <!-- Slide 2: Multi-scale Cartilage Modeling -->
                                 <div class="project-slide" data-title="Multi-scale Cartilage Modeling">
-                                    <img src="images/projects/multiscale-cartilage.png"
-                                        alt="Multi-scale Cartilage Modeling">
+                                    <a href="projects/multiscale-cartilage.html">
+                                        <img src="images/projects/multiscale-cartilage.png"
+                                            alt="Multi-scale Cartilage Modeling">
+                                    </a>
                                 </div>
                                 <!-- Slide 3: Data-Driven Modeling -->
-                                <div class="project-slide" data-title="Constitutive Modeling of Cartilage">
-                                    <img src="images/projects/data-driven-cartilage.png" alt="Data-Driven Modeling">
+                                <div class="project-slide" data-title="Data-Driven Constitutive Modeling">
+                                    <a href="projects/data-driven-modeling.html">
+                                        <img src="images/projects/data-driven-cartilage.png" alt="Data-Driven Modeling">
+                                    </a>
                                 </div>
                                 <!-- Slide 4: Bio-printing System -->
-                                <div class="project-slide" data-title="Compatible Bio-printing System">
-                                    <img src="images/projects/bioprinting-system.png" alt="Bio-printing System">
+                                <div class="project-slide" data-title="Bio-printing System">
+                                    <a href="projects/bioprinter.html">
+                                        <img src="images/projects/bioprinting-system.png" alt="Bio-printing System">
+                                    </a>
                                 </div>
                             </div>
                             <div class="slider-indicators">
@@ -151,38 +155,36 @@
                         <div class="project-slider-container recent-news">
                             <h3>Recent News</h3>
                             <div class="project-slider" id="newsSlider">
-                                <!-- Slide 1 -->
-                                <div class="project-slide active">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #8e44ad, #9b59b6);">
-                                        <i class="fas fa-newspaper"></i>
-                                    </div>
+                                <!-- Slide 1: ORS 2026 Acceptance -->
+                                <div class="project-slide active" data-title="ORS 2026 Acceptance">
+                                    <img src="images/news/ors-2026.webp" alt="ORS 2026 Poster Acceptance">
                                     <div class="slide-caption">
-                                        <h4>New Publication</h4>
-                                        <p>Paper accepted in <em>Biomechanics and Modeling in Mechanobiology</em>
-                                            (2025).</p>
+                                        <h4>ORS 2026 Acceptance</h4>
+                                        <p>Accepted for Poster presentation at ORS 2026 Annual Meeting.</p>
                                     </div>
                                 </div>
-                                <!-- Slide 2 -->
-                                <div class="project-slide">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #e67e22, #d35400);">
-                                        <i class="fas fa-microphone"></i>
-                                    </div>
+                                <!-- Slide 2: Internship -->
+                                <div class="project-slide" data-title="Summer Internship">
+                                    <img src="images/news/internship-2025.png" alt="Summer 2025 Internship">
                                     <div class="slide-caption">
-                                        <h4>Conference Talk</h4>
-                                        <p>Presented at CMBBE 2025 in Barcelona, Spain.</p>
+                                        <h4>Summer Internship</h4>
+                                        <p>Worked as Tech Intern at Opportunity Machine in Summer 2025.</p>
                                     </div>
                                 </div>
-                                <!-- Slide 3 -->
-                                <div class="project-slide">
-                                    <div class="slide-placeholder"
-                                        style="background: linear-gradient(45deg, #16a085, #1abc9c);">
-                                        <i class="fas fa-award"></i>
-                                    </div>
+                                <!-- Slide 3: SBEC 2025 -->
+                                <div class="project-slide" data-title="SBEC 2025 Conference">
+                                    <img src="images/news/sbec-2025.jpg" alt="SBEC 2025 Presentation">
                                     <div class="slide-caption">
-                                        <h4>Research Update</h4>
-                                        <p>Completed validation of multi-scale cartilage model.</p>
+                                        <h4>SBEC 2025 Conference</h4>
+                                        <p>Presented my research at SBEC 2025 conference.</p>
+                                    </div>
+                                </div>
+                                <!-- Slide 4: PhD Comprehensive Exam -->
+                                <div class="project-slide" data-title="PhD Milestone">
+                                    <img src="images/news/phd-exam.jpg" alt="PhD Comprehensive Exam">
+                                    <div class="slide-caption">
+                                        <h4>PhD Milestone</h4>
+                                        <p>Completed my PhD comprehensive exam.</p>
                                     </div>
                                 </div>
                             </div>
@@ -190,6 +192,7 @@
                                 <span class="indicator active" data-slide="0"></span>
                                 <span class="indicator" data-slide="1"></span>
                                 <span class="indicator" data-slide="2"></span>
+                                <span class="indicator" data-slide="3"></span>
                             </div>
                         </div>
                     </div>

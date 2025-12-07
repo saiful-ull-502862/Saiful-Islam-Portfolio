@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Force Light Theme for Project Detail */
         .project-detail {
             padding-top: calc(var(--header-height) + var(--spacing-2xl));
             padding-bottom: var(--spacing-3xl);
+            background-color: #FDFCF8;
+            color: #2C2420;
+        }
+
+        .project-detail * {
+            color: inherit;
         }
 
         .project-header {
@@ -21,6 +28,7 @@
         .project-header h1 {
             font-size: 2.5rem;
             margin-bottom: var(--spacing-md);
+            color: #2C2420;
         }
 
         .project-meta {
@@ -29,7 +37,7 @@
             gap: var(--spacing-xl);
             flex-wrap: wrap;
             margin-bottom: var(--spacing-lg);
-            color: var(--text-secondary);
+            color: #5D5550;
         }
 
         .project-meta-item {
@@ -51,7 +59,13 @@
             font-size: 1.75rem;
             margin-bottom: var(--spacing-lg);
             padding-bottom: var(--spacing-sm);
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 2px solid #DED9CC;
+            color: #2C2420;
+        }
+
+        .content-section p,
+        .content-section li {
+            color: #5D5550;
         }
 
         .media-grid {
@@ -62,10 +76,10 @@
         }
 
         .media-item {
-            background-color: var(--bg-secondary);
+            background-color: #F3F0E7;
             border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
         }
 
         .media-item img {
@@ -76,14 +90,18 @@
         .media-caption {
             padding: var(--spacing-md);
             font-size: 0.875rem;
-            color: var(--text-secondary);
+            color: #5D5550;
         }
 
         .key-findings {
-            background-color: var(--bg-secondary);
+            background-color: #F3F0E7;
             padding: var(--spacing-xl);
             border-radius: var(--radius-lg);
             margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings h4 {
+            color: #2C2420;
         }
 
         .key-findings ul {
@@ -96,14 +114,14 @@
         .key-findings li {
             padding-left: var(--spacing-lg);
             position: relative;
-            color: var(--text-secondary);
+            color: #5D5550;
         }
 
         .key-findings li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: var(--secondary-color);
+            color: #84A98C;
             font-weight: bold;
             font-size: 1.25rem;
         }
@@ -112,7 +130,7 @@
             display: inline-flex;
             align-items: center;
             gap: var(--spacing-sm);
-            color: var(--primary-color);
+            color: #D97757;
             font-weight: 600;
             margin-bottom: var(--spacing-2xl);
         }
@@ -121,16 +139,139 @@
             gap: var(--spacing-md);
         }
 
-        .placeholder-media {
-            background-color: var(--bg-tertiary);
-            height: 250px;
+        .experience-list {
+            margin-top: var(--spacing-md);
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .experience-list li {
+            color: #5D5550;
+            position: relative;
+            padding-left: var(--spacing-lg);
+        }
+
+        .experience-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #D97757;
+            font-weight: bold;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
             justify-content: center;
-            color: var(--text-tertiary);
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #E8E4D9, #F3F0E7);
+            color: #2C2420;
+            border-radius: var(--radius-full);
             font-size: 0.875rem;
-            text-align: center;
+            font-weight: 500;
+            border: 1px solid #DED9CC;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: linear-gradient(135deg, #D97757, #84A98C);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.15);
+            border-color: transparent;
+        }
+
+        /* Publication item light theme */
+        .publication-item {
+            background-color: #F3F0E7;
             padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid #DED9CC;
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pub-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .pub-status.under-review {
+            background-color: #E9C46A;
+            color: #2C2420;
+        }
+
+        .pub-status.published {
+            background-color: #84A98C;
+            color: white;
+        }
+
+        .pub-year {
+            color: #8B8580;
+            font-size: 0.875rem;
+        }
+
+        .pub-authors {
+            color: #5D5550;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: #2C2420;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .pub-journal {
+            color: #5D5550;
+            font-size: 0.938rem;
+        }
+
+        .pub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: #D97757;
+            font-weight: 600;
+            margin-top: var(--spacing-sm);
+            transition: gap 0.3s ease;
+        }
+
+        .pub-link:hover {
+            gap: var(--spacing-sm);
+        }
+
+        /* Manuscript status box */
+        .manuscript-status {
+            background: rgba(217, 119, 87, 0.1);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border-left: 4px solid #D97757;
+            margin-top: var(--spacing-lg);
+        }
+
+        .manuscript-status strong {
+            color: #2C2420;
+        }
+
+        .manuscript-status em {
+            color: #D97757;
         }
     </style>
 </head>
@@ -285,58 +426,6 @@
                     </div>
                 </div>
 
-                <!-- Media Gallery -->
-                <div class="content-section">
-                    <h2>Project Media</h2>
-                    <p style="margin-bottom: var(--spacing-lg);">
-                        <em>To add images, videos, or diagrams: Place your media files in the
-                            <code>images/projects/</code>
-                            directory and update the paths below.</em>
-                    </p>
-
-                    <div class="media-grid">
-                        <div class="media-item">
-                            <div class="placeholder-media">
-                                <p><strong>Micro-FE Model Geometry</strong><br>
-                                    Add file: images/projects/cartilage-microstructure.png</p>
-                            </div>
-                            <div class="media-caption">
-                                Representative Volume Element (RVE) showing zone-specific collagen fibril architecture
-                            </div>
-                        </div>
-
-                        <div class="media-item">
-                            <div class="placeholder-media">
-                                <p><strong>Stress Distribution</strong><br>
-                                    Add file: images/projects/cartilage-stress.png</p>
-                            </div>
-                            <div class="media-caption">
-                                Von Mises stress distribution in cartilage under compressive loading
-                            </div>
-                        </div>
-
-                        <div class="media-item">
-                            <div class="placeholder-media">
-                                <p><strong>Validation Results</strong><br>
-                                    Add file: images/projects/cartilage-validation.png</p>
-                            </div>
-                            <div class="media-caption">
-                                Model predictions vs. experimental data from indentation tests
-                            </div>
-                        </div>
-
-                        <div class="media-item">
-                            <div class="placeholder-media">
-                                <p><strong>Homogenization Workflow</strong><br>
-                                    Add file: images/projects/homogenization-diagram.png</p>
-                            </div>
-                            <div class="media-caption">
-                                Computational homogenization framework linking micro to macro scales
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Publications -->
                 <div class="content-section">
                     <h2>Related Publications</h2>
@@ -354,7 +443,7 @@
                             the zone-specific mechanics of cartilage and its constituents
                         </p>
                         <p class="pub-journal">
-                            <em>Biomechanics and Modeling in Mechanobiology</em>
+                            <em>Journal of the Mechanical Behavior of Biomedical Materials</em>
                         </p>
                     </div>
 

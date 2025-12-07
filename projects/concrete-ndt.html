@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,110 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .project-detail { padding-top: calc(var(--header-height) + var(--spacing-2xl)); padding-bottom: var(--spacing-3xl); }
-        .project-header { text-align: center; margin-bottom: var(--spacing-3xl); }
-        .project-header h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); }
-        .project-meta { display: flex; justify-content: center; gap: var(--spacing-xl); flex-wrap: wrap; margin-bottom: var(--spacing-lg); color: var(--text-secondary); }
-        .project-meta-item { display: flex; align-items: center; gap: var(--spacing-sm); }
-        .project-content { max-width: 900px; margin: 0 auto; }
-        .content-section { margin-bottom: var(--spacing-3xl); }
-        .content-section h2 { font-size: 1.75rem; margin-bottom: var(--spacing-lg); padding-bottom: var(--spacing-sm); border-bottom: 2px solid var(--border-color); }
-        .key-findings { background-color: var(--bg-secondary); padding: var(--spacing-xl); border-radius: var(--radius-lg); margin: var(--spacing-xl) 0; }
-        .key-findings ul { margin-top: var(--spacing-md); display: flex; flex-direction: column; gap: var(--spacing-md); }
-        .key-findings li { padding-left: var(--spacing-lg); position: relative; color: var(--text-secondary); }
-        .key-findings li::before { content: ''; position: absolute; left: 0; color: var(--secondary-color); font-weight: bold; font-size: 1.25rem; }
-        .back-link { display: inline-flex; align-items: center; gap: var(--spacing-sm); color: var(--primary-color); font-weight: 600; margin-bottom: var(--spacing-2xl); }
-        .back-link:hover { gap: var(--spacing-md); }
-        .highlight-box { background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary)); padding: var(--spacing-xl); border-radius: var(--radius-lg); border-left: 4px solid var(--primary-color); margin: var(--spacing-xl) 0; }
+        .project-detail {
+            padding-top: calc(var(--header-height) + var(--spacing-2xl));
+            padding-bottom: var(--spacing-3xl);
+        }
+
+        .project-header {
+            text-align: center;
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-xl);
+            flex-wrap: wrap;
+            margin-bottom: var(--spacing-lg);
+            color: var(--text-secondary);
+        }
+
+        .project-meta-item {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+        }
+
+        .project-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            margin-bottom: var(--spacing-3xl);
+        }
+
+        .content-section h2 {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .key-findings {
+            background-color: var(--bg-secondary);
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings ul {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+        }
+
+        .key-findings li {
+            padding-left: var(--spacing-lg);
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .key-findings li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: var(--spacing-2xl);
+        }
+
+        .back-link:hover {
+            gap: var(--spacing-md);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            padding: var(--spacing-xl);
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+            margin: var(--spacing-xl) 0;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar" id="navbar">
         <div class="container">
             <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i
+                    class="fas fa-moon"></i></button>
         </div>
     </nav>
 
@@ -39,8 +122,10 @@
             <div class="project-header">
                 <h1>Leaky Rayleigh Wave Modeling for Early-Age Concrete</h1>
                 <div class="project-meta">
-                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>January 2024 - August 2024</span></div>
-                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>Tran's Lab, Michigan Tech</span></div>
+                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>January 2024 - August
+                            2024</span></div>
+                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>Tran's Lab, Michigan
+                            Tech</span></div>
                     <div class="project-meta-item"><i class="fas fa-user-tie"></i><span>Dr. Quang Tran</span></div>
                 </div>
                 <div class="tags">
@@ -50,6 +135,12 @@
                     <span class="tag">#Civil Engineering</span>
                     <span class="tag">#Ultrasonics</span>
                 </div>
+            </div>
+
+            <!-- Cover Photo (placeholder) -->
+            <div class="project-cover" style="margin-bottom: var(--spacing-3xl); display: none;">
+                <img src="../images/projects/concrete-ndt.png" alt="Leaky Rayleigh Wave Modeling for Early-Age Concrete"
+                    style="width: 100%; max-height: 500px; object-fit: contain; border-radius: var(--radius-lg); background: white;">
             </div>
 
             <div class="project-content">
@@ -90,10 +181,13 @@
                         Computational Modeling
                     </h3>
                     <ul class="experience-list">
-                        <li><strong>Multiphysics FEA:</strong> Coupled acoustic-structural simulations in COMSOL/ABAQUS</li>
+                        <li><strong>Multiphysics FEA:</strong> Coupled acoustic-structural simulations in COMSOL/ABAQUS
+                        </li>
                         <li><strong>Domain:</strong> Air-concrete interface with absorbing boundaries</li>
-                        <li><strong>Wave Generation:</strong> Piezoelectric transducer modeling for ultrasonic excitation</li>
-                        <li><strong>Material Evolution:</strong> Time-dependent properties modeling cement hydration</li>
+                        <li><strong>Wave Generation:</strong> Piezoelectric transducer modeling for ultrasonic
+                            excitation</li>
+                        <li><strong>Material Evolution:</strong> Time-dependent properties modeling cement hydration
+                        </li>
                         <li><strong>Parameter Studies:</strong> Frequency, angle, and mix design variations</li>
                     </ul>
 
@@ -125,7 +219,8 @@
                         <h4>Research Outcomes:</h4>
                         <ul>
                             <li>Successfully modeled leaky Rayleigh wave propagation in air-concrete system</li>
-                            <li>Demonstrated strong correlation (R > 0.85) between wave velocity and compressive strength</li>
+                            <li>Demonstrated strong correlation (R > 0.85) between wave velocity and compressive
+                                strength</li>
                             <li>Identified optimal frequency range (200-300 kHz) for early-age monitoring</li>
                             <li>Validated FEA predictions against experimental data within 10% error</li>
                             <li>Developed calibration curves for different concrete mix designs</li>
@@ -137,12 +232,18 @@
                 <div class="content-section">
                     <h2>Applications & Impact</h2>
                     <ul class="experience-list">
-                        <li><strong>Construction Quality Control:</strong> Real-time monitoring of concrete strength development</li>
-                        <li><strong>Formwork Removal:</strong> Objective criteria for safe stripping time determination</li>
-                        <li><strong>Cold Weather Concreting:</strong> Monitoring hydration in challenging conditions</li>
-                        <li><strong>Defect Detection:</strong> Early identification of curing anomalies or segregation</li>
-                        <li><strong>Research & Development:</strong> Rapid assessment of novel concrete formulations</li>
-                        <li><strong>Infrastructure Safety:</strong> Non-invasive evaluation without damaging structure</li>
+                        <li><strong>Construction Quality Control:</strong> Real-time monitoring of concrete strength
+                            development</li>
+                        <li><strong>Formwork Removal:</strong> Objective criteria for safe stripping time determination
+                        </li>
+                        <li><strong>Cold Weather Concreting:</strong> Monitoring hydration in challenging conditions
+                        </li>
+                        <li><strong>Defect Detection:</strong> Early identification of curing anomalies or segregation
+                        </li>
+                        <li><strong>Research & Development:</strong> Rapid assessment of novel concrete formulations
+                        </li>
+                        <li><strong>Infrastructure Safety:</strong> Non-invasive evaluation without damaging structure
+                        </li>
                     </ul>
                 </div>
 
@@ -186,69 +287,70 @@
     </div>
 
     <!-- Footer -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Md Saiful Islam</h3>
-                <p>Ph.D. Candidate in Mechanical Engineering</p>
-                <p>University of Louisiana at Lafayette</p>
-            </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Md Saiful Islam</h3>
+                    <p>Ph.D. Candidate in Mechanical Engineering</p>
+                    <p>University of Louisiana at Lafayette</p>
+                </div>
 
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../publications.html">Publications</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
-                </ul>
-            </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../projects.html">Projects</a></li>
+                        <li><a href="../publications.html">Publications</a></li>
+                        <li><a href="../contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-section">
-                <h4>Research Areas</h4>
-                <ul>
-                    <li>Finite Element Analysis</li>
-                    <li>Biomechanics</li>
-                    <li>Computational Modeling</li>
-                    <li>Soft Materials</li>
-                </ul>
-            </div>
+                <div class="footer-section">
+                    <h4>Research Areas</h4>
+                    <ul>
+                        <li>Finite Element Analysis</li>
+                        <li>Biomechanics</li>
+                        <li>Computational Modeling</li>
+                        <li>Soft Materials</li>
+                    </ul>
+                </div>
 
-            <div class="footer-section">
-                <h4>Connect</h4>
-                <div class="footer-social">
-                    <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
-                        rel="noopener noreferrer" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
-                        aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2" target="_blank"
-                        rel="noopener noreferrer" aria-label="Google Scholar">
-                        <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
-                        rel="noopener noreferrer" aria-label="ResearchGate">
-                        <i class="fab fa-researchgate"></i>
-                    </a>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="footer-social">
+                        <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
+                            rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
+                            aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
+                            target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+                        <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
+                            rel="noopener noreferrer" aria-label="ResearchGate">
+                            <i class="fab fa-researchgate"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="footer-bottom">
-            <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
-            <p>Last updated: <span id="lastUpdated">January 2025</span></p>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+                <p>Last updated: <span id="lastUpdated">January 2025</span></p>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
     <script src="../js/main.js"></script>
 </body>
+
 </html>

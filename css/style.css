@@ -314,6 +314,7 @@ code {
     flex-wrap: wrap;
     gap: var(--spacing-sm);
     margin-top: var(--spacing-md);
+    justify-content: center;
 }
 
 .tag,
@@ -1595,6 +1596,11 @@ html[data-theme="dark"] .hero-social a:hover {
 
 .pub-status.under-review {
     background-color: var(--accent-color);
+    color: white;
+}
+
+.pub-status.accepted {
+    background-color: #84A98C;
     color: white;
 }
 
@@ -3206,6 +3212,21 @@ html {
     background: #ffffff;
     /* Force white background for transparent chart PNGs */
     padding: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Clickable project slide link styling */
+.project-slide a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Hover effect for clickable project slides */
+.featured-projects .project-slide a:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* Dynamic Project Title in Header */
@@ -3240,7 +3261,7 @@ html {
 }
 
 .slide-caption {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     color: white;
     padding: 1rem;
     width: 100%;
@@ -3248,6 +3269,20 @@ html {
     /* Prevent caption shrinking */
     position: relative;
     /* Not absolute anymore */
+}
+
+.slide-caption h4 {
+    color: white !important;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.slide-caption p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 0;
+    font-size: 0.875rem;
+    line-height: 1.4;
 }
 
 .slider-indicators {

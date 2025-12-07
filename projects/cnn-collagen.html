@@ -4,13 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CNN-based Collagen Quantification | Md Saiful Islam</title>
+    <title>Quantitative Image Analysis of Cartilage Degradation | Md Saiful Islam</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Force Light Theme for Project Detail */
         .project-detail {
             padding-top: calc(var(--header-height) + var(--spacing-2xl));
             padding-bottom: var(--spacing-3xl);
+            background-color: #FDFCF8;
+            color: #2C2420;
+        }
+
+        .project-detail * {
+            color: inherit;
         }
 
         .project-header {
@@ -21,6 +28,7 @@
         .project-header h1 {
             font-size: 2.5rem;
             margin-bottom: var(--spacing-md);
+            color: #2C2420;
         }
 
         .project-meta {
@@ -29,7 +37,7 @@
             gap: var(--spacing-xl);
             flex-wrap: wrap;
             margin-bottom: var(--spacing-lg);
-            color: var(--text-secondary);
+            color: #5D5550;
         }
 
         .project-meta-item {
@@ -51,14 +59,49 @@
             font-size: 1.75rem;
             margin-bottom: var(--spacing-lg);
             padding-bottom: var(--spacing-sm);
-            border-bottom: 2px solid var(--border-color);
+            border-bottom: 2px solid #DED9CC;
+            color: #2C2420;
+        }
+
+        .content-section p,
+        .content-section li {
+            color: #5D5550;
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+        }
+
+        .media-item {
+            background-color: #F3F0E7;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .media-item img {
+            width: 100%;
+            height: auto;
+        }
+
+        .media-caption {
+            padding: var(--spacing-md);
+            font-size: 0.875rem;
+            color: #5D5550;
         }
 
         .key-findings {
-            background-color: var(--bg-secondary);
+            background-color: #F3F0E7;
             padding: var(--spacing-xl);
             border-radius: var(--radius-lg);
             margin: var(--spacing-xl) 0;
+        }
+
+        .key-findings h4 {
+            color: #2C2420;
         }
 
         .key-findings ul {
@@ -71,14 +114,14 @@
         .key-findings li {
             padding-left: var(--spacing-lg);
             position: relative;
-            color: var(--text-secondary);
+            color: #5D5550;
         }
 
         .key-findings li::before {
-            content: '';
+            content: '✓';
             position: absolute;
             left: 0;
-            color: var(--secondary-color);
+            color: #84A98C;
             font-weight: bold;
             font-size: 1.25rem;
         }
@@ -87,7 +130,7 @@
             display: inline-flex;
             align-items: center;
             gap: var(--spacing-sm);
-            color: var(--primary-color);
+            color: #D97757;
             font-weight: 600;
             margin-bottom: var(--spacing-2xl);
         }
@@ -97,35 +140,193 @@
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            background: linear-gradient(135deg, #F3F0E7, #E8E4D9);
             padding: var(--spacing-xl);
             border-radius: var(--radius-lg);
-            border-left: 4px solid var(--primary-color);
+            border-left: 4px solid #D97757;
             margin: var(--spacing-xl) 0;
+        }
+
+        .highlight-box h4 {
+            color: #2C2420;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .highlight-box p {
+            color: #5D5550;
+            margin-bottom: 0;
+        }
+
+        .placeholder-media {
+            background-color: #E8E4D9;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8B8580;
+            font-size: 0.875rem;
+            text-align: center;
+            padding: var(--spacing-lg);
+        }
+
+        .experience-list {
+            margin-top: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+        }
+
+        .experience-list li {
+            color: #5D5550;
+            position: relative;
+            padding-left: var(--spacing-lg);
+        }
+
+        .experience-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: #D97757;
+            font-weight: bold;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-sm);
+            margin-top: var(--spacing-md);
+            justify-content: center;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(135deg, #E8E4D9, #F3F0E7);
+            color: #2C2420;
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid #DED9CC;
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: linear-gradient(135deg, #D97757, #84A98C);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px -2px rgba(0, 0, 0, 0.15);
+            border-color: transparent;
+        }
+
+        /* Publication item light theme */
+        .publication-item {
+            background-color: #F3F0E7;
+            padding: var(--spacing-lg);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--spacing-lg);
+            border: 1px solid #DED9CC;
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .pub-status {
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .pub-status.under-review {
+            background-color: #E9C46A;
+            color: #2C2420;
+        }
+
+        .pub-status.submitted {
+            background-color: #D97757;
+            color: white;
+        }
+
+        .pub-year {
+            color: #8B8580;
+            font-size: 0.875rem;
+        }
+
+        .pub-authors {
+            color: #5D5550;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: #2C2420;
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .pub-journal {
+            color: #5D5550;
+            font-size: 0.938rem;
+        }
+
+        /* Manuscript status box */
+        .manuscript-status {
+            background: rgba(217, 119, 87, 0.1);
+            padding: var(--spacing-md);
+            border-radius: var(--radius-md);
+            border-left: 4px solid #D97757;
+            margin-top: var(--spacing-lg);
+        }
+
+        .manuscript-status strong {
+            color: #2C2420;
+        }
+
+        .manuscript-status em {
+            color: #D97757;
         }
     </style>
 </head>
 
 <body>
+    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
-            <div class="nav-brand"><a href="../index.html">Md Saiful Islam</a></div>
-            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode"><i
-                    class="fas fa-moon"></i></button>
+            <div class="nav-brand">
+                <a href="../index.html">Md Saiful Islam</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </nav>
 
+    <!-- Project Detail -->
     <div class="project-detail">
         <div class="container">
-            <a href="../projects.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Projects</a>
+            <a href="../projects.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Projects
+            </a>
 
             <div class="project-header">
-                <h1>Quantitative Image Analysis & FE Modeling of Cartilage Degradation</h1>
+                <h1>Quantitative Image Analysis-Driven Computational Framework for Cartilage Degradation</h1>
                 <div class="project-meta">
-                    <div class="project-meta-item"><i class="fas fa-calendar"></i><span>2024 - Present</span></div>
-                    <div class="project-meta-item"><i class="fas fa-map-marker-alt"></i><span>4MLAB, UL Lafayette</span>
+                    <div class="project-meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>2024 - Present</span>
                     </div>
-                    <div class="project-meta-item"><i class="fas fa-user-tie"></i><span>Dr. Tanvir Faisal</span></div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>4MLAB, UL Lafayette</span>
+                    </div>
+                    <div class="project-meta-item">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Dr. Tanvir Faisal</span>
+                    </div>
                 </div>
                 <div class="tags">
                     <span class="tag">#Image Analysis</span>
@@ -133,29 +334,59 @@
                     <span class="tag">#Biomechanics</span>
                     <span class="tag">#Mechanobiology</span>
                     <span class="tag">#Osteoarthritis</span>
+                    <span class="tag">#Collagen Quantification</span>
                 </div>
             </div>
 
+            <!-- Cover Photo -->
+            <div class="project-cover" style="margin-bottom: var(--spacing-3xl);">
+                <img src="../images/projects/cnn-collagen.png"
+                    alt="Quantitative Image Analysis and FE Modeling of Cartilage Degradation"
+                    style="width: 100%; border-radius: var(--radius-lg); box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.15);">
+            </div>
+
             <div class="project-content">
+                <!-- Overview -->
                 <div class="content-section">
                     <h2>Project Overview</h2>
                     <p>
                         Progressive collagen network degradation represents a critical pathomechanical feature of
-                        osteoarthritis (OA), disrupting cartilage load-bearing capacity and altering the mechanical
-                        microenvironment of chondrocytes. This study combines quantitative image analysis (IA) with
-                        computational biomechanics to map enzymatic collagen degradation patterns and predict their
-                        impact on cartilage tissue mechanics and chondrocyte deformation behavior.
+                        <strong>osteoarthritis (OA)</strong>, disrupting cartilage load-bearing capacity and altering
+                        the mechanical
+                        microenvironment of chondrocytes. Despite its importance, the spatial heterogeneity of collagen
+                        degradation
+                        and its zone-specific biomechanical consequences are not fully characterized.
+                    </p>
+                    <p>
+                        This study combines <strong>quantitative image analysis (IA)</strong> with <strong>computational
+                            biomechanics</strong>
+                        to map enzymatic collagen degradation patterns and predict their impact on cartilage tissue
+                        mechanics and
+                        chondrocyte deformation behavior. The integrated experimental-computational framework
+                        establishes quantitative
+                        relationships between tissue composition and cellular mechanics.
                     </p>
                     <div class="highlight-box">
-                        <h4><i class="fas fa-brain"></i> Key Innovation</h4>
+                        <h4><i class="fas fa-lightbulb"></i> Key Innovation</h4>
                         <p>
-                            Integrated experimental-computational framework establishing quantitative relationships
-                            between tissue composition and cellular mechanics, enabling prediction of disease
+                            This IA-FE framework provides mechanistic insights into OA progression and identifies
+                            potential
+                            therapeutic targets for structure-modifying interventions. By establishing quantitative
+                            relationships
+                            between tissue composition and cellular mechanics, the framework enables prediction of
+                            disease
                             progression patterns and identification of biomechanical intervention targets.
                         </p>
                     </div>
+                    <div class="manuscript-status">
+                        <strong><i class="fas fa-check-circle" style="color: #84A98C;"></i> Conference
+                            Presentation:</strong> Abstract <em style="color: #84A98C; font-weight: 600;">accepted</em>
+                        for presentation at
+                        <strong>ORS 2026 Annual Meeting</strong> (Orthopaedic Research Society).
+                    </div>
                 </div>
 
+                <!-- Objectives -->
                 <div class="content-section">
                     <h2>Research Objectives</h2>
                     <ul class="experience-list">
@@ -164,154 +395,222 @@
                         <li>Establish quantitative relationship between matrix degradation severity and cellular
                             mechanical strain</li>
                         <li>Predict impact of degradation on chondrocyte mechanobiological responses</li>
-                        <li>Develop validated FE models incorporating key ECM constituents (collagen fibrils, PGs, PCM)
+                        <li>Develop validated FE models incorporating key ECM constituents (type II/VI collagen, PGs,
+                            PCM)</li>
+                        <li>Link early-stage matrix degradation to chondrocyte mechanical dysfunction in OA pathogenesis
                         </li>
                     </ul>
                 </div>
 
+                <!-- Methodology -->
                 <div class="content-section">
                     <h2>Methodology</h2>
-                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md);">
+                    <h3
+                        style="font-size: 1.25rem; margin-top: var(--spacing-lg); margin-bottom: var(--spacing-md); color: #2C2420;">
                         Experimental Framework
                     </h3>
                     <ul class="experience-list">
-                        <li><strong>Enzymatic Digestion:</strong> MMPs and ADAMTS treatment to simulate pathological
-                            degradation</li>
-                        <li><strong>Histology:</strong> Picrosirius Red staining and sectioning at 5 µm thickness</li>
-                        <li><strong>Quantification:</strong> Image analysis based on red intensity, validated by FTIR
-                            spectroscopy</li>
-                        <li><strong>Degradation Mapping:</strong> IA-derived degradation values: 25% (Superficial), 22%
-                            (Middle), 16% (Deep)</li>
+                        <li><strong>Enzymatic Digestion:</strong> Cartilage explants underwent digestion using matrix
+                            metalloproteinases
+                            (MMPs) and ADAMTS to simulate pathological degradation</li>
+                        <li><strong>Histology:</strong> Picrosirius Red staining, paraffin embedding, and sectioning at
+                            5 µm thickness</li>
+                        <li><strong>Collagen Quantification:</strong> Image analysis based on red intensity under
+                            standard light microscopy</li>
+                        <li><strong>Validation:</strong> FTIR spectroscopy for collagen content validation</li>
+                        <li><strong>Degradation Mapping:</strong> IA-derived degradation values: 25% (Superficial Zone),
+                            22% (Middle Zone),
+                            16% (Deep Zone)</li>
                     </ul>
 
-                    <h3 style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md);">
-                        Computational Modeling
+                    <h3
+                        style="font-size: 1.25rem; margin-top: var(--spacing-xl); margin-bottom: var(--spacing-md); color: #2C2420;">
+                        Computational Framework
                     </h3>
                     <ul class="experience-list">
-                        <li><strong>FE Model:</strong> Axisymmetric model incorporating type II/VI collagen, PGs, PCM,
-                            and chondrocytes</li>
-                        <li><strong>Validation:</strong> Validated against healthy cartilage properties</li>
-                        <li><strong>Simulation:</strong> Implemented graded collagen loss to investigate chondrocyte
-                            responses</li>
+                        <li><strong>FE Model:</strong> Axisymmetric model incorporating type II and VI collagen fibrils,
+                            proteoglycans (PGs),
+                            pericellular matrix (PCM), and chondrocytes</li>
+                        <li><strong>Validation:</strong> Model validated against healthy cartilage properties</li>
+                        <li><strong>Degradation Simulation:</strong> Implementation of graded collagen loss to
+                            investigate chondrocyte
+                            mechanobiological responses</li>
+                        <li><strong>Zone-Specific Analysis:</strong> Superficial zone (SZ), middle zone (MZ), and deep
+                            zone (DZ) evaluation</li>
                     </ul>
                 </div>
 
+                <!-- Key Findings -->
                 <div class="content-section">
                     <h2>Key Findings</h2>
                     <div class="key-findings">
                         <h4>Research Outcomes:</h4>
                         <ul>
                             <li><strong>Depth-Dependent Degradation:</strong> Significantly higher degradation in
-                                Superficial Zone (24.62 ± 14.42%) vs Deep Zone (15.80 ± 10.51%)</li>
-                            <li><strong>Cellular Strain:</strong> Collagen degradation induced chondrocyte aspect ratio
-                                changes of 6.35% (SZ), 5.99% (MZ), and 3.77% (DZ)</li>
-                            <li><strong>Mechanobiology:</strong> Established quantitative link between matrix
-                                degradation and cellular mechanical strain</li>
-                            <li><strong>Pathology Insight:</strong> Confirmed collagen network integrity is critical for
-                                protecting cells from excessive strain</li>
+                                Superficial Zone
+                                (24.62 ± 14.42%) compared to Middle Zone (21.94 ± 6.38%) and Deep Zone (15.80 ± 10.51%)
+                            </li>
+                            <li><strong>Chondrocyte Deformation:</strong> Collagen degradation induced chondrocyte
+                                aspect ratio changes
+                                of 6.35% (SZ), 5.99% (MZ), and 3.77% (DZ)</li>
+                            <li><strong>Early OA Pathology:</strong> Observed degradation gradient (highest in
+                                superficial regions,
+                                decreasing with depth) demonstrates early OA pathology patterns</li>
+                            <li><strong>Mechanical Strain Elevation:</strong> FE simulations revealed that collagen
+                                degradation elevates
+                                mechanical strain across all tissue components (ECM, PCM, and chondrocytes)</li>
+                            <li><strong>Critical Finding:</strong> Collagen network integrity is essential for
+                                maintaining physiological
+                                load distribution and protecting cells from excessive mechanical strain</li>
                         </ul>
                     </div>
-                </div>
 
-                <div class="content-section">
-                    <h2>Significance & Clinical Relevance</h2>
-                    <p>
-                        This integrated approach addresses a critical gap in understanding how early-stage matrix
-                        degradation drives chondrocyte mechanical dysfunction. By linking tissue composition to cellular
-                        mechanics, the framework enables:
-                    </p>
-                    <ul class="experience-list">
-                        <li>Prediction of disease progression patterns</li>
-                        <li>Identification of biomechanical intervention targets</li>
-                        <li>Development of structure-modifying therapies</li>
-                        <li>Early diagnostic strategies for osteoarthritis</li>
-                    </ul>
-                </div>
+                    <!-- Significance -->
+                    <div class="content-section">
+                        <h2>Significance & Clinical Relevance</h2>
+                        <p>
+                            This integrated experimental-computational approach addresses a critical knowledge gap in
+                            understanding how
+                            early-stage matrix degradation drives chondrocyte mechanical dysfunction in OA pathogenesis.
+                        </p>
+                        <ul class="experience-list">
+                            <li><strong>Disease Progression Prediction:</strong> Framework enables prediction of OA
+                                progression patterns
+                                based on tissue composition</li>
+                            <li><strong>Therapeutic Targets:</strong> Identification of biomechanical intervention
+                                targets
+                                for
+                                structure-modifying therapies</li>
+                            <li><strong>Early Diagnostic Strategies:</strong> Potential for developing early diagnostic
+                                approaches
+                                for osteoarthritis</li>
+                            <li><strong>Drug Development:</strong> Platform for testing disease-modifying OA therapies
+                                in
+                                silico</li>
+                        </ul>
+                    </div>
 
-                <div class="content-section">
-                    <h2>Future Directions</h2>
-                    <ul class="experience-list">
-                        <li>Integration of concurrent proteoglycan loss simulation</li>
-                        <li>Experimental validation of predicted cellular deformations</li>
-                        <li>Extension to patient-specific models for personalized medicine</li>
-                        <li>Application to other connective tissues and pathologies</li>
-                    </ul>
-                </div>
+                    <!-- Publications -->
+                    <div class="content-section">
+                        <h2>Related Publications & Presentations</h2>
+                        <div class="publication-item">
+                            <div class="pub-header">
+                                <span class="pub-status"
+                                    style="background-color: #84A98C; color: white;">Accepted</span>
+                                <span class="pub-year">2026</span>
+                            </div>
+                            <p class="pub-authors">
+                                <strong>Islam, S.</strong>, Istiak, A., Kayes, I., Faisal, T. R.
+                            </p>
+                            <p class="pub-title">
+                                Quantitative Image Analysis-Driven Computational Framework Reveals Depth-Dependent
+                                Biomechanical
+                                Impact of Collagen Degradation in Articular Cartilage
+                            </p>
+                            <p class="pub-journal">
+                                <em>ORS 2026 Annual Meeting</em> - Abstract Accepted
+                            </p>
+                        </div>
+                    </div>
 
-                <div style="text-align: center; margin-top: var(--spacing-3xl);">
-                    <a href="../projects.html" class="btn btn-primary">
-                        <i class="fas fa-arrow-left"></i> Back to All Projects
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <!-- Future Directions -->
+                    <div class="content-section">
+                        <h2>Future Directions</h2>
+                        <ul class="experience-list">
+                            <li>Integration of concurrent proteoglycan loss simulation for more realistic OA modeling
+                            </li>
+                            <li>Experimental validation of predicted cellular deformations using confocal microscopy
+                            </li>
+                            <li>Extension to patient-specific models for personalized medicine approaches</li>
+                            <li>Development of CNN-based automated collagen quantification from histological images</li>
+                            <li>Application of the framework to assess therapeutic efficacy of regenerative treatments
+                            </li>
+                        </ul>
+                        <p style="margin-top: var(--spacing-lg);">
+                            <strong>Ongoing Work:</strong> Currently extending the image analysis framework to
+                            incorporate
+                            deep learning
+                            approaches for automated, high-throughput collagen quantification and developing real-time
+                            feedback systems
+                            for intraoperative assessment of cartilage health.
+                        </p>
+                    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Md Saiful Islam</h3>
-                    <p>Ph.D. Candidate in Mechanical Engineering</p>
-                    <p>University of Louisiana at Lafayette</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../projects.html">Projects</a></li>
-                        <li><a href="../publications.html">Publications</a></li>
-                        <li><a href="../contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Research Areas</h4>
-                    <ul>
-                        <li>Finite Element Analysis</li>
-                        <li>Biomechanics</li>
-                        <li>Computational Modeling</li>
-                        <li>Soft Materials</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Connect</h4>
-                    <div class="footer-social">
-                        <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
-                            rel="noopener noreferrer" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
-                            aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
-                            target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
-                            <i class="fas fa-graduation-cap"></i>
-                        </a>
-                        <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
-                            rel="noopener noreferrer" aria-label="ResearchGate">
-                            <i class="fab fa-researchgate"></i>
+                    <!-- Back to Projects -->
+                    <div style="text-align: center; margin-top: var(--spacing-3xl);">
+                        <a href="../projects.html" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i> Back to All Projects
                         </a>
                     </div>
                 </div>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
-                <p>Last updated: <span id="lastUpdated">January 2025</span></p>
-            </div>
         </div>
-    </footer>
 
-    <script src="../js/main.js"></script>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Md Saiful Islam</h3>
+                        <p>Ph.D. Candidate in Mechanical Engineering</p>
+                        <p>University of Louisiana at Lafayette</p>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../about.html">About</a></li>
+                            <li><a href="../projects.html">Projects</a></li>
+                            <li><a href="../publications.html">Publications</a></li>
+                            <li><a href="../contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Research Areas</h4>
+                        <ul>
+                            <li>Finite Element Analysis</li>
+                            <li>Biomechanics</li>
+                            <li>Computational Modeling</li>
+                            <li>Soft Materials</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-section">
+                        <h4>Connect</h4>
+                        <div class="footer-social">
+                            <a href="mailto:md-saiful.islam1@louisiana.edu" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saiful-islam-22b680115" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/saiful-ull-502862" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://scholar.google.com/citations?user=HIcb4zYAAAAJ&hl=en&authuser=2"
+                                target="_blank" rel="noopener noreferrer" aria-label="Google Scholar">
+                                <i class="fas fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://www.researchgate.net/profile/Saiful-Islam-7" target="_blank"
+                                rel="noopener noreferrer" aria-label="ResearchGate">
+                                <i class="fab fa-researchgate"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Md Saiful Islam. All rights reserved.</p>
+                    <p>Last updated: <span id="lastUpdated">December 2025</span></p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="../js/main.js"></script>
 </body>
 
 </html>
