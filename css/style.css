@@ -971,12 +971,22 @@ html[data-theme="dark"] .hero-social a:hover {
         height: auto;
         justify-content: center;
         transform: none;
+        z-index: 5;
+        /* Ensure image is above the background overlay */
     }
 
     .hero-image img,
     .profile-img-hero {
-        transform: none;
-        max-height: 60vh;
+        transform: none !important;
+        max-height: 50vh;
+        width: auto !important;
+        mask-image: none !important;
+        /* Remove desktop masking */
+        -webkit-mask-image: none !important;
+        border-radius: var(--radius-xl) !important;
+        /* restore rounded corners */
+        box-shadow: var(--shadow-lg) !important;
+        filter: none !important;
     }
 
     .hero-content {
@@ -3085,43 +3095,65 @@ html {
         flex-direction: column;
     }
 
+    /* Ensure hamburger menu is visible and positioned correctly */
+    .menu-toggle {
+        display: flex;
+        top: 1rem;
+        left: 1rem;
+    }
+
+    /* Sidebar: Off-canvas drawer style */
     .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding: 1rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 2001;
+        /* Above mask/overlay */
+        border-right: 1px solid var(--border-color);
+        border-bottom: none;
+        padding: 2rem 1rem;
+        background-color: var(--bg-secondary);
+        /* Ensure opaque background */
+        display: flex;
+        flex-direction: column;
+        /* Transform is handled by .collapsed class */
     }
 
     .main-content {
         margin-left: 0;
         width: 100%;
+        padding-top: 60px;
+        /* Space for the fixed hamburger button */
     }
 
+    /* Reset navigation list to vertical */
     .sidebar-nav ul {
-        display: flex;
-        overflow-x: auto;
-        gap: 1rem;
-        padding-bottom: 1rem;
+        display: block;
+        overflow-x: visible;
+        gap: 0;
+        padding-bottom: 0;
     }
 
     .sidebar-nav .nav-link {
-        white-space: nowrap;
+        white-space: normal;
+        padding: 0.75rem 1rem;
     }
 
+    /* Restore profile and footer visibility */
     .profile-photo-small {
-        display: none;
+        display: flex;
     }
 
     .sidebar-header h3 {
-        margin: 0;
-        font-size: 1.2rem;
+        margin: 0.5rem 0 0;
+        font-size: 1.25rem;
     }
 
     .sidebar-footer {
-        display: none;
-        /* Hide footer on mobile sidebar to save space */
+        display: flex;
+        padding-top: 1rem;
     }
 }
 
@@ -3213,6 +3245,12 @@ html {
     /* Force white background for transparent chart PNGs */
     padding: 0;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fix for Recent News slider to allow caption visibility */
+.recent-news .project-slide img {
+    height: auto;
+    min-height: 0;
 }
 
 /* Clickable project slide link styling */
