@@ -69,6 +69,9 @@
     /* Layout */
     --max-width: calc(100vw - 2rem);
     --header-height: 80px;
+    --sidebar-width: 280px;
+    --hero-divider-center-offset: 140px;
+    --hero-divider-half-width: 40px;
 }
 
 /* Dark Mode Colors - Enhanced */
@@ -731,8 +734,14 @@ code {
     height: 100%;
     background: #E0E0E0;
     /* Light grey - perfectly straight diagonal using simple two-point line */
-    clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
+    clip-path: polygon(0 0,
+            calc(50% + var(--hero-divider-center-offset) + var(--hero-divider-half-width)) 0,
+            calc(50% + var(--hero-divider-center-offset) - var(--hero-divider-half-width)) 100%,
+            0 100%);
+    -webkit-clip-path: polygon(0 0,
+            calc(50% + var(--hero-divider-center-offset) + var(--hero-divider-half-width)) 0,
+            calc(50% + var(--hero-divider-center-offset) - var(--hero-divider-half-width)) 100%,
+            0 100%);
     z-index: 2;
     /* Subtle white divider line */
     box-shadow: none;
@@ -758,16 +767,18 @@ code {
     align-items: end;
     position: relative;
     z-index: 1;
-    width: calc(100% - 280px);
+    width: calc(100% - var(--sidebar-width));
     max-width: none;
     padding: 0;
     height: 100vh;
-    margin-left: 280px;
+    margin-left: var(--sidebar-width);
 }
 
 .hero-text {
     max-width: none;
-    padding-left: 4rem;
+    width: min(100%, 36rem);
+    padding-left: clamp(2.5rem, 4vw, 4.5rem);
+    padding-right: clamp(3rem, 7vw, 8rem);
     padding-bottom: 0;
     display: flex;
     flex-direction: column;
@@ -788,7 +799,7 @@ code {
 }
 
 .name {
-    font-size: 4rem;
+    font-size: clamp(3.5rem, 3vw + 1.8rem, 4.5rem);
     font-weight: 800;
     color: #000000 !important;
     margin: 0;
@@ -899,8 +910,14 @@ html[data-theme="dark"] .hero-social a:hover {
     background: #E0E0E0;
     /* Light grey - perfectly straight diagonal using simple two-point line */
     /* Create the diagonal split: Top-left to Bottom-right */
-    clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
-    -webkit-clip-path: polygon(0 0, calc(50% + 140px + 40px) 0, calc(50% + 140px - 40px) 100%, 0 100%);
+    clip-path: polygon(0 0,
+            calc(50% + var(--hero-divider-center-offset) + var(--hero-divider-half-width)) 0,
+            calc(50% + var(--hero-divider-center-offset) - var(--hero-divider-half-width)) 100%,
+            0 100%);
+    -webkit-clip-path: polygon(0 0,
+            calc(50% + var(--hero-divider-center-offset) + var(--hero-divider-half-width)) 0,
+            calc(50% + var(--hero-divider-center-offset) - var(--hero-divider-half-width)) 100%,
+            0 100%);
     z-index: 2;
     /* Sit on top of the image */
 }
@@ -915,7 +932,7 @@ html[data-theme="dark"] .hero-social a:hover {
     position: absolute;
     top: 0;
     right: 0;
-    width: calc(50% - 140px);
+    width: calc(50% - var(--hero-divider-center-offset));
     /* Occupy right side */
     height: 100%;
     z-index: 1;
@@ -999,7 +1016,9 @@ html[data-theme="dark"] .hero-social a:hover {
 
     .hero-text {
         padding-left: 0;
+        padding-right: 0;
         margin: 0 auto;
+        width: min(100%, 32rem);
     }
 
     .nav-link {
@@ -3422,8 +3441,8 @@ html {
     grid-template-columns: 1fr 1fr;
     gap: var(--spacing-3xl);
     align-items: center;
-    width: 100%;
-    max-width: 1400px;
+    width: calc(100% - var(--sidebar-width));
+    max-width: none;
 }
 
 /* Legacy styles removed */
